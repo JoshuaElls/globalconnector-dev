@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Engineering-led development, value engineering, global supply chain, and manufacturing transfers behind Gii's custom cable &amp; connector sub-assemblies for energy-based medical devices." />
+  <title>Engineering &amp; Manufacturing Expertise | Global Interconnect, Inc.</title>
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Global Interconnect, Inc." />
+  <meta property="og:url"         content="https://www.globalinterconnect.com/expertise/" />
+  <meta property="og:title"       content="Global Medical Manufacturing Expertise | Global Interconnect, Inc." />
+  <meta property="og:description" content="Supply chain management, manufacturing transfers, regulatory compliance, and nearshore cost optimization. The organizational muscle behind reliable global medical device manufacturing." />
+  <meta property="og:image"       content="https://www.globalinterconnect.com/assets/images/capabilities/validation-process.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Global Medical Manufacturing Expertise | Global Interconnect" />
+  <meta name="twitter:description" content="Supply chain management, manufacturing transfers, regulatory navigation, and nearshore cost strategy for medical device OEMs." />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* Expertise Page Specific Styles */
+
+    .expertise-banner {
+      position: relative;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .expertise-banner-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1b5e3f 0%, #0f4c2f 100%);
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .expertise-banner-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/images/validation.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .expertise-banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(27, 94, 63, 0.75);
+      z-index: -1;
+    }
+
+    .expertise-banner-content {
+      position: relative;
+      z-index: 1;
+      padding: 80px 20px;
+      max-width: 900px;
+    }
+
+    .expertise-banner-content h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .expertise-banner-content p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+      opacity: 0.95;
+      font-weight: 300;
+    }
+
+    @media (max-width: 768px) {
+      .expertise-banner-content h1 {
+        font-size: 2.5rem;
+      }
+      .expertise-banner-content p {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Expertise Intro Section */
+    .expertise-intro {
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .expertise-intro .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .expertise-intro-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .expertise-intro-text p {
+      margin-bottom: 20px;
+    }
+
+    .expertise-intro-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Expertise Area Cards */
+    .expertise-areas {
+      padding: 80px 20px;
+      background: #f9f9f9;
+    }
+
+    .expertise-area {
+      margin-bottom: 120px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .expertise-area:nth-child(even) {
+      grid-template-columns: 1fr 1fr;
+      direction: rtl;
+    }
+
+    .expertise-area:nth-child(even) > * {
+      direction: ltr;
+    }
+
+    .expertise-area-content h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1b5e3f;
+    }
+
+    .expertise-area-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .expertise-area-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .expertise-area-content li {
+      padding-left: 30px;
+      margin-bottom: 12px;
+      position: relative;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .expertise-area-content li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #1b5e3f;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .expertise-area-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 12px;
+      background: white;
+      min-height: 350px;
+    }
+
+    .expertise-area-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 1024px) {
+      .expertise-area {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .expertise-area:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+      .expertise-area-content h3 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Process Section */
+    .expertise-process {
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .expertise-process .container {
+      max-width: 1200px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1b5e3f;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+    }
+
+    .section-desc {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 0;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .process-timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f9f9f9;
+      border-radius: 12px;
+      border: 2px solid #e0e0e0;
+      position: relative;
+    }
+
+    .process-step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: #1b5e3f;
+      color: white;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .process-step h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #1a1a1a;
+    }
+
+    .process-step p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .process-arrow {
+      display: none;
+    }
+
+    @media (min-width: 1025px) {
+      .process-step::after {
+        content: '→';
+        position: absolute;
+        right: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: #1b5e3f;
+        font-weight: 700;
+      }
+
+      .process-step:last-child::after {
+        content: '';
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .process-timeline {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Why Gii Section */
+    .why-gii {
+      padding: 80px 20px;
+      background: #1b5e3f;
+      color: white;
+    }
+
+    .why-gii .container {
+      max-width: 1200px;
+    }
+
+    .why-gii .section-header {
+      margin-bottom: 60px;
+    }
+
+    .why-gii .section-eyebrow {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .why-gii .section-title {
+      color: white;
+    }
+
+    .why-gii .section-desc {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .why-gii-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .why-gii-item {
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      border-left: 4px solid #4ade80;
+    }
+
+    .why-gii-item h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .why-gii-item p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .why-gii-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* CTA Section */
+    .expertise-cta {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #1b5e3f 0%, #0f4c2f 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .expertise-cta .container {
+      max-width: 800px;
+    }
+
+    .expertise-cta h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .expertise-cta p {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      padding: 16px 40px;
+      background: white;
+      color: #1b5e3f;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 1.1rem;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="logo-img" />
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="capabilities.html">Capabilities</a></li>
+        <li><a href="expertise.html" class="active">Expertise</a></li>
+        <li><a href="devices.html">Devices</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== EXPERTISE BANNER ===== -->
+  <section class="expertise-banner">
+    <div class="expertise-banner-bg"></div>
+    <div class="expertise-banner-overlay"></div>
+    <div class="expertise-banner-content">
+      <h1>The Expertise Behind Our Specialization</h1>
+      <p>Supply Chain. Transfers. Compliance. Cost Strategy. The Organizational Muscle That Makes Complex Programs Run.</p>
+    </div>
+  </section>
+
+  <!-- ===== EXPERTISE INTRO ===== -->
+  <section class="expertise-intro">
+    <div class="container">
+      <div class="expertise-intro-text">
+        <p>Building custom cables and connectors for energy-based medical devices is what Gii does. But what makes Gii different from a domestic specialty shop is the organizational infrastructure that surrounds that capability — a global manufacturing network, a supply chain built across three continents, and three decades of experience managing the complexity that comes with it.</p>
+        <p>The expertise on this page isn't about what we make. It's about what we know how to do — the supply chain management, regulatory navigation, program transfers, and cost strategy that most contract manufacturers claim but few have actually built. For OEM partners who need more than a vendor, this is what a true manufacturing partner looks like.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERTISE AREAS ===== -->
+  <section class="expertise-areas">
+    <div class="container">
+
+      <!-- Global Supply Chain Management -->
+      <div class="expertise-area">
+        <div class="expertise-area-content">
+          <h3>Global Supply Chain Management</h3>
+          <p>Most OEMs don't need a parts vendor — they need someone who can manage the complexity of sourcing across multiple countries, qualify suppliers to medical standards, and protect production continuity when something goes wrong halfway around the world. That's what Gii's supply chain infrastructure is built to do.</p>
+          <ul>
+            <li>Multi-country component sourcing and supplier qualification</li>
+            <li>Dual-sourcing strategies to eliminate single points of failure</li>
+            <li>Tariff management and trade compliance across US, Costa Rica, and Asia</li>
+            <li>Long-lead-time component management and strategic buffer inventory</li>
+            <li>Vendor managed inventory (VMI) programs for high-volume programs</li>
+            <li>Supplier audits and ongoing performance monitoring</li>
+          </ul>
+        </div>
+        <div class="expertise-area-image">
+          <img src="assets/images/capabilities/assembly.jpg" alt="Global Supply Chain Management" />
+        </div>
+      </div>
+
+      <!-- Manufacturing Transfer Management -->
+      <div class="expertise-area">
+        <div class="expertise-area-content">
+          <h3>Manufacturing Transfer Management</h3>
+          <p>Transferring a medical device program — whether from OEM internal production, an outgoing supplier, or another CMO — is one of the most operationally complex things an OEM team can do. Gii has executed these transfers dozens of times. We know what goes wrong, where the documentation gaps appear, and how to keep production running while a transfer is in progress.</p>
+          <ul>
+            <li>Full engineering review of existing processes, tooling, and designs</li>
+            <li>Process revalidation and capability studies at the receiving facility</li>
+            <li>Supply chain remapping and vendor requalification</li>
+            <li>Regulatory documentation support — DHR, DHF, change control</li>
+            <li>First-article inspection and lot acceptance procedures</li>
+            <li>Zero-disruption transfer methodology to protect your production continuity</li>
+          </ul>
+        </div>
+        <div class="expertise-area-image">
+          <img src="assets/images/validation.jpg" alt="Manufacturing Transfer Management" />
+        </div>
+      </div>
+
+      <!-- Regulatory Navigation -->
+      <div class="expertise-area">
+        <div class="expertise-area-content">
+          <h3>Regulatory &amp; Compliance Navigation</h3>
+          <p>For a medical device OEM, a supplier that can't keep up with your regulatory requirements isn't a partner — it's a liability. Gii's quality systems are built specifically for the documentation burden of medical device manufacturing, and our team understands the regulatory frameworks that govern what we build.</p>
+          <ul>
+            <li>FDA-registered manufacturing with full Quality Management System</li>
+            <li>ISO 13485 certified quality management across the network</li>
+            <li>IEC 60601 electrical safety compliance for powered devices</li>
+            <li>DHR and DHF documentation built to support your regulatory submissions</li>
+            <li>Robust change control processes that don't slow production</li>
+            <li>Audit-ready facilities — customer and regulatory audits welcomed</li>
+          </ul>
+        </div>
+        <div class="expertise-area-image">
+          <img src="assets/images/capabilities/validation-process.jpg" alt="Regulatory and Compliance" />
+        </div>
+      </div>
+
+      <!-- Nearshore & Offshore Cost Strategy -->
+      <div class="expertise-area">
+        <div class="expertise-area-content">
+          <h3>Nearshore &amp; Offshore Cost Strategy</h3>
+          <p>Not every program should be built in the same place. Gii's global footprint lets us match each program to the manufacturing location that delivers the best combination of quality, cost, and supply chain risk — and we manage that complexity so you don't have to. In today's tariff environment, knowing where and how to build is itself a competitive advantage.</p>
+          <ul>
+            <li>Strategic facility selection across US, Costa Rica, and Asia</li>
+            <li>Costa Rica nearshore: same time zone, audit-accessible, no China tariff exposure</li>
+            <li>Total landed cost modeling — not just unit price</li>
+            <li>Tariff risk assessment and mitigation strategy for your BOM</li>
+            <li>Dual-region production for supply chain resilience</li>
+            <li>On-site customer audit access at all manufacturing locations</li>
+          </ul>
+        </div>
+        <div class="expertise-area-image">
+          <img src="assets/images/capabilities/cleanroom.jpg" alt="Nearshore Manufacturing Costa Rica" />
+        </div>
+      </div>
+
+      <!-- Program Management at Scale -->
+      <div class="expertise-area">
+        <div class="expertise-area-content">
+          <h3>Program Management at Scale</h3>
+          <p>Running a complex medical device program across multiple suppliers, time zones, and regulatory environments requires organizational discipline that most companies underestimate. Gii provides a single point of accountability from prototype through volume production — so your team isn't spending its time coordinating between vendors.</p>
+          <ul>
+            <li>Single point of contact across engineering, quality, and supply chain</li>
+            <li>Multi-supplier coordination and sub-tier management</li>
+            <li>Cross-time-zone program management without quality or schedule risk</li>
+            <li>Prototype through high-volume production continuity</li>
+            <li>Proactive communication and escalation protocols</li>
+            <li>Regular program reviews with full visibility into status and risk</li>
+          </ul>
+        </div>
+        <div class="expertise-area-image">
+          <img src="assets/images/capabilities/subassembly.jpg" alt="Program Management" />
+        </div>
+      </div>
+
+      <!-- Cost Reduction as a Discipline -->
+      <div class="expertise-area">
+        <div class="expertise-area-content">
+          <h3>Cost Reduction as an Organizational Discipline</h3>
+          <p>Any supplier can quote a lower price. Few can systematically find and eliminate the cost that's hidden in your BOM, your connector specifications, and your production process. At Gii, cost reduction isn't a project — it's how our engineering culture operates. It's built into every DFM review, every BOM audit, and every supplier negotiation we run on your behalf.</p>
+          <ul>
+            <li>Design for Manufacturability (DFM) reviews that find real savings</li>
+            <li>BOM optimization — identifying over-specified components and materials</li>
+            <li>Component consolidation across programs to build purchasing leverage</li>
+            <li>Make vs. buy analysis for connector and cable subassemblies</li>
+            <li>Continuous improvement programs in volume production</li>
+            <li>Open-book cost modeling so you understand where every dollar goes</li>
+          </ul>
+        </div>
+        <div class="expertise-area-image">
+          <img src="assets/images/capabilities/molding.jpg" alt="Cost Reduction Engineering" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 4-STEP PROCESS ===== -->
+  <section class="expertise-process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">How We Work</span>
+        <h2 class="section-title">How Gii Manages a New Program</h2>
+        <p class="section-desc">From initial assessment through sustained volume production, every Gii engagement follows a structured process designed to protect your schedule, your quality, and your margins.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="process-step-num">1</div>
+          <h4>Program<br />Assessment</h4>
+          <p>We review your full program scope — BOM, regulatory path, supply chain, volume, and timeline — before committing to a strategy.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step-num">2</div>
+          <h4>Strategy &<br />Planning</h4>
+          <p>We recommend the right facility mix, supplier approach, and cost reduction opportunities based on your specific program requirements.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step-num">3</div>
+          <h4>Transfer &<br />Qualification</h4>
+          <p>We execute the launch or transfer — validating processes, qualifying suppliers, and completing all required documentation.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step-num">4</div>
+          <h4>Ongoing<br />Management</h4>
+          <p>We manage production, supply chain, and continuous improvement so your team stays focused on your device — not your supplier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY ENGINEERS CHOOSE GII ===== -->
+  <section class="why-gii">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Why OEMs Choose Gii</span>
+        <h2 class="section-title">The Difference Between a Vendor and a Partner</h2>
+      </div>
+
+      <div class="why-gii-grid">
+        <div class="why-gii-item">
+          <h4>Global Reach, Single Accountability</h4>
+          <p>Gii operates across the US, Costa Rica, and Asia — but your team has one point of contact. We manage the complexity of a global manufacturing network so you don't have to coordinate across multiple suppliers, time zones, and quality systems.</p>
+        </div>
+
+        <div class="why-gii-item">
+          <h4>Built for the Regulatory Environment of Medical Devices</h4>
+          <p>FDA-registered and ISO 13485 certified, our quality systems are designed around the documentation burden of medical device manufacturing — DHRs, DHFs, change control, and audit readiness built in from day one, not bolted on after the fact.</p>
+        </div>
+
+        <div class="why-gii-item">
+          <h4>Supply Chain Resilience by Design</h4>
+          <p>We build dual-sourcing and geographic diversification into every program from the start. When supply chain disruptions hit — and they do — our OEM partners are protected by a supply chain architecture that was designed for exactly that scenario.</p>
+        </div>
+
+        <div class="why-gii-item">
+          <h4>Three Decades of Program Transfers</h4>
+          <p>Manufacturing transfers are where programs go wrong. Gii has executed dozens of successful transfers — from OEM internal production, from other CMOs, and between our own facilities. That experience is what keeps your production running while a transfer is in progress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERTISE CTA ===== -->
+  <section class="expertise-cta">
+    <div class="container">
+      <h2>Bring Us Your Program — We'll Show You What's Possible</h2>
+      <p>Whether you're looking to transfer a program, reduce costs, de-risk your supply chain, or find a partner who can manage the full complexity of global medical manufacturing — Gii is ready to talk. Tell us about your program and let's see where we can help.</p>
+      <a href="index.html#contact" class="btn-cta">Start the Conversation</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="footer-logo" />
+          <p>Medical device cable &amp; connector specialists. Engineering-led, value-driven custom connector and cable assembly for energy-based medical devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. Trusted by leading OEMs for over three decades.</p>
+          <div class="footer-certs">
+            <span>FDA Registered</span>
+            <span>ISO 13485</span>
+            
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="expertise.html">Expertise</a></li>
+            <li><a href="https://www.globalinterconnect.com/careers/" target="_blank" rel="noopener">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Capabilities</h4>
+          <ul>
+            <li><a href="capabilities.html">Custom Connectors</a></li>
+            <li><a href="capabilities.html">Cable Assemblies</a></li>
+            <li><a href="capabilities.html">Electromechanical Assembly</a></li>
+            <li><a href="capabilities.html">PCBA</a></li>
+            <li><a href="capabilities.html">Metal Stamping</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="devices.html">Medical Devices</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Global Interconnect, Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+</body>
+</html>

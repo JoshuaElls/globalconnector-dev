@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Custom medical connector design, cable assembly, value engineering, DFM reviews, and clean room manufacturing for energy-based devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. FDA-registered, ISO 13485." />
+  <title>Cable &amp; Connector Capabilities for Energy-Based Medical Devices | Global Interconnect, Inc.</title>
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Global Interconnect, Inc." />
+  <meta property="og:url"         content="https://www.globalinterconnect.com/capabilities/" />
+  <meta property="og:title"       content="Medical Cable &amp; Connector Capabilities | Global Interconnect, Inc." />
+  <meta property="og:description" content="Custom connector design, DFM reviews, cable assembly, clean room manufacturing, and manufacturing transfers — all under ISO 13485. Built to reduce your OEM costs." />
+  <meta property="og:image"       content="https://www.globalinterconnect.com/assets/images/capabilities/cleanroom.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Medical Cable &amp; Connector Capabilities | Global Interconnect" />
+  <meta name="twitter:description" content="Custom connectors, cable assembly, DFM reviews, and clean room manufacturing. FDA-registered, ISO 13485." />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== PAGE-SPECIFIC STYLES ===== */
+
+    /* Banner Section */
+    .capabilities-banner {
+      position: relative;
+      background: linear-gradient(135deg, #1a472a 0%, #2d6e47 100%);
+      background-size: cover;
+      background-position: center;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .capabilities-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('assets/images/capabilities/banner.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.4;
+    }
+
+    .capabilities-banner-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .capabilities-banner h1 {
+      font-family: 'Barlow', sans-serif;
+      font-size: 56px;
+      font-weight: 700;
+      margin: 0 0 20px 0;
+      line-height: 1.2;
+    }
+
+    .capabilities-banner p {
+      font-size: 24px;
+      font-weight: 300;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .capabilities-banner h1 {
+        font-size: 36px;
+      }
+      .capabilities-banner p {
+        font-size: 18px;
+      }
+      .capabilities-banner-content {
+        padding: 60px 30px;
+      }
+    }
+
+    /* Intro Section */
+    .capabilities-intro {
+      padding: 80px 40px;
+      background: #ffffff;
+    }
+
+    .capabilities-intro-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .capabilities-intro h2 {
+      font-family: 'Barlow', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0 0 30px 0;
+      color: #1a1a1a;
+      line-height: 1.3;
+    }
+
+    .capabilities-intro p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+      margin: 0 0 20px 0;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .capabilities-intro-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+      padding-top: 60px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .intro-stat-item {
+      text-align: center;
+    }
+
+    .intro-stat-number {
+      display: block;
+      font-family: 'Barlow', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #1a472a;
+      margin-bottom: 10px;
+    }
+
+    .intro-stat-label {
+      display: block;
+      font-size: 14px;
+      color: #666;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      .capabilities-intro {
+        padding: 60px 30px;
+      }
+      .capabilities-intro h2 {
+        font-size: 32px;
+      }
+      .intro-stat-number {
+        font-size: 28px;
+      }
+    }
+
+    /* Capability Sections */
+    .capability-section {
+      padding: 80px 40px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .capability-section:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    .capability-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .capability-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .capability-section.reverse .capability-container {
+      direction: rtl;
+    }
+
+    .capability-section.reverse .capability-text {
+      direction: ltr;
+    }
+
+    .capability-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      min-height: 400px;
+    }
+
+    .capability-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .capability-text h3 {
+      font-family: 'Barlow', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0 0 20px 0;
+      color: #1a1a1a;
+      line-height: 1.3;
+    }
+
+    .capability-text p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #555;
+      margin: 0 0 20px 0;
+    }
+
+    .capability-text ul {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0 0 0;
+    }
+
+    .capability-text li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 12px;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .capability-text li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #1a472a;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .capability-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .capability-section.reverse .capability-container {
+        direction: ltr;
+      }
+
+      .capability-image {
+        min-height: 300px;
+      }
+
+      .capability-text h3 {
+        font-size: 28px;
+      }
+
+      .capability-section {
+        padding: 60px 30px;
+      }
+    }
+
+    /* Stats Bar */
+    .capabilities-stats-bar {
+      background: #1a472a;
+      color: white;
+      padding: 60px 40px;
+      margin: 60px 0;
+    }
+
+    .capabilities-stats-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+
+    .capabilities-stats-item {
+      padding: 20px 0;
+    }
+
+    .capabilities-stats-number {
+      display: block;
+      font-family: 'Barlow', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .capabilities-stats-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      .capabilities-stats-bar {
+        padding: 40px 30px;
+        margin: 40px 0;
+      }
+      .capabilities-stats-number {
+        font-size: 28px;
+      }
+      .capabilities-stats-container {
+        gap: 30px;
+      }
+    }
+
+    /* Transfer Section */
+    .manufacturing-transfer {
+      padding: 80px 40px;
+      background: linear-gradient(135deg, #f5f5f5 0%, #f9f9f9 100%);
+    }
+
+    .transfer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .transfer-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .transfer-header h2 {
+      font-family: 'Barlow', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0 0 30px 0;
+      color: #1a1a1a;
+      line-height: 1.3;
+    }
+
+    .transfer-content {
+      background: white;
+      padding: 50px;
+      border-radius: 8px;
+      border-left: 5px solid #1a472a;
+    }
+
+    .transfer-content p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #555;
+      margin: 0 0 20px 0;
+    }
+
+    .transfer-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .transfer-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+    }
+
+    .transfer-content li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 12px;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .transfer-content li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #1a472a;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .manufacturing-transfer {
+        padding: 60px 30px;
+      }
+      .transfer-header h2 {
+        font-size: 32px;
+      }
+      .transfer-content {
+        padding: 40px 30px;
+      }
+    }
+
+    /* CTA Section */
+    .capabilities-cta {
+      padding: 80px 40px;
+      background: #1a472a;
+      color: white;
+      text-align: center;
+    }
+
+    .capabilities-cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .capabilities-cta h2 {
+      font-family: 'Barlow', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0 0 20px 0;
+      line-height: 1.3;
+    }
+
+    .capabilities-cta p {
+      font-size: 18px;
+      margin: 0 0 40px 0;
+      line-height: 1.5;
+      opacity: 0.95;
+    }
+
+    .capabilities-cta .btn {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .capabilities-cta {
+        padding: 60px 30px;
+      }
+      .capabilities-cta h2 {
+        font-size: 32px;
+      }
+      .capabilities-cta p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="logo-img" />
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="capabilities.html" class="active">Capabilities</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="devices.html">Devices</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE BANNER ===== -->
+  <section class="capabilities-banner">
+    <div class="capabilities-banner-content">
+      <h1>Cable &amp; Connector Capabilities</h1>
+      <p>Engineering-Led Custom Connector Design &amp; Cable Assembly for Energy-Based Medical Devices</p>
+    </div>
+  </section>
+
+  <!-- ===== INTRO SECTION ===== -->
+  <section class="capabilities-intro">
+    <div class="capabilities-intro-content">
+      <h2>Value Engineering — The Gii Difference</h2>
+      <p>The single biggest driver of cable and connector cost in medical devices isn't manufacturing overhead — it's the choice of connector itself. When OEMs default to expensive branded off-the-shelf connectors, they pay a significant price premium that compounds across every unit shipped. Gii's engineers design purpose-built custom connector solutions that meet your exact performance and regulatory requirements at a fraction of that cost. Paired with rigorous DFM reviews and material optimization on every program, that value-engineering approach is how Gii consistently delivers meaningful cost reductions for OEMs building energy-based devices — across electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management.</p>
+      <p>On the manufacturing side, Gii draws on a carefully curated network of specialized manufacturing partners across the US, Costa Rica, and Asia — selecting the right facility for each element of your program based on capability, quality, and cost, rather than constraining you to a single location. That flexibility is a competitive advantage most contract manufacturers simply can't offer.</p>
+      <p>And while cables and connectors are always our deepest specialty, Gii's capabilities don't stop at the connector. For programs where it makes sense, we support full device-level builds — complete electromechanical assembly, PCBA integration, and finished device production — giving partners who want a single accountable team from concept through finished goods exactly that.</p>
+
+      <div class="capabilities-intro-stats">
+        <div class="intro-stat-item">
+          <span class="intro-stat-number">10K+</span>
+          <span class="intro-stat-label">Skilled Workers</span>
+        </div>
+        <div class="intro-stat-item">
+          <span class="intro-stat-number">1.5M</span>
+          <span class="intro-stat-label">Sq Ft Manufacturing</span>
+        </div>
+        <div class="intro-stat-item">
+          <span class="intro-stat-number">15K</span>
+          <span class="intro-stat-label">Sq Ft Clean Room</span>
+        </div>
+        <div class="intro-stat-item">
+          <span class="intro-stat-number">8</span>
+          <span class="intro-stat-label">Sterilization Chambers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAPABILITY SECTIONS ===== -->
+
+  <!-- Custom Connector Design & Molding -->
+  <section class="capability-section">
+    <div class="capability-container">
+      <div class="capability-image">
+        <img src="assets/images/capabilities/molding.jpg" alt="Custom Connector Design & Molding" />
+      </div>
+      <div class="capability-text">
+        <h3>Custom Connector Design &amp; Engineering</h3>
+        <p>This is the core of what Gii does and where the greatest cost savings are found. Rather than specifying expensive branded connectors, our engineers design purpose-built alternatives — push-pull, locking, non-locking, and breakaway configurations — that match your clinical and regulatory requirements at a dramatically lower per-unit cost. Biocompatible, durable, and engineered from the ground up for your specific device.</p>
+        <ul>
+          <li>Biocompatible material selection and validation</li>
+          <li>Push-pull, locking, and non-locking configurations</li>
+          <li>Backward compatible design engineering</li>
+          <li>Miniaturization and tight tolerance capabilities</li>
+          <li>Full DFM review and process validation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cable Assembly Manufacturing -->
+  <section class="capability-section reverse">
+    <div class="capability-container">
+      <div class="capability-image">
+        <img src="assets/images/capabilities/assembly.jpg" alt="Cable Assembly Manufacturing" />
+      </div>
+      <div class="capability-text">
+        <h3>Cable Assembly Manufacturing</h3>
+        <p>Complete cable assembly from wire cutting and termination through final electrical test — 100% tested on every unit, no exceptions. We offer custom extruded wires, high-flex, shielded, coaxial, and multi-conductor cable options. Our DFM engineers review every design for opportunities to simplify construction, optimize materials, and reduce per-unit cost before production begins.</p>
+        <ul>
+          <li>Custom wire extrusion and formulation</li>
+          <li>High-flex, shielded, and coaxial options</li>
+          <li>Multi-conductor cable capabilities</li>
+          <li>Full traceability from raw material to shipment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Electromechanical Assembly -->
+  <section class="capability-section">
+    <div class="capability-container">
+      <div class="capability-image">
+        <img src="assets/images/capabilities/subassembly.jpg" alt="Electromechanical Assembly" />
+      </div>
+      <div class="capability-text">
+        <h3>From Cable Assembly to Full Device Build</h3>
+        <p>Cables and connectors are Gii's core — but our engineering and manufacturing infrastructure is built to go further. For OEM partners who need it, we support complete device-level production: full electromechanical assembly, multi-component subassembly, and finished medical device builds under ISO 13485. Whether you need a single sub-build handled or a complete turnkey program, Gii can be the single accountable partner from interconnect through finished goods.</p>
+        <ul>
+          <li>Cable-to-device subassembly integration</li>
+          <li>Complete electromechanical device builds</li>
+          <li>Multi-component and multi-supplier coordination</li>
+          <li>In-process quality controls at every stage</li>
+          <li>Prototype through volume production</li>
+          <li>ISO 13485 quality management throughout</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PCB Assembly -->
+  <section class="capability-section reverse">
+    <div class="capability-container">
+      <div class="capability-image">
+        <img src="assets/images/capabilities/pcba.jpg" alt="PCB Assembly (PCBA)" />
+      </div>
+      <div class="capability-text">
+        <h3>Connector Electronics &amp; PCBA</h3>
+        <p>Surface-mount and through-hole PCB assembly for the electronics that live inside and around your cable and connector assemblies. IPC Class 2/3 standards with full component traceability, automated optical inspection (AOI), and X-ray inspection — precision electronics as part of a fully integrated cable and connector build.</p>
+        <ul>
+          <li>SMT and through-hole assembly</li>
+          <li>IPC Class 2/3 standards compliance</li>
+          <li>Full component traceability</li>
+          <li>AOI and X-ray inspection</li>
+          <li>Medical-grade quality assurance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metal Stamping & Machining -->
+  <section class="capability-section">
+    <div class="capability-container">
+      <div class="capability-image">
+        <img src="assets/images/capabilities/machining.jpg" alt="Metal Stamping & Machining" />
+      </div>
+      <div class="capability-text">
+        <h3>Metal Stamping &amp; Contact Fabrication</h3>
+        <p>Precision stamping and CNC machining of connector contacts, pins, shields, and housings to tight tolerances and high volume. Part of the custom connector design process — engineering the specific metal contact geometry your device needs rather than defaulting to a standard component that may be over-specified and overpriced.</p>
+        <ul>
+          <li>Precision stamping and forming</li>
+          <li>CNC machining capabilities</li>
+          <li>Connector contacts and shields</li>
+          <li>Tight tolerances at volume scale</li>
+          <li>Material expertise and supply chain</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coating & Surface Treatment -->
+  <section class="capability-section reverse">
+    <div class="capability-container">
+      <div class="capability-image">
+        <img src="assets/images/capabilities/coating.jpg" alt="Coating & Surface Treatment" />
+      </div>
+      <div class="capability-text">
+        <h3>Coating &amp; Surface Treatment</h3>
+        <p>Lubricity, biocompatible, and electrical performance coatings applied to cables and connectors with precision and validated consistency. Material and coating specifications are reviewed as part of our DFM process — ensuring you're using the right coating for your application, not an over-specified one that inflates your unit cost.</p>
+        <ul>
+          <li>Lubricity coatings for device insertion</li>
+          <li>Biocompatible surface treatments</li>
+          <li>Electrical performance coatings</li>
+          <li>Single-use and reusable device support</li>
+          <li>Process validation and documentation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Room Manufacturing -->
+  <section class="capability-section">
+    <div class="capability-container">
+      <div class="capability-image">
+        <img src="assets/images/capabilities/cleanroom.jpg" alt="Clean Room Manufacturing" />
+      </div>
+      <div class="capability-text">
+        <h3>Clean Room Manufacturing</h3>
+        <p>15,000 sq ft of ISO 8 clean room space with 8 sterilization chambers — purpose-built for sterile and critical medical cable and connector assembly. Producing cables and connectors in a controlled environment within the same facility that does your molding and stamping eliminates costly transfer steps and keeps your sterile supply chain tight.</p>
+        <ul>
+          <li>15,000 sq ft ISO 8 clean room</li>
+          <li>8 sterilization chambers (10K cu ft total)</li>
+          <li>Sterile device manufacturing support</li>
+          <li>Critical device production capabilities</li>
+          <li>Environmental monitoring and controls</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Validation & Quality -->
+  <section class="capability-section reverse">
+    <div class="capability-container">
+      <div class="capability-image">
+        <img src="assets/images/capabilities/validation-process.jpg" alt="Validation & Quality" />
+      </div>
+      <div class="capability-text">
+        <h3>Validation &amp; Quality — Built for Zero-Failure</h3>
+        <p>FDA-registered and ISO 13485 certified, with full IQ/OQ/PQ validation protocols and complete DHR/DHF documentation specific to cable and connector manufacturing. Our quality systems are built to support your regulatory submissions Our quality systems are built to support your regulatory submissions and ensure nothing ships unless it meets your exact specification.</p>
+        <ul>
+          <li>IQ/OQ/PQ validation protocols</li>
+          <li>Full DHR/DHF documentation</li>
+          <li>FDA-registered QMS</li>
+          <li>ISO 13485 compliance</li>
+          <li>Supplier and process audits</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <div class="capabilities-stats-bar">
+    <div class="capabilities-stats-container">
+      <div class="capabilities-stats-item">
+        <span class="capabilities-stats-number">10K+</span>
+        <span class="capabilities-stats-label">Workers</span>
+      </div>
+      <div class="capabilities-stats-item">
+        <span class="capabilities-stats-number">1.5M</span>
+        <span class="capabilities-stats-label">Sq Ft Manufacturing</span>
+      </div>
+      <div class="capabilities-stats-item">
+        <span class="capabilities-stats-number">15K</span>
+        <span class="capabilities-stats-label">Sq Ft Clean Room</span>
+      </div>
+      <div class="capabilities-stats-item">
+        <span class="capabilities-stats-number">8</span>
+        <span class="capabilities-stats-label">Sterilization Chambers</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MANUFACTURING TRANSFER ===== -->
+  <section class="manufacturing-transfer">
+    <div class="transfer-container">
+      <div class="transfer-header">
+        <h2>Transferring Your Cable &amp; Connector Manufacturing to Gii</h2>
+      </div>
+      <div class="transfer-content">
+        <p>Gii specializes in seamless manufacturing transfers of cable and connector programs — from other contract manufacturers or directly from OEM internal production. Our engineering team has transferred hundreds of programs and understands exactly what it takes to move a medical cable or connector without disrupting your supply chain or your quality records.</p>
+        <p><strong>Our transfer process includes:</strong></p>
+        <ul>
+          <li>Comprehensive DFM review and optimization</li>
+          <li>Process validation and qualification</li>
+          <li>Supply chain transition and vendor qualification</li>
+          <li>Equipment setup and process documentation</li>
+          <li>Trial runs and ramp-up support</li>
+          <li>Full traceability and regulatory documentation</li>
+        </ul>
+        <p>Whether you're consolidating suppliers, pursuing a cost-down, or preparing for volume scale, Gii's transfer process delivers continuity of supply and regulatory compliance — and typically surfaces additional cost-down opportunities during the engineering review phase that your previous manufacturer never identified.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="capabilities-cta">
+    <div class="capabilities-cta-content">
+      <h2>Ready to Start a Cost-Down Review?</h2>
+      <p>Send us your current cable or connector assembly details and we'll run a free DFM analysis — showing you exactly where the cost opportunities are. No commitment required.</p>
+      <a href="index.html#contact" class="btn btn-primary">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="footer-logo" />
+          <p>Medical device cable &amp; connector specialists. Engineering-led, value-driven custom connector and cable assembly for energy-based medical devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. Trusted by leading OEMs for over three decades.</p>
+          <div class="footer-certs">
+            <span>FDA Registered</span>
+            <span>ISO 13485</span>
+            
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#advantage">The Gii Advantage</a></li>
+            <li><a href="index.html#quality">Quality &amp; Certifications</a></li>
+            <li><a href="index.html#global">Global Reach</a></li>
+            <li><a href="https://www.globalinterconnect.com/careers/" target="_blank" rel="noopener">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Capabilities</h4>
+          <ul>
+            <li><a href="capabilities.html">Custom Connectors</a></li>
+            <li><a href="capabilities.html">Cable Assemblies</a></li>
+            <li><a href="capabilities.html">Electromechanical Assembly</a></li>
+            <li><a href="capabilities.html">PCBA</a></li>
+            <li><a href="capabilities.html">Metal Stamping</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://www.globalinterconnect.com/understanding-custom-medical-connectors/" target="_blank" rel="noopener">Custom Medical Connectors</a></li>
+            <li><a href="https://www.globalinterconnect.com/understanding-medical-cable-assemblies/" target="_blank" rel="noopener">Medical Cable Assemblies</a></li>
+            <li><a href="https://www.globalinterconnect.com/considerations-when-transferring-medical-device-manufacturing/" target="_blank" rel="noopener">Manufacturing Transfers</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Global Interconnect, Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+</body>
+</html>

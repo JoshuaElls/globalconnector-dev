@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Request a quote from Global Interconnect, Inc. (Gii) — medical cable and connector specialists. Tell us about your program and a Gii engineer will respond within one business day." />
+  <title>Request a Quote | Global Interconnect, Inc.</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== QUOTE HERO ===== */
+    .quote-hero {
+      position: relative;
+      padding: 120px 0 70px;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(135deg, #0e3d2e 0%, #346c2b 100%);
+    }
+    .quote-hero h1 {
+      font-family: 'Barlow', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      margin: 10px 0 14px;
+      line-height: 1.15;
+    }
+    .quote-hero p {
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.9);
+    }
+    .quote-hero .section-eyebrow { color: #8BC342; }
+
+    /* ===== LAYOUT ===== */
+    .quote-section { padding: 70px 0 90px; background: #f9faf7; }
+    .quote-layout {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* form groupings */
+    .quote-form fieldset { border: 0; padding: 0; margin: 0 0 28px; }
+    .quote-form legend {
+      font-family: 'Barlow', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a2a1a;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #e9eee2;
+      width: 100%;
+    }
+    .quote-form .form-hint {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    /* file upload */
+    .file-field input[type="file"] {
+      padding: 12px;
+      background: #fafcf7;
+      border: 1.5px dashed #b9cfa1;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      width: 100%;
+    }
+    .file-field input[type="file"]::file-selector-button {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: #fff;
+      background: #346c2b;
+      border: 0;
+      border-radius: 6px;
+      padding: 8px 14px;
+      margin-right: 12px;
+      cursor: pointer;
+    }
+
+    /* sidebar */
+    .quote-aside { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 28px; }
+    .aside-card {
+      background: #fff;
+      border: 1px solid #eef1ea;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 6px 22px rgba(14,61,46,0.06);
+    }
+    .aside-card h3 {
+      font-family: 'Barlow', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a2a1a;
+      margin: 0 0 18px;
+    }
+    .steps { list-style: none; margin: 0; padding: 0; counter-reset: step; }
+    .steps li {
+      position: relative;
+      padding: 0 0 20px 46px;
+      counter-increment: step;
+    }
+    .steps li:last-child { padding-bottom: 0; }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0; top: -2px;
+      width: 30px; height: 30px;
+      background: #f0f5eb;
+      color: #346c2b;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+    }
+    .steps li:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      left: 14px; top: 30px; bottom: 6px;
+      width: 2px;
+      background: #e3ead8;
+    }
+    .steps strong { display: block; color: #1a2a1a; font-size: 0.95rem; margin-bottom: 2px; }
+    .steps span { color: #5c6359; font-size: 0.875rem; line-height: 1.5; }
+
+    .aside-contact-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px; }
+    .aside-contact-item:last-child { margin-bottom: 0; }
+    .aside-contact-item svg { width: 20px; height: 20px; color: #8BC342; flex-shrink: 0; margin-top: 2px; }
+    .aside-contact-item strong { display: block; font-size: 0.82rem; color: #1a2a1a; }
+    .aside-contact-item a, .aside-contact-item span { color: #5c6359; font-size: 0.9rem; text-decoration: none; }
+    .aside-contact-item a:hover { color: #346c2b; }
+
+    .aside-certs { display: flex; flex-wrap: wrap; gap: 8px; }
+    .aside-certs span {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+      text-transform: uppercase; color: #346c2b;
+      background: #f0f5eb; border: 1px solid #d8e6c6;
+      padding: 6px 12px; border-radius: 20px;
+    }
+
+    .form-success {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      background: #f0f5eb;
+      border: 1px solid #8BC342;
+      color: #2c5523;
+      border-radius: 10px;
+      padding: 16px 18px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    .form-success:not([hidden]) { display: flex; }
+    .form-success svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+    @media (max-width: 900px) {
+      .quote-layout { grid-template-columns: 1fr; gap: 36px; }
+      .quote-aside { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="logo-img" />
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="capabilities.html">Capabilities</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="devices.html">Devices</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="quote-hero">
+    <div class="container">
+      <span class="section-eyebrow">Let's Build Something</span>
+      <h1>Request a Quote</h1>
+      <p>Tell us about your cable or connector program. A Gii engineer will review your request and respond within one business day — no call center, no runaround.</p>
+    </div>
+  </section>
+
+  <!-- ===== QUOTE FORM ===== -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="quote-layout">
+
+        <!-- FORM -->
+        <div class="contact-form-wrap">
+          <form class="contact-form quote-form" id="contact-form" novalidate enctype="multipart/form-data">
+
+            <fieldset>
+              <legend>Your Details</legend>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name <span class="required">*</span></label>
+                  <input type="text" id="first-name" name="first_name" placeholder="Jane" required />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name <span class="required">*</span></label>
+                  <input type="text" id="last-name" name="last_name" placeholder="Smith" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Business Email <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="company">Company <span class="required">*</span></label>
+                  <input type="text" id="company" name="company" placeholder="Your Company" required />
+                </div>
+                <div class="form-group">
+                  <label for="job-title">Job Title</label>
+                  <input type="text" id="job-title" name="job_title" placeholder="e.g. Sourcing Manager" />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Your Program</legend>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="product-type">Product Type</label>
+                  <select id="product-type" name="product_type">
+                    <option value="">Select a product type…</option>
+                    <option value="custom-connector">Custom Connector</option>
+                    <option value="cable-assembly">Cable Assembly</option>
+                    <option value="electromechanical">Electromechanical Assembly</option>
+                    <option value="pcba">PCBA</option>
+                    <option value="metal-stamping">Metal Stamping</option>
+                    <option value="multiple">Multiple / Full Device</option>
+                    <option value="not-sure">Not Sure Yet</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="device-category">Application / Device Category</label>
+                  <select id="device-category" name="device_category">
+                    <option value="">Select a category…</option>
+                    <option value="energy-based">Energy-Based Devices</option>
+                    <option value="diagnostic-imaging">Diagnostic Imaging</option>
+                    <option value="surgical-instruments">Surgical Instruments</option>
+                    <option value="robotics">Robotics &amp; Navigation</option>
+                    <option value="patient-monitoring">Patient Monitoring</option>
+                    <option value="pain-management">Pain Management</option>
+                    <option value="industrial">Industrial / Commercial</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="manufacturing-status">Current Status</label>
+                  <select id="manufacturing-status" name="manufacturing_status">
+                    <option value="">Select a status…</option>
+                    <option value="new-design">New Design</option>
+                    <option value="transfer">Transfer from Another Manufacturer</option>
+                    <option value="second-source">Second Source</option>
+                    <option value="cost-down">Cost-Down of Existing Part</option>
+                    <option value="not-sure">Not Sure Yet</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="annual-volume">Estimated Annual Volume (EAU)</label>
+                  <select id="annual-volume" name="annual_volume">
+                    <option value="">Select a range…</option>
+                    <option value="under-10k">Under 10,000 units</option>
+                    <option value="10k-50k">10,000 – 50,000 units</option>
+                    <option value="50k-250k">50,000 – 250,000 units</option>
+                    <option value="250k-plus">250,000+ units</option>
+                    <option value="not-sure">Not Sure Yet</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="target-cost">Target Unit Cost</label>
+                  <input type="text" id="target-cost" name="target_cost" placeholder="Optional, e.g. $4.50" />
+                </div>
+                <div class="form-group">
+                  <label for="timeline">Desired Timeline</label>
+                  <select id="timeline" name="timeline">
+                    <option value="">Select a timeline…</option>
+                    <option value="asap">As soon as possible</option>
+                    <option value="1-3-months">1 – 3 months</option>
+                    <option value="3-6-months">3 – 6 months</option>
+                    <option value="6-plus-months">6+ months</option>
+                    <option value="exploring">Just exploring</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group file-field">
+                <label for="drawings">Drawings &amp; Specifications</label>
+                <input type="file" id="drawings" name="drawings" multiple accept=".pdf,.dxf,.dwg,.step,.stp,.igs,.iges,.zip,.png,.jpg,.jpeg" />
+                <p class="form-hint">Optional. Attach prints, BOMs, or specs (PDF, STEP, DXF, DWG, ZIP, images).</p>
+              </div>
+              <div class="form-group">
+                <label for="message">Program Details <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us about your device, requirements, quantities, and any challenges you're trying to solve…" required></textarea>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+              <span class="btn-text">Submit Request</span>
+              <span class="btn-loading" hidden>Sending…</span>
+            </button>
+            <p class="form-note">We typically respond within one business day. Your information is kept confidential.</p>
+            <div class="form-success" id="form-success" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Thank you — your request has been received. A Gii engineer will be in touch within one business day.
+            </div>
+          </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="quote-aside">
+          <div class="aside-card">
+            <h3>What Happens Next</h3>
+            <ol class="steps">
+              <li><strong>We review your request</strong><span>A Gii engineer reads your details — not a generic sales queue.</span></li>
+              <li><strong>We reach out within one business day</strong><span>To confirm scope and ask any clarifying questions.</span></li>
+              <li><strong>You get a tailored response</strong><span>DFM feedback, cost-down ideas, and a clear path to a quote.</span></li>
+            </ol>
+          </div>
+
+          <div class="aside-card">
+            <h3>Prefer to Reach Us Directly?</h3>
+            <div class="aside-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.61a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .87h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.34a16 16 0 006.72 6.72l1.74-1.74a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <div><strong>Phone</strong><a href="tel:+15089779100">(508) 977-9100</a></div>
+            </div>
+            <div class="aside-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div><strong>Email</strong><a href="mailto:info@globalinterconnect.com">info@globalinterconnect.com</a></div>
+            </div>
+            <div class="aside-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><strong>Headquarters</strong><span>Pocasset, Massachusetts, USA</span></div>
+            </div>
+          </div>
+
+          <div class="aside-card">
+            <h3>Built on Quality</h3>
+            <div class="aside-certs">
+              <span>FDA Registered</span>
+              <span>ISO 13485</span>
+              <span>ISO 8 Clean Room</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="footer-logo" />
+          <p>Medical device cable &amp; connector specialists. Engineering-led, value-driven custom connector and cable assembly for energy-based medical devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. Trusted by leading OEMs for over three decades.</p>
+          <div class="footer-certs">
+            <span>FDA Registered</span>
+            <span>ISO 13485</span>
+          </div>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#advantage">The Gii Advantage</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="https://www.globalinterconnect.com/careers/" target="_blank" rel="noopener">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Capabilities</h4>
+          <ul>
+            <li><a href="capabilities.html">Custom Connectors</a></li>
+            <li><a href="capabilities.html">Cable Assemblies</a></li>
+            <li><a href="capabilities.html">Electromechanical Assembly</a></li>
+            <li><a href="capabilities.html">PCBA</a></li>
+            <li><a href="capabilities.html">Metal Stamping</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="quote.html">Request a Quote</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Global Interconnect, Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+</body>
+</html>

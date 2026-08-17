@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Custom medical cable and connector assemblies for energy-based devices — electrophysiology, ablation (RF, cryo, plasma, PFA), electrosurgical, orthopedics, urology, and pain management. FDA-registered, ISO 13485. Engineering-led and value-driven." />
+  <title>Medical Device Cables &amp; Connectors | Energy-Based Specialties | Global Interconnect, Inc.</title>
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Global Interconnect, Inc." />
+  <meta property="og:url"         content="https://www.globalinterconnect.com/devices/" />
+  <meta property="og:title"       content="Medical Device Cables &amp; Connectors | Global Interconnect, Inc." />
+  <meta property="og:description" content="Purpose-built cable and connector assemblies for energy-based devices — electrophysiology, ablation (RF, cryo, plasma, PFA), electrosurgical, orthopedics, urology, and pain management. Engineering-led and value-driven — FDA-registered, ISO 13485." />
+  <meta property="og:image"       content="https://www.globalinterconnect.com/assets/images/devices/rf-ablation.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Medical Device Cables &amp; Connectors | Gii" />
+  <meta name="twitter:description" content="Custom cable and connector assemblies for energy-based devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. FDA-registered, ISO 13485." />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+
+    /* ─── VIDEO HERO ──────────────────────────────────────────── */
+    .devices-hero {
+      position: relative;
+      width: 100%;
+      /* Padding drives the height — content never gets clipped.
+         clamp(min, preferred, max) shrinks gracefully on small viewports. */
+      padding: clamp(90px, 16vh, 160px) 24px clamp(80px, 14vh, 130px);
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0c2e1e;
+    }
+
+    .devices-hero video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;   /* always fills the box without distorting */
+      object-position: center;
+      z-index: 0;
+    }
+
+    .devices-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10, 28, 20, 0.55) 0%,
+        rgba(10, 28, 20, 0.45) 60%,
+        rgba(10, 28, 20, 0.75) 100%
+      );
+      z-index: 1;
+    }
+
+    .devices-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      max-width: 820px;
+      padding: 0 24px;
+    }
+
+    .devices-hero-content .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #7fcea0;
+      margin-bottom: 18px;
+    }
+
+    .devices-hero-content h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .devices-hero-content p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 300;
+      opacity: 0.92;
+      max-width: 620px;
+      margin: 0 auto 32px;
+      line-height: 1.65;
+    }
+
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero-scroll-hint svg {
+      animation: bounce 1.8s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(6px); }
+    }
+
+    /* ─── CATEGORY NAV TABS ──────────────────────────────────── */
+    .category-nav {
+      position: sticky;
+      top: 64px; /* below site header */
+      z-index: 100;
+      background: white;
+      border-bottom: 1px solid #e5e5e5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .category-nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .category-nav-inner::-webkit-scrollbar { display: none; }
+
+    .cat-tab {
+      flex-shrink: 0;
+      padding: 18px 22px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #555;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .cat-tab:hover { color: #1a4d3e; }
+    .cat-tab.active { color: #1a4d3e; border-bottom-color: #1a4d3e; }
+
+    /* ─── INTRO STRIP ────────────────────────────────────────── */
+    .devices-intro {
+      background: white;
+      padding: 72px 24px;
+    }
+
+    .devices-intro-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .intro-lead {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.35;
+    }
+
+    .intro-lead em {
+      font-style: normal;
+      color: #1a4d3e;
+    }
+
+    .intro-body {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #555;
+    }
+
+    /* ─── SECTION WRAPPER ────────────────────────────────────── */
+    .device-section {
+      padding: 88px 24px;
+    }
+
+    .device-section:nth-child(odd) {
+      background: #f8faf9;
+    }
+
+    .device-section:nth-child(even) {
+      background: white;
+    }
+
+    .device-section-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    /* Reverse layout on even sections */
+    .device-section-inner.reverse {
+      direction: rtl;
+    }
+
+    .device-section-inner.reverse > * {
+      direction: ltr;
+    }
+
+    /* ─── SECTION MEDIA PANEL ────────────────────────────────── */
+    .section-media {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    .section-media img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Multi-image grid variant */
+    .section-media-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    .section-media-grid img {
+      width: 100%;
+      height: 186px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .section-media-grid img:first-child {
+      grid-column: span 2;
+      height: 200px;
+    }
+
+    /* ─── SECTION TEXT PANEL ─────────────────────────────────── */
+    .section-text {}
+
+    .section-text .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #1a4d3e;
+      margin-bottom: 14px;
+    }
+
+    .section-text .tag svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    .section-text h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      margin-top: 0;
+    }
+
+    .section-text .lead {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 28px;
+    }
+
+    /* ─── FEATURE LIST ───────────────────────────────────────── */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .feature-list li::before {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #1a4d3e;
+      margin-top: 6px;
+    }
+
+    /* ─── SECTION ANCHOR ─────────────────────────────────────── */
+    .section-anchor {
+      scroll-margin-top: 120px;
+    }
+
+    /* ─── COMPARISON TABLE ───────────────────────────────────── */
+    .comparison-section {
+      padding: 88px 24px;
+      background: #f8faf9;
+    }
+
+    .comparison-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .comparison-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .comparison-header .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a4d3e;
+      margin-bottom: 12px;
+    }
+
+    .comparison-header h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 14px;
+      margin-top: 0;
+    }
+
+    .comparison-header p {
+      font-size: 1rem;
+      color: #666;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .comparison-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .comp-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    .comp-card-head {
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .comp-card-head.custom { background: #1a4d3e; color: white; }
+    .comp-card-head.ots    { background: #f0f0f0; color: #444; }
+
+    .comp-card-head h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .comp-card-head p {
+      font-size: 0.85rem;
+      margin: 4px 0 0;
+      opacity: 0.85;
+    }
+
+    .comp-card-body {
+      padding: 0;
+    }
+
+    .comp-row {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      border-bottom: 1px solid #eee;
+    }
+
+    .comp-row:last-child { border-bottom: none; }
+
+    .comp-row-label {
+      padding: 14px 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      border-right: 1px solid #eee;
+      background: #fafafa;
+      display: flex;
+      align-items: center;
+    }
+
+    .comp-row-val {
+      padding: 14px 20px;
+      font-size: 0.85rem;
+      color: #444;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+    }
+
+    .comp-card.custom .comp-row-val { color: #1a4d3e; font-weight: 500; }
+
+    .recommendation-box {
+      background: white;
+      border-radius: 10px;
+      padding: 24px 28px;
+      border-left: 5px solid #1a4d3e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .recommendation-box strong { color: #1a4d3e; }
+    .recommendation-box p { margin: 0; font-size: 0.95rem; line-height: 1.65; color: #333; }
+
+    /* ─── CTA ────────────────────────────────────────────────── */
+    .cta-section {
+      background: linear-gradient(135deg, #1a4d3e 0%, #0f3d31 100%);
+      color: white;
+      padding: 88px 24px;
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      opacity: 0.92;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .cta-section .btn {
+      background: white;
+      color: #1a4d3e;
+      font-weight: 700;
+      padding: 15px 42px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.25s ease;
+      font-size: 1rem;
+    }
+
+    .cta-section .btn:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .devices-intro-inner { grid-template-columns: 1fr; gap: 28px; }
+      .device-section-inner,
+      .device-section-inner.reverse { grid-template-columns: 1fr; direction: ltr; }
+      .comparison-cards { grid-template-columns: 1fr; }
+      .feature-list { grid-template-columns: 1fr; }
+      .devices-hero { height: 72vh; }
+      .section-media img { height: 260px; }
+    }
+
+    @media (max-width: 600px) {
+      .cat-tab { padding: 16px 14px; font-size: 0.82rem; }
+      .device-section { padding: 60px 20px; }
+      .section-text h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="logo-img" />
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="capabilities.html">Capabilities</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="devices.html" class="active">Devices</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== VIDEO HERO ===== -->
+  <section class="devices-hero">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="https://embed-ssl.wistia.com/deliveries/08ba3d40e229c51cb6984dbe94ec924d20bd3632.bin?file=video.mp4" type="video/mp4" />
+    </video>
+    <div class="devices-hero-overlay"></div>
+    <div class="devices-hero-content">
+      <span class="eyebrow">Custom-Engineered Solutions</span>
+      <h1>The Cable &amp; Connector Inside Your Device</h1>
+      <p>Gii specializes in the cables and connectors that make energy-based medical devices function — across electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management — engineered for zero-failure performance and manufactured with a relentless focus on reducing your cost per unit.</p>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Explore</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== STICKY CATEGORY TABS ===== -->
+  <nav class="category-nav" id="category-nav">
+    <div class="category-nav-inner">
+      <a href="#energy-based"  class="cat-tab active" data-target="energy-based">Energy-Based</a>
+      <a href="#connectors"    class="cat-tab" data-target="connectors">Custom Connectors</a>
+      <a href="#rf-ablation"   class="cat-tab" data-target="rf-ablation">Ablation</a>
+      <a href="#electrophysiology" class="cat-tab" data-target="electrophysiology">Electrophysiology</a>
+      <a href="#electrosurgical"   class="cat-tab" data-target="electrosurgical">Electrosurgical</a>
+      <a href="#scopes-probes" class="cat-tab" data-target="scopes-probes">Scopes &amp; Probes</a>
+      <a href="#sports-med"    class="cat-tab" data-target="sports-med">Orthopedics</a>
+      <a href="#pain-mgmt"     class="cat-tab" data-target="pain-mgmt">Pain Management</a>
+      <a href="#urology"       class="cat-tab" data-target="urology">Urology</a>
+      <a href="#cable"         class="cat-tab" data-target="cable">Cable Assemblies</a>
+      <a href="#custom-vs-ots" class="cat-tab" data-target="custom-vs-ots">Custom vs. OTS</a>
+    </div>
+  </nav>
+
+  <!-- ===== INTRO ===== -->
+  <section class="devices-intro">
+    <div class="devices-intro-inner">
+      <div class="intro-lead">
+        Your connector shouldn't be <em>the most expensive part</em> of your device.
+      </div>
+      <p class="intro-body">
+        Gii engineers and manufactures the cables and connectors inside medical devices — and our primary focus is finding the cost that's hiding in your assembly. Whether that's a branded connector that can be purpose-built for a fraction of the price, materials that are over-specified for your application, or supply chain complexity that can be simplified — our engineering team finds it, fixes it, and validates it to zero-failure standards.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 0 — ENERGY-BASED DEVICES
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="device-section section-anchor" id="energy-based">
+    <div class="device-section-inner reverse">
+
+      <div class="section-media">
+        <img src="assets/images/devices/rf-ablation.jpg" alt="Energy-Based Device Cable Assembly" />
+      </div>
+
+      <div class="section-text">
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Core Specialty
+        </span>
+        <h2>Energy-Based Devices</h2>
+        <p class="lead">
+          Energy-based devices — electrosurgical units, RF ablation systems, microwave platforms, ultrasonic devices, and laser delivery systems — place some of the most demanding requirements on cables and connectors. High voltage, RF shielding, precise impedance matching, sterilization compatibility, and zero-failure safety standards all apply simultaneously. This is Gii's deepest area of specialization, and where our engineering team delivers the most consistent cost reduction.
+        </p>
+        <ul class="feature-list">
+          <li>Electrosurgical unit (ESU) cables</li>
+          <li>RF &amp; microwave delivery assemblies</li>
+          <li>Ultrasonic device cables</li>
+          <li>Laser fiber delivery systems</li>
+          <li>High-voltage rated per IEC 60601</li>
+          <li>EMI/RFI shielded designs</li>
+          <li>Single-use &amp; reusable configurations</li>
+          <li>DFM review included on every program</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 1 — CUSTOM MEDICAL CONNECTORS
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="device-section section-anchor" id="connectors">
+    <div class="device-section-inner">
+
+      <div class="section-media-grid">
+        <img src="assets/images/devices/nonlocking-connector.png" alt="Non-Locking Connector" />
+        <img src="assets/images/devices/locking-connector.png"    alt="Locking Connector" />
+        <img src="assets/images/devices/purpose-built-connector.png" alt="Purpose-Built Connector" style="grid-column:span 2; height:200px;" />
+      </div>
+
+      <div class="section-text">
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          Custom Connectors
+        </span>
+        <h2>Custom Medical Connectors</h2>
+        <p class="lead">
+          Expensive branded off-the-shelf connectors work — but they're priced for the brand, not the performance. If your device uses a premium push-pull connector simply because it was the easiest spec to write, you're likely leaving significant margin on the table at scale. Gii engineers purpose-built alternatives in push-pull, locking, non-locking, and breakaway configurations that match or exceed clinical performance at a fraction of the branded cost — with full drop-in compatibility where required.
+        </p>
+        <ul class="feature-list">
+          <li>Non-locking push-pull designs</li>
+          <li>Bayonet &amp; screw-locking styles</li>
+          <li>1–30+ contacts per design</li>
+          <li>Purpose-built alternatives to expensive off-the-shelf connectors</li>
+          <li>Biocompatible materials</li>
+          <li>Single-use &amp; reusable options</li>
+          <li>Custom overmolded housings</li>
+          <li>Fully proprietary architectures</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 2 — RF ABLATION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="device-section section-anchor" id="rf-ablation">
+    <div class="device-section-inner reverse">
+
+      <div class="section-media">
+        <img src="assets/images/devices/rf-ablation.jpg" alt="RF Ablation Assembly" />
+      </div>
+
+      <div class="section-text">
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Ablation
+        </span>
+        <h2>Ablation Assemblies — RF, Cryo, Plasma &amp; PFA</h2>
+        <p class="lead">
+          Ablation cables and connectors — across RF, cryo, plasma, and pulsed field ablation (PFA) — sit at the intersection of high voltage, precise signal integrity, and clinical safety — and the cost per unit compounds fast for single-use programs. From cardiac ablation in electrophysiology to ablation probes used in orthopedics, urology, and pain management, Gii has deep experience in the IEC 60601 compliance these assemblies demand, and our DFM engineers consistently find simplifications — connector configurations, insulation materials, contact count — that reduce per-unit cost without affecting the clinical outcome.
+        </p>
+        <ul class="feature-list">
+          <li>RF, cryo, plasma &amp; PFA energy delivery</li>
+          <li>Push-pull RF connectors (1–30+ contacts)</li>
+          <li>Breakaway connectors for pain probes</li>
+          <li>High-voltage rated per IEC 60601</li>
+          <li>Low-leakage high-voltage insulation</li>
+          <li>Full DHR/DHF documentation per program</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 3 — SCOPES, PROBES & CATHETERS
+  ═══════════════════════════════════════════════════════════ -->
+  <!-- ===== SECTION — ELECTROPHYSIOLOGY ===== -->
+  <section class="device-section section-anchor" id="electrophysiology">
+    <div class="device-section-inner">
+
+      <div class="section-media">
+        <img src="assets/images/devices/rf-ablation.jpg" alt="Electrophysiology Cable Assembly" />
+      </div>
+
+      <div class="section-text">
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Electrophysiology
+        </span>
+        <h2>Electrophysiology &amp; Cardiac Ablation</h2>
+        <p class="lead">
+          Electrophysiology catheters and cardiac ablation systems demand precise signal integrity, high contact counts, and uncompromising patient safety — usually across single-use, high-volume programs. Gii engineers the diagnostic and ablation cable-and-connector sub-assemblies inside EP devices, applying value engineering to high-density connectors and mapping cables without touching clinical performance or regulatory status.
+        </p>
+        <ul class="feature-list">
+          <li>High-density mapping &amp; diagnostic cables</li>
+          <li>Push-pull connectors (20–60+ contacts)</li>
+          <li>RF &amp; PFA ablation delivery</li>
+          <li>Single-use, high-volume designs</li>
+          <li>Signal integrity &amp; low-noise shielding</li>
+          <li>Full DHR/DHF documentation per program</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SECTION — ELECTROSURGICAL ===== -->
+  <section class="device-section section-anchor" id="electrosurgical">
+    <div class="device-section-inner reverse">
+
+      <div class="section-media">
+        <img src="assets/images/devices/rf-ablation.jpg" alt="Electrosurgical Cable Assembly" />
+      </div>
+
+      <div class="section-text">
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Electrosurgical
+        </span>
+        <h2>Electrosurgical Devices</h2>
+        <p class="lead">
+          Electrosurgical generators, handpieces, and return-electrode assemblies carry high-frequency energy that places exacting demands on connector dielectric strength and cable durability. Gii designs custom electrosurgical cable and connector sub-assemblies — frequently replacing over-specified branded connectors with purpose-built alternatives — engineered to IEC 60601 and validated to zero-failure standards.
+        </p>
+        <ul class="feature-list">
+          <li>Monopolar &amp; bipolar handpiece cables</li>
+          <li>High-frequency, high-voltage rated</li>
+          <li>Custom connectors vs. branded OTS</li>
+          <li>Return-electrode &amp; footswitch assemblies</li>
+          <li>Reusable &amp; single-use options</li>
+          <li>Full DHR/DHF documentation per program</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="device-section section-anchor" id="scopes-probes">
+    <div class="device-section-inner">
+
+      <div class="section-media">
+        <img src="assets/images/devices/probe.png" alt="Scopes and Probes" />
+      </div>
+
+      <div class="section-text">
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Scopes &amp; Probes
+        </span>
+        <h2>Scopes, Probes &amp; Catheters</h2>
+        <p class="lead">
+          In colonoscopes, laparoscopes, and ultrasound probes, the cable and connector are frequently the highest-cost component in the assembly — and often the most over-specified. Gii engineers have deep experience in the signal integrity, flexibility, and sterilization requirements these devices demand, and apply rigorous DFM to identify where those specs can be met at meaningfully lower cost without compromising imaging quality or procedural safety.
+        </p>
+        <ul class="feature-list">
+          <li>Colonoscope &amp; laparoscope cables</li>
+          <li>Ultrasound &amp; imaging cables</li>
+          <li>Multi-lumen catheter assemblies</li>
+          <li>RF &amp; microwave delivery</li>
+          <li>Sterilization-rated flexible tubing</li>
+          <li>Shielded EMI/RFI designs</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 4 — PAIN MANAGEMENT
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="device-section section-anchor" id="pain-mgmt">
+    <div class="device-section-inner reverse">
+
+      <div class="section-media-grid">
+        <img src="assets/images/devices/pain-management.png" alt="Pain Management Assembly" />
+        <img src="assets/images/devices/rf-pain-probe.png"   alt="RF Pain Probe" />
+      </div>
+
+      <div class="section-text">
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 5.64 3.582 10.2 8 10.2s8-4.56 8-10.2c0-3.32-2.67-7.25-8-11.8z"/></svg>
+          Pain Management
+        </span>
+        <h2>Pain Management Devices</h2>
+        <p class="lead">
+          Single-use RF ablation programs for interventional pain live or die on per-unit cost. Breakaway connectors, high-voltage insulation, and sterilization-compatible packaging all need to be engineered to single-use economics — not specified like a reusable device. Gii's engineers know exactly where the cost is in these assemblies, and how to remove it while keeping the high-voltage safety requirements that make the procedure viable.
+        </p>
+        <ul class="feature-list">
+          <li>Single-use RF ablation probes</li>
+          <li>Purpose-built breakaway connectors</li>
+          <li>Sterilization-compatible packaging</li>
+          <li>High-voltage RF insulation</li>
+          <li>Precision contact alignment</li>
+          <li>Operator-safety engineered</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 4b — ORTHOPEDICS
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="device-section section-anchor" id="sports-med">
+    <div class="device-section-inner reverse">
+
+      <div class="section-media">
+        <img src="assets/images/insights/signati.jpg" alt="Orthopedic Device Cable Assembly" />
+      </div>
+
+      <div class="section-text">
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Orthopedics
+        </span>
+        <h2>Orthopedics &amp; Arthroscopy</h2>
+        <p class="lead">
+          Orthopedic and sports-medicine devices — arthroscopic shavers, RF ablation probes, imaging systems, and surgical handpieces — share a common cable and connector challenge: premium branded connectors specified during early design that become an ongoing cost burden at volume. Gii works with orthopedics OEMs to re-engineer those assemblies without touching the device's clinical performance or regulatory status.
+        </p>
+        <ul class="feature-list">
+          <li>Arthroscopic shaver &amp; resector cables</li>
+          <li>Surgical handpiece assemblies</li>
+          <li>RF ablation probe connections</li>
+          <li>Imaging &amp; visualization cables</li>
+          <li>Drop-in connector replacements</li>
+          <li>Supply chain consolidation</li>
+          <li>Single-use &amp; reusable versions</li>
+          <li>Production to 20,000+ units/week</li>
+        </ul>
+        <div style="margin-top:24px; padding:18px 20px; background:#f0f7eb; border-left:4px solid #8BC342; border-radius:6px;">
+          <p style="margin:0; font-size:0.9rem; color:#333; line-height:1.6;"><strong style="color:#1a4d3e;">Proven Result:</strong> Gii delivered $7M in cost savings for a $5B orthopedics OEM — reducing components from 6 to 2, suppliers from 3 to 1, and ramping production to 20,000 pieces per week. <a href="https://www.globalinterconnect.com/how-global-interconnect-changed-the-game-for-a-global-sports-medical-device-manufacturer/" target="_blank" rel="noopener" style="color:#1a4d3e; font-weight:600;">Read the case study →</a></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 5 — UROLOGY & ENDOSCOPY
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="device-section section-anchor" id="urology">
+    <div class="device-section-inner">
+
+      <div class="section-media">
+        <img src="assets/images/devices/urology.jpg" alt="Urology Device Assembly" />
+      </div>
+
+      <div class="section-text">
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          Urology &amp; Endoscopy
+        </span>
+        <h2>Urology &amp; Endoscopy</h2>
+        <p class="lead">
+          Custom cable and connector assemblies for kidney stone management and urological endoscopy — precision irrigation, aspiration, and multi-lumen fluid pathway engineering paired with connectors built to minimize cost without sacrificing performance in demanding procedural environments.
+        </p>
+        <ul class="feature-list">
+          <li>Stone management device assemblies</li>
+          <li>Irrigation &amp; aspiration tubing</li>
+          <li>Urological scope connectors</li>
+          <li>Multi-lumen simultaneous functions</li>
+          <li>Precision fluid pathway design</li>
+          <li>Compatible with existing platforms</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 6 — CABLE ASSEMBLIES
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="device-section section-anchor" id="cable">
+    <div class="device-section-inner reverse">
+
+      <div class="section-media">
+        <img src="assets/images/products/cable-assembly.png" alt="Cable Assembly" />
+      </div>
+
+      <div class="section-text">
+        <span class="tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14M9 9l3 3 3-3M9 15l3-3 3 3"/></svg>
+          Cable Assemblies
+        </span>
+        <h2>Cable &amp; Harness Assemblies</h2>
+        <p class="lead">
+          Engineered wire, cable, and harness assemblies across the full spectrum of medical applications — single-use to reusable, shielded to coaxial, always 100% electrically tested. Our material optimization process ensures you're using the right conductor, insulation, and jacket spec for your application — not an over-engineered one that inflates your COGS.
+        </p>
+        <ul class="feature-list">
+          <li>Custom extruded wire &amp; cable</li>
+          <li>Shielded, coaxial, multi-conductor</li>
+          <li>Single-use &amp; reusable versions</li>
+          <li>Full traceability and documentation</li>
+          <li>Biocompatible jacketing</li>
+          <li>Custom length, color &amp; termination</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CUSTOM VS. OFF-THE-SHELF
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="comparison-section section-anchor" id="custom-vs-ots">
+    <div class="comparison-inner">
+
+      <div class="comparison-header">
+        <span class="eyebrow">Decision Guide</span>
+        <h2>Custom Solution vs. Off-the-Shelf</h2>
+        <p>A practical side-by-side to help you evaluate the right path for your program.</p>
+      </div>
+
+      <div class="comparison-cards">
+
+        <!-- CUSTOM -->
+        <div class="comp-card custom">
+          <div class="comp-card-head custom">
+            <div>
+              <h3>✦ Choose Custom (Gii Recommends)</h3>
+              <p>When standard solutions fall short of your requirements</p>
+            </div>
+          </div>
+          <div class="comp-card-body">
+            <div class="comp-row"><span class="comp-row-label">Fit</span><span class="comp-row-val">Unique form factor required</span></div>
+            <div class="comp-row"><span class="comp-row-label">Contacts</span><span class="comp-row-val">10+ contacts in tight space</span></div>
+            <div class="comp-row"><span class="comp-row-label">Performance</span><span class="comp-row-val">High-voltage, RF, or EMI-critical</span></div>
+            <div class="comp-row"><span class="comp-row-label">Volume</span><span class="comp-row-val">&gt;10K units/year; tooling justified</span></div>
+            <div class="comp-row"><span class="comp-row-label">Material</span><span class="comp-row-val">PTFE, PFA, or biocomp. coatings needed</span></div>
+            <div class="comp-row"><span class="comp-row-label">Use Type</span><span class="comp-row-val">Single-use breakaway or sterilized</span></div>
+            <div class="comp-row"><span class="comp-row-label">Regulatory</span><span class="comp-row-val">510(k) predicate advantage</span></div>
+            <div class="comp-row"><span class="comp-row-label">Timeline</span><span class="comp-row-val">Can absorb 6–9 mo. eng. phase</span></div>
+            <div class="comp-row"><span class="comp-row-label">Supply</span><span class="comp-row-val">Sole-source partnership preferred</span></div>
+          </div>
+        </div>
+
+        <!-- OTS -->
+        <div class="comp-card ots">
+          <div class="comp-card-head ots">
+            <div>
+              <h3>Off-the-Shelf Adaptation</h3>
+              <p>When standard components can meet your needs</p>
+            </div>
+          </div>
+          <div class="comp-card-body">
+            <div class="comp-row"><span class="comp-row-label">Fit</span><span class="comp-row-val">Standard form factors work fine</span></div>
+            <div class="comp-row"><span class="comp-row-label">Contacts</span><span class="comp-row-val">Fewer than 10, standard configs</span></div>
+            <div class="comp-row"><span class="comp-row-label">Performance</span><span class="comp-row-val">Standard electrical specs sufficient</span></div>
+            <div class="comp-row"><span class="comp-row-label">Volume</span><span class="comp-row-val">Low-to-medium; cost-sensitive</span></div>
+            <div class="comp-row"><span class="comp-row-label">Material</span><span class="comp-row-val">Commercial polymers acceptable</span></div>
+            <div class="comp-row"><span class="comp-row-label">Use Type</span><span class="comp-row-val">Connector reused across procedures</span></div>
+            <div class="comp-row"><span class="comp-row-label">Regulatory</span><span class="comp-row-val">Leveraging established predicates</span></div>
+            <div class="comp-row"><span class="comp-row-label">Timeline</span><span class="comp-row-val">Need to launch in &lt;6 months</span></div>
+            <div class="comp-row"><span class="comp-row-label">Supply</span><span class="comp-row-val">Multi-source, vendor-agnostic OK</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="recommendation-box">
+        <p><strong>Gii's Recommendation:</strong> When in doubt, start with an engineering conversation. We'll help you evaluate cost, timeline, and regulatory implications — then recommend the best path forward, whether that's custom engineering or smart adaptation of existing standards.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <h2>Let's Find the Cost Savings in Your Cable &amp; Connector</h2>
+      <p>Tell us about your device and current assembly. Our engineering team will review your design and identify specific opportunities to reduce cost — without compromising performance or compliance.</p>
+      <a href="index.html#contact" class="btn">Request a Free Cost-Down Review</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="footer-logo" />
+          <p>Medical device cable &amp; connector specialists. Engineering-led, value-driven custom connector and cable assembly for energy-based medical devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. Trusted by leading OEMs for over three decades.</p>
+          <div class="footer-certs">
+            <span>FDA Registered</span>
+            <span>ISO 13485</span>
+            
+          </div>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Gii</a></li>
+            <li><a href="index.html#advantage">The Gii Advantage</a></li>
+            <li><a href="index.html#quality">Quality &amp; Certifications</a></li>
+            <li><a href="https://www.globalinterconnect.com/careers/" target="_blank" rel="noopener">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Products &amp; Services</h4>
+          <ul>
+            <li><a href="devices.html">Devices &amp; Products</a></li>
+            <li><a href="capabilities.html">Manufacturing Capabilities</a></li>
+            <li><a href="expertise.html">Industry Expertise</a></li>
+            <li><a href="index.html#resources">Resources &amp; Insights</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="https://www.globalinterconnect.com/understanding-custom-medical-connectors/" target="_blank" rel="noopener">Custom Connectors 101</a></li>
+            <li><a href="https://www.globalinterconnect.com/understanding-medical-cable-assemblies/" target="_blank" rel="noopener">Cable Assembly Guide</a></li>
+            <li><a href="https://www.globalinterconnect.com/design-considerations-single-use-medical-connectors/" target="_blank" rel="noopener">Single-Use Design</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Global Interconnect, Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // ── Active tab tracking on scroll ──────────────────────────
+    (function () {
+      const tabs     = document.querySelectorAll('.cat-tab[data-target]');
+      const sections = Array.from(tabs).map(t => document.getElementById(t.dataset.target)).filter(Boolean);
+
+      function setActive(id) {
+        tabs.forEach(t => t.classList.toggle('active', t.dataset.target === id));
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+
+      sections.forEach(s => observer.observe(s));
+
+      // Smooth scroll on tab click
+      tabs.forEach(tab => {
+        tab.addEventListener('click', e => {
+          e.preventDefault();
+          const target = document.getElementById(tab.dataset.target);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    })();
+  </script>
+  <script src="assets/js/chatbot.js"></script>
+</body>
+</html>

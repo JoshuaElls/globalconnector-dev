@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Global Interconnect, Inc. (Gii) — engineering-led cable &amp; connector specialists for energy-based medical devices spanning electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. 30+ years, FDA-registered, ISO 13485 certified." />
+  <title>About Us | Global Interconnect, Inc. | Medical Device Cable &amp; Connector Specialists</title>
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Global Interconnect, Inc." />
+  <meta property="og:url"         content="https://www.globalinterconnect.com/about/" />
+  <meta property="og:title"       content="About Gii | Medical Device Cable &amp; Connector Specialists" />
+  <meta property="og:description" content="Engineering-led cable &amp; connector specialists for energy-based medical devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. 30+ years, FDA-registered, ISO 13485." />
+  <meta property="og:image"       content="https://www.globalinterconnect.com/assets/images/team/facility-1.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="About Gii | Medical Device Cable &amp; Connector Specialists" />
+  <meta name="twitter:description" content="Engineering-led custom cable &amp; connector sub-assemblies for energy-based medical devices. FDA-registered, ISO 13485. US, Costa Rica, and Asia." />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== ABOUT PAGE HERO BANNER ===== */
+    .about-hero {
+      position: relative;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("assets/images/team/company-action.jpg") center / cover no-repeat;
+      background-attachment: fixed;
+      z-index: 0;
+    }
+
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(52, 100, 43, 0.85), rgba(52, 100, 43, 0.75));
+      z-index: 1;
+    }
+
+    .about-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 80px 40px;
+    }
+
+    .about-hero h1 {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .about-hero .subtitle {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 400;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
+
+    /* ===== LEADERSHIP TEAM GRID ===== */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin: 60px 0;
+    }
+
+    /* Center the lone last card (Sarah) */
+    .team-grid .team-card:last-child:nth-child(3n + 1) {
+      grid-column: 2 / 3;
+    }
+
+    .team-card {
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .team-card-img {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      background: #f0f0f0;
+    }
+
+    .team-card-img img {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%);
+      object-fit: cover;
+    }
+
+    .team-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #1a1a1a;
+    }
+
+    .team-card .title {
+      font-size: 1rem;
+      color: #666;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .team-card .bio {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ===== VALUES ICON GRID ===== */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+      margin: 60px 0;
+    }
+
+    .value-card {
+      text-align: center;
+      padding: 40px 30px;
+    }
+
+    .value-card-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0f5eb;
+      border-radius: 50%;
+    }
+
+    .value-card-icon svg {
+      width: 48px;
+      height: 48px;
+      color: #346c2b;
+    }
+
+    .value-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+
+    .value-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ===== COMPANY PHOTOS GRID ===== */
+    .company-photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin: 60px 0;
+    }
+
+    .photo-item {
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: #f0f0f0;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .photo-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ===== SECTION PADDING & STYLING ===== */
+    .about-section {
+      padding: 80px 0;
+    }
+
+    .about-section.bg-light {
+      background-color: #f9faf7;
+    }
+
+    .about-section.bg-dark {
+      background-color: #1a2a1a;
+      color: white;
+    }
+
+    .about-section.bg-dark .section-title {
+      color: white;
+    }
+
+    .about-section.bg-dark p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* ===== STORY & MISSION BLOCKS ===== */
+    .story-text, .mission-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Refined "Our Story" typography */
+    .story-text {
+      max-width: 768px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .story-text p {
+      color: #3c4a3c;
+      margin-bottom: 1.4rem;
+    }
+    .story-text p:last-child { margin-bottom: 0; }
+
+    .story-text .lead {
+      font-size: 1.28rem;
+      line-height: 1.7;
+      font-weight: 500;
+      color: #1d2a1a;
+      margin-bottom: 1.6rem;
+    }
+    .story-text .lead::first-letter {
+      float: left;
+      font-family: 'Barlow', sans-serif;
+      font-size: 4rem;
+      line-height: 0.78;
+      font-weight: 800;
+      color: #346c2b;
+      margin: 8px 14px 0 0;
+    }
+    .story-text .accent {
+      color: #346c2b;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .story-text .lead { font-size: 1.15rem; }
+      .story-text .lead::first-letter { font-size: 3.2rem; margin-right: 10px; }
+    }
+
+    .story-highlights, .mission-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    @media (max-width: 820px) {
+      .story-highlights, .mission-highlights { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 520px) {
+      .story-highlights, .mission-highlights { grid-template-columns: 1fr; }
+    }
+
+    .highlight-item {
+      padding: 20px;
+      background: #f0f5eb;
+      border-radius: 8px;
+      border-left: 4px solid #8BC342;
+    }
+
+    .highlight-item strong {
+      color: #346c2b;
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .highlight-item span {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* ===== GLOBAL PRESENCE MAP ===== */
+    .locations-section {
+      background: #0e3d2e;
+      padding: 80px 0;
+    }
+
+    .locations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .locations-text .section-eyebrow { color: #8BC342; }
+    .locations-text h2 { color: #fff; margin-bottom: 2rem; }
+
+    .location-block { margin-bottom: 2rem; }
+    .location-block h3 {
+      font-family: 'Barlow', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #8BC342;
+      margin-bottom: .2rem;
+    }
+    .location-block h4 {
+      font-family: 'Barlow', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: .4rem;
+    }
+    .location-block p,
+    .location-block li {
+      color: rgba(255,255,255,.7);
+      font-size: .9375rem;
+      line-height: 1.6;
+    }
+    .location-block ul {
+      list-style: none;
+      padding: 0;
+    }
+    .location-block ul li::before {
+      content: '▪ ';
+      color: #8BC342;
+      font-weight: bold;
+    }
+
+    .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .map-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .locations-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .about-hero-content {
+        padding: 60px 30px;
+      }
+
+      .about-hero h1 {
+        font-size: 2rem;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .company-photos {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .about-section {
+        padding: 60px 0;
+      }
+    }
+
+    /* ===== ACTIVE NAV LINK ===== */
+    .nav-links li a.active {
+      position: relative;
+      color: #8BC342;
+    }
+
+    .nav-links li a.active::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: #8BC342;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="logo-img" />
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="capabilities.html">Capabilities</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="devices.html">Devices</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== ABOUT HERO BANNER ===== -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <h1>Medical Device Cable &amp; Connector Specialists</h1>
+      <p class="subtitle">Engineering-led. Value-driven. 30+ years specializing in energy-based medical devices.</p>
+    </div>
+  </section>
+
+  <!-- ===== OUR STORY ===== -->
+  <section class="about-section">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+        <span class="section-eyebrow">Our Foundation</span>
+        <h2 class="section-title">Why We Chose to Specialize</h2>
+      </div>
+
+      <div class="story-text">
+        <p class="lead">Global Interconnect, Inc. (Gii) was founded in 1995 in Pocasset, Massachusetts by industry veterans who saw a gap the market wasn't filling: medical device OEMs needed a manufacturing partner that was a <span class="accent">genuine expert in cables and connectors</span> — not a generalist who happened to build them. That singular focus has guided every decision we've made since day one.</p>
+
+        <p>While broad-based contract manufacturers spread their capabilities wide, Gii made a deliberate choice to <span class="accent">go deep</span> — building its engineering culture and supply chain with cables and connectors at the center. That specialization, combined with our global manufacturing footprint across the US, Americas, and Asia — including a nearshore facility in Cartago, Costa Rica — is what allows us to find solutions that other manufacturers simply cannot offer. Today, our 1.5 million square feet of production capacity, 15,000 square feet of ISO 8 clean room, and FDA registration and ISO 13485 certification support a comprehensive range of medical device manufacturing programs — with cable and connector programs as the <span class="accent">cornerstone of everything we do</span>.</p>
+      </div>
+
+      <div class="story-highlights">
+        <div class="highlight-item">
+          <strong>30+ Years</strong>
+          <span>Combined leadership experience in medical device manufacturing</span>
+        </div>
+        <div class="highlight-item">
+          <strong>Founded 1995</strong>
+          <span>Pocasset, Massachusetts</span>
+        </div>
+        <div class="highlight-item">
+          <strong>1.5M Sq Ft</strong>
+          <span>Global manufacturing footprint</span>
+        </div>
+        <div class="highlight-item">
+          <strong>15K Sq Ft</strong>
+          <span>ISO 8 Clean Room Capacity</span>
+        </div>
+        <div class="highlight-item">
+          <strong>FDA Registered</strong>
+          <span>Medical Device Establishment</span>
+        </div>
+        <div class="highlight-item">
+          <strong>ISO 13485 Certified</strong>
+          <span>Quality Management Certification</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR JOURNEY (INTERACTIVE TIMELINE) ===== -->
+  <section class="about-section bg-light tl-h-section" id="our-journey">
+    <style>
+      /* ===== HORIZONTAL "MOUNTAIN RANGE" TIMELINE ===== */
+      .tl-h-section .section-header { text-align:center; margin-bottom:18px; }
+
+      .tl-h-viewport {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        cursor: ew-resize;
+        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
+                mask-image: linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
+      }
+      .tl-h-track {
+        position: relative;
+        height: 100%;
+        white-space: nowrap;
+        will-change: transform;
+        padding: 0 80px;
+      }
+      /* vertical spine only used on mobile */
+      .tl-h-track::before { content:""; display:none; }
+
+      /* SVG connecting line (mountain range) */
+      .tl-h-line {
+        position: absolute;
+        top: 0; left: 0;
+        z-index: 1;
+        pointer-events: none;
+        overflow: visible;
+      }
+
+      .tl-h-item {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 168px;
+        height: 100%;
+        white-space: normal;
+        text-align: center;
+        outline: none;
+      }
+      .tl-h-item.lvl-up   { --y: 40%; }
+      .tl-h-item.lvl-down { --y: 66%; }
+
+      /* node with icon */
+      .tl-h-node {
+        position: absolute;
+        top: var(--y);
+        left: 50%;
+        width: 46px; height: 46px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: #fff;
+        border: 3px solid #8BC342;
+        box-shadow: 0 4px 14px rgba(14,61,46,0.12), 0 0 0 5px rgba(139,195,66,0.12);
+        display: flex; align-items: center; justify-content: center;
+        z-index: 3;
+        transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+      .tl-h-node svg {
+        width: 22px; height: 22px;
+        fill: none; stroke: #346c2b; stroke-width: 2;
+        stroke-linecap: round; stroke-linejoin: round;
+        transition: stroke 0.25s ease;
+      }
+
+      .tl-h-year {
+        position: absolute;
+        left: 0; right: 0;
+        text-align: center;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 800;
+        font-size: 1.05rem;
+        color: #346c2b;
+        z-index: 2;
+        transition: color 0.25s ease;
+      }
+      .lvl-up   .tl-h-year { top: calc(var(--y) - 48px); }
+      .lvl-down .tl-h-year { top: calc(var(--y) + 32px); }
+
+      /* expanding card (hover only) */
+      .tl-h-card {
+        position: absolute;
+        left: 50%;
+        width: 300px;
+        background: #fff;
+        border-radius: 12px;
+        border: 1px solid #eef1ea;
+        box-shadow: 0 16px 38px rgba(14,61,46,0.18);
+        padding: 18px 20px;
+        text-align: left;
+        opacity: 0; visibility: hidden; pointer-events: none;
+        transform: translateX(-50%);
+        translate: 0 8px;
+        transition: opacity 0.28s ease, translate 0.28s ease, visibility 0.28s;
+        z-index: 5;
+      }
+      .lvl-up   .tl-h-card { top: calc(var(--y) + 40px); border-top: 4px solid #346c2b; }
+      .lvl-down .tl-h-card { bottom: calc(100% - var(--y) + 40px); border-bottom: 4px solid #346c2b; }
+
+      .tl-h-card::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        width: 14px; height: 14px;
+        background: #fff;
+      }
+      .lvl-up   .tl-h-card::after { top: -8px; border-left: 1px solid #eef1ea; border-top: 1px solid #eef1ea; }
+      .lvl-down .tl-h-card::after { bottom: -8px; border-right: 1px solid #eef1ea; border-bottom: 1px solid #eef1ea; }
+
+      /* edge alignment so cards never clip */
+      .tl-h-item.align-start .tl-h-card { left: 0;   transform: translateX(0); }
+      .tl-h-item.align-end   .tl-h-card { left: auto; right: 0; transform: translateX(0); }
+      .tl-h-item.align-start .tl-h-card::after { left: 28px; transform: rotate(45deg); }
+      .tl-h-item.align-end   .tl-h-card::after { left: auto; right: 28px; transform: rotate(45deg); }
+
+      .tl-h-year-badge {
+        display:inline-block; font-family:'Barlow',sans-serif; font-weight:800;
+        font-size:.8rem; letter-spacing:.04em; color:#fff; background:#346c2b;
+        padding:3px 12px; border-radius:20px; margin-bottom:9px;
+      }
+      .tl-h-card-title { font-family:'Barlow',sans-serif; font-size:1.05rem; font-weight:700; color:#1a2a1a; margin:0 0 7px; line-height:1.3; }
+      .tl-h-card-detail { font-size:.85rem; color:#444; line-height:1.6; margin:0; }
+
+      /* hover / focus reveal */
+      .tl-h-item:hover .tl-h-node,
+      .tl-h-item:focus-within .tl-h-node {
+        transform: translate(-50%,-50%) scale(1.14);
+        background:#346c2b; border-color:#346c2b;
+        box-shadow:0 8px 22px rgba(14,61,46,0.24), 0 0 0 6px rgba(52,108,43,0.18);
+      }
+      .tl-h-item:hover .tl-h-node svg,
+      .tl-h-item:focus-within .tl-h-node svg { stroke:#fff; }
+      .tl-h-item:hover .tl-h-year,
+      .tl-h-item:focus-within .tl-h-year { color:#1a2a1a; }
+      .tl-h-item:hover .tl-h-card,
+      .tl-h-item:focus-within .tl-h-card {
+        opacity:1; visibility:visible; translate:0 0;
+      }
+
+      .tl-h-viewport.is-panning .tl-h-card { opacity:0 !important; visibility:hidden !important; }
+
+      .tl-h-today .tl-h-node { background:#8BC342; border-color:#346c2b; }
+      .tl-h-today .tl-h-node svg { stroke:#fff; }
+
+      .tl-h-scrollhint {
+        text-align:center; margin-top:6px;
+        font-size:.74rem; letter-spacing:.08em; text-transform:uppercase;
+        color:#8BC342; font-weight:600;
+      }
+
+      /* ===== MOBILE / TABLET: revert to vertical ===== */
+      @media (max-width: 820px) {
+        .tl-h-scrollhint { display:none; }
+        .tl-h-line { display:none !important; }
+        .tl-h-viewport {
+          height:auto; overflow:visible; cursor:auto;
+          -webkit-mask-image:none; mask-image:none;
+        }
+        .tl-h-track {
+          transform:none !important; white-space:normal; padding:10px 0 0; height:auto;
+        }
+        .tl-h-track::before {
+          display:block; position:absolute; top:0; bottom:0; left:24px;
+          width:4px; height:auto; border-radius:4px;
+          background:linear-gradient(180deg,#8BC342 0%,#346c2b 100%);
+        }
+        .tl-h-item, .tl-h-item.lvl-up, .tl-h-item.lvl-down {
+          display:block; width:100%; height:auto; text-align:left;
+          padding:0 0 30px 60px; --y:0;
+        }
+        .tl-h-node { top:4px; left:3px; transform:none; width:40px; height:40px; }
+        .tl-h-item:hover .tl-h-node, .tl-h-item:focus-within .tl-h-node { transform:scale(1.08); }
+        .tl-h-year, .lvl-up .tl-h-year, .lvl-down .tl-h-year {
+          position:static; text-align:left; font-size:1rem; margin-bottom:4px;
+        }
+        .tl-h-card, .lvl-up .tl-h-card, .lvl-down .tl-h-card {
+          position:static; opacity:1; visibility:visible; pointer-events:auto;
+          transform:none !important; translate:none !important; width:auto;
+          top:auto; bottom:auto; margin-top:6px;
+          box-shadow:0 4px 16px rgba(14,61,46,0.08);
+          border:1px solid #eef1ea; border-left:4px solid #346c2b;
+        }
+        .tl-h-card::after { display:none; }
+        .tl-h-card-detail { font-size:.9rem; }
+      }
+    </style>
+
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Our Journey</span>
+        <h2 class="section-title">Three Decades of Cable &amp; Connector Specialization</h2>
+        <p class="section-desc">From a single-minded startup in 1995 to a three-continent medical manufacturing partner. Move your cursor across the timeline to travel through the years — hover any milestone to reveal its story.</p>
+      </div>
+    </div>
+
+    <div class="tl-h-viewport" id="tlViewport" aria-label="Company history timeline">
+      <div class="tl-h-track" id="tlTrack">
+        <svg class="tl-h-line" id="tlLine" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="tlGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#8BC342"/>
+              <stop offset="1" stop-color="#346c2b"/>
+            </linearGradient>
+          </defs>
+          <polyline id="tlPoly" fill="none" stroke="url(#tlGrad)" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="tl-h-item lvl-up" style="--y: 32%" tabindex="0">
+          <div class="tl-h-card">
+            <span class="tl-h-year-badge">1995</span>
+            <h3 class="tl-h-card-title">A Specialist Is Born</h3>
+            <p class="tl-h-card-detail">After a career spanning commercial lending, finance, sales, and operations in the interconnect industry, Babson College graduate Stephen Bates makes a deliberate bet: rather than be a generalist contract manufacturer, Gii would go deep on the one thing OEMs struggled to source well — custom cables and connectors. That focused identity has guided every decision since.</p>
+          </div>
+          <span class="tl-h-node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></span>
+          <span class="tl-h-year">1995</span>
+        </div>
+        <div class="tl-h-item lvl-down" style="--y: 70%" tabindex="0">
+          <div class="tl-h-card">
+            <span class="tl-h-year-badge">1999</span>
+            <h3 class="tl-h-card-title">Building Engineering Depth</h3>
+            <p class="tl-h-card-detail">Gii's longest-serving team member, Bob would go on to become Chief Technology Officer. His arrival anchored the company's electromechanical engineering discipline — the technical backbone that lets Gii design custom connectors and assemblies rather than simply build to print.</p>
+          </div>
+          <span class="tl-h-node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          <span class="tl-h-year">1999</span>
+        </div>
+        <div class="tl-h-item lvl-up" style="--y: 42%" tabindex="0">
+          <div class="tl-h-card">
+            <span class="tl-h-year-badge">2004</span>
+            <h3 class="tl-h-card-title">Deepening OEM Partnerships</h3>
+            <p class="tl-h-card-detail">As demand from medical device OEMs grew, Gii invested in the commercial relationships that would carry it from a regional New England shop toward a global manufacturing partner — building the long-term, consultative customer model the company is known for today.</p>
+          </div>
+          <span class="tl-h-node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <span class="tl-h-year">2004</span>
+        </div>
+        <div class="tl-h-item lvl-down" style="--y: 60%" tabindex="0">
+          <div class="tl-h-card">
+            <span class="tl-h-year-badge">2007</span>
+            <h3 class="tl-h-card-title">A Global Supply Chain</h3>
+            <p class="tl-h-card-detail">With purpose-built procurement leadership in place, Gii extended its sourcing and logistics across borders — laying the groundwork for the global manufacturing network that lets the company match each program to the right facility and cost structure.</p>
+          </div>
+          <span class="tl-h-node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+          <span class="tl-h-year">2007</span>
+        </div>
+        <div class="tl-h-item lvl-up" style="--y: 30%" tabindex="0">
+          <div class="tl-h-card">
+            <span class="tl-h-year-badge">Late 2000s</span>
+            <h3 class="tl-h-card-title">Going Truly Global</h3>
+            <p class="tl-h-card-detail">Asia operations gave Gii high-volume cable and connector manufacturing capacity alongside its US engineering base — the combination that turned “Global” in the company's name into an operational reality spanning multiple continents.</p>
+          </div>
+          <span class="tl-h-node"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+          <span class="tl-h-year">Late 2000s</span>
+        </div>
+        <div class="tl-h-item lvl-down" style="--y: 72%" tabindex="0">
+          <div class="tl-h-card">
+            <span class="tl-h-year-badge">2011</span>
+            <h3 class="tl-h-card-title">A Deeper Purpose</h3>
+            <p class="tl-h-card-detail">In April 2011, Stephen's son Charlie passed away unexpectedly from SUDEP (Sudden Unexpected Death in Epilepsy). The loss became a lasting source of purpose — sharpening Gii's focus on energy-based and diagnostic medical devices and on manufacturing work that ultimately serves patients.</p>
+          </div>
+          <span class="tl-h-node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+          <span class="tl-h-year">2011</span>
+        </div>
+        <div class="tl-h-item lvl-up" style="--y: 44%" tabindex="0">
+          <div class="tl-h-card">
+            <span class="tl-h-year-badge">2013</span>
+            <h3 class="tl-h-card-title">Scaling Quality &amp; R&amp;D</h3>
+            <p class="tl-h-card-detail">As programs grew more complex, Gii formalized engineering processes and project structures across its US and China sites — co-developing new technologies and reinforcing the ISO 13485 quality systems that medical OEMs require.</p>
+          </div>
+          <span class="tl-h-node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 3h15"/><path d="M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"/><path d="M6 14h12"/></svg></span>
+          <span class="tl-h-year">2013</span>
+        </div>
+        <div class="tl-h-item lvl-down" style="--y: 62%" tabindex="0">
+          <div class="tl-h-card">
+            <span class="tl-h-year-badge">2017</span>
+            <h3 class="tl-h-card-title">Quality Leadership Matures</h3>
+            <p class="tl-h-card-detail">With dedicated quality leadership, Gii reinforced the zero-defect culture that defines its reputation — balancing strict FDA and ISO 13485 requirements against the real-world needs of demanding medical device programs.</p>
+          </div>
+          <span class="tl-h-node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="tl-h-year">2017</span>
+        </div>
+        <div class="tl-h-item lvl-up" style="--y: 36%" tabindex="0">
+          <div class="tl-h-card">
+            <span class="tl-h-year-badge">2019</span>
+            <h3 class="tl-h-card-title">Nearshore in Costa Rica</h3>
+            <p class="tl-h-card-detail">Through a nearshore partnership in Cartago, Gii added US time-zone-aligned manufacturing with fast lead times and reduced tariff exposure — giving OEMs a flexible alternative to Asia-only production without sacrificing cost or quality.</p>
+          </div>
+          <span class="tl-h-node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span class="tl-h-year">2019</span>
+        </div>
+        <div class="tl-h-item lvl-down" style="--y: 68%" tabindex="0">
+          <div class="tl-h-card">
+            <span class="tl-h-year-badge">2023</span>
+            <h3 class="tl-h-card-title">A Renewed Identity</h3>
+            <p class="tl-h-card-detail">A new brand and website reframed Gii's story around the outcomes OEMs care about most — supply chain consolidation, strategic cost-down, and faster time to revenue — all powered by deep cable and connector specialization.</p>
+          </div>
+          <span class="tl-h-node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/></svg></span>
+          <span class="tl-h-year">2023</span>
+        </div>
+        <div class="tl-h-item lvl-up tl-h-today" style="--y: 40%" tabindex="0">
+          <div class="tl-h-card">
+            <span class="tl-h-year-badge">Today</span>
+            <h3 class="tl-h-card-title">Three Continents, One Specialty</h3>
+            <p class="tl-h-card-detail">FDA-registered and ISO 13485 certified, Gii now spans corporate engineering in Massachusetts, nearshore manufacturing in Costa Rica, and high-volume production in Asia — and recently added a Chief Medical Officer to deepen its clinical perspective. Three decades on, cables and connectors remain the cornerstone of everything Gii builds.</p>
+          </div>
+          <span class="tl-h-node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span>
+          <span class="tl-h-year">Today</span>
+        </div>
+      </div>
+    </div>
+    <p class="tl-h-scrollhint">&larr; &nbsp; Move toward either edge to pan &middot; or scroll &middot; hover a milestone for details &nbsp; &rarr;</p>
+
+    <script>
+      (function () {
+        var viewport = document.getElementById('tlViewport');
+        var track = document.getElementById('tlTrack');
+        var svg = document.getElementById('tlLine');
+        var poly = document.getElementById('tlPoly');
+        if (!viewport || !track) return;
+        var items = track.querySelectorAll('.tl-h-item');
+        var mq = window.matchMedia('(min-width: 821px) and (pointer: fine)');
+        var offset = 0, velocity = 0;
+
+        function maxScroll() { return Math.max(0, track.scrollWidth - viewport.clientWidth); }
+        function clamp(v) { return Math.max(0, Math.min(maxScroll(), v)); }
+        function apply() { track.style.transform = 'translateX(' + (-offset) + 'px)'; }
+
+        // Edge-zone panning: a calm dead zone in the middle (for reading / hovering
+        // dots) and gentle, speed-based scrolling only as the cursor nears an edge.
+        function onMove(e) {
+          if (!mq.matches) { velocity = 0; return; }
+          var rect = viewport.getBoundingClientRect();
+          var x = (e.clientX - rect.left) / rect.width;     // 0..1
+          var dead = 0.28, maxSpeed = 13;                   // calm center 0.22..0.78 (pan only near edges)
+          if (x < 0.5 - dead) {
+            var t = (0.5 - dead - x) / (0.5 - dead);
+            velocity = -maxSpeed * t * t;
+          } else if (x > 0.5 + dead) {
+            var t2 = (x - 0.5 - dead) / (0.5 - dead);
+            velocity = maxSpeed * t2 * t2;
+          } else {
+            velocity = 0;
+          }
+        }
+        viewport.addEventListener('mousemove', onMove);
+        viewport.addEventListener('mouseleave', function () { velocity = 0; viewport.classList.remove('is-panning'); });
+
+        // Trackpad / mouse wheel pans horizontally too
+        viewport.addEventListener('wheel', function (e) {
+          if (!mq.matches) return;
+          var d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+          if (!d) return;
+          var before = offset;
+          offset = clamp(offset + d);
+          if (offset !== before) {
+            apply(); e.preventDefault();
+            viewport.classList.add('is-panning');
+            clearTimeout(wheelIdle);
+            wheelIdle = setTimeout(function () { viewport.classList.remove('is-panning'); }, 180);
+          }
+        }, { passive: false });
+        var wheelIdle;
+
+        // Animation loop applies edge-zone velocity (paused while hovering a dot)
+        (function loop() {
+          if (mq.matches && velocity !== 0) {
+            var before = offset;
+            offset = clamp(offset + velocity);
+            if (offset !== before) { apply(); viewport.classList.add('is-panning'); }
+            else viewport.classList.remove('is-panning');   // clamped at an edge = at rest
+          } else {
+            viewport.classList.remove('is-panning');
+          }
+          requestAnimationFrame(loop);
+        })();
+
+        items.forEach(function (item) {
+          item.addEventListener('mouseenter', function () {
+            if (!mq.matches) return;
+            var vr = viewport.getBoundingClientRect();
+            var ir = item.getBoundingClientRect();
+            var center = ir.left + ir.width / 2 - vr.left;
+            item.classList.remove('align-start', 'align-end');
+            if (center < 175) item.classList.add('align-start');
+            else if (center > vr.width - 175) item.classList.add('align-end');
+          });
+          item.addEventListener('mouseleave', function () { if (document.activeElement === item) item.blur(); });
+        });
+
+        // Pad both ends so the first & last milestones can scroll into the
+        // calm center dead zone (where cards open) instead of being stuck in
+        // the edge pan zones.
+        function setPads() {
+          if (!mq.matches) { track.style.paddingLeft = ''; track.style.paddingRight = ''; return; }
+          var half = items[0].offsetWidth / 2;
+          track.style.paddingLeft = Math.max(40, viewport.clientWidth * 0.30 - half) + 'px';
+          track.style.paddingRight = Math.max(60, viewport.clientWidth * 0.50 - half) + 'px';
+        }
+
+        // Build the mountain-range connecting line through every node center
+        function buildLine() {
+          if (!mq.matches) { svg.style.display = 'none'; return; }
+          svg.style.display = 'block';
+          var tr = track.getBoundingClientRect();
+          var W = track.scrollWidth, H = track.clientHeight;
+          var pts = [];
+          items.forEach(function (it) {
+            var n = it.querySelector('.tl-h-node').getBoundingClientRect();
+            var x = (n.left + n.width / 2) - tr.left;
+            var y = (n.top + n.height / 2) - tr.top;
+            pts.push(x.toFixed(1) + ',' + y.toFixed(1));
+          });
+          svg.setAttribute('width', W);
+          svg.setAttribute('height', H);
+          svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+          poly.setAttribute('points', pts.join(' '));
+        }
+
+        function relayout() { setPads(); offset = clamp(offset); apply(); buildLine(); }
+
+        var rt;
+        window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(relayout, 120); });
+        if (mq.addEventListener) mq.addEventListener('change', function (ev) {
+          if (!ev.matches) { offset = 0; velocity = 0; track.style.transform = ''; }
+          relayout();
+        });
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
+        requestAnimationFrame(relayout);
+        setTimeout(relayout, 400);
+      })();
+    </script>
+  </section>
+
+  <!-- ===== OUR MISSION ===== -->
+  <section class="about-section bg-dark">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+        <span class="section-eyebrow light">Our Purpose</span>
+        <h2 class="section-title light">Our Mission</h2>
+
+      </div>
+
+      <div class="mission-text" style="max-width: 800px; margin: 0 auto; text-align: center; color: rgba(255, 255, 255, 0.95); font-size: 1.3rem; line-height: 1.8;">
+        <p>To be the definitive specialist in medical cable and connector manufacturing — delivering zero-failure quality and measurable cost-down results that make our OEM partners more competitive in the market. We believe the best cable and connector doesn't have to be the most expensive one. Our job is to prove it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEADERSHIP TEAM ===== -->
+  <section class="about-section bg-light">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+        <span class="section-eyebrow">Leadership</span>
+        <h2 class="section-title">Our Leadership Team</h2>
+        <p class="section-desc">Decades of combined expertise in medical device manufacturing, engineering, and operations.</p>
+      </div>
+
+      <div class="team-grid">
+
+        <!-- Row 1 -->
+        <div class="team-card">
+          <div class="team-card-img">
+            <img src="assets/images/team/stephen-bates.jpg" alt="Stephen Bates, Founder" />
+          </div>
+          <h3>Stephen Bates</h3>
+          <p class="title">Founder</p>
+          <p class="bio">Founded Global Interconnect in 1995 after building a career in finance, sales, and operations in the interconnect industry. A Babson College graduate, Stephen's vision established Gii as a trusted partner to the world's leading medical device OEMs.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-img">
+            <img src="assets/images/team/todd-squire.jpg" alt="Todd Squire, President" />
+          </div>
+          <h3>Todd Squire</h3>
+          <p class="title">President</p>
+          <p class="bio">Joined Gii in 2004 as Senior Account Executive. Todd's deep expertise in customer relationships and business development has driven Gii's strategic growth into a global contract manufacturing leader.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-img">
+            <img src="assets/images/team/robert-gray.jpg" alt="Robert Gray, Chief Technical Officer" />
+          </div>
+          <h3>Robert Gray</h3>
+          <p class="title">Chief Technical Officer</p>
+          <p class="bio">Gii's longest-serving team member, Bob started as Engineering Manager and grew into the CTO role. His deep technical knowledge of electromechanical systems underpins every engineering decision Gii makes.</p>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="team-card">
+          <div class="team-card-img">
+            <img src="assets/images/team/chet-potter.jpg" alt="Chet Potter, VP Engineering &amp; R&amp;D" />
+          </div>
+          <h3>Chet Potter</h3>
+          <p class="title">VP of Engineering &amp; R&amp;D</p>
+          <p class="bio">Joined Gii in 2013 as a Quality Engineer and rose to VP of Engineering and R&D. Chet leads Gii's product development, design-for-manufacture initiatives, and continuous engineering innovation.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-img">
+            <img src="assets/images/team/scott-burns.webp" alt="Scott Burns, VP of Sales" />
+          </div>
+          <h3>Scott Burns</h3>
+          <p class="title">VP of Sales</p>
+          <p class="bio">Scott drives Gii's business development strategy and manages key OEM relationships. His technical background and commercial acumen help customers find the right manufacturing solution for every program.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-img">
+            <img src="assets/images/team/jacqueline-christensen.jpg" alt="Jacqueline Christensen, Director of Finance" />
+          </div>
+          <h3>Jacqueline Christensen</h3>
+          <p class="title">Director of Finance</p>
+          <p class="bio">Joined Gii in 2005 as Accounting and Administrative Coordinator. Jacqueline manages Gii's financial strategy and operational efficiency, ensuring the company's sustainable growth and fiscal health.</p>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="team-card">
+          <div class="team-card-img">
+            <img src="assets/images/team/troy-mauk.jpg" alt="Troy Mauk, Director of Global Procurement" />
+          </div>
+          <h3>Troy Mauk</h3>
+          <p class="title">Director of Global Procurement</p>
+          <p class="bio">Joined Gii in 2007 as Purchasing Manager. Troy oversees Gii's global supply chain strategy, supplier partnerships, and procurement operations across our global manufacturing network — US, Americas, and Asia.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-img">
+            <img src="assets/images/team/jonathan-goodwin.jpg" alt="Jonathan Goodwin, Director of Engineering" />
+          </div>
+          <h3>Jonathan Goodwin</h3>
+          <p class="title">Director of Engineering</p>
+          <p class="bio">With over 35 years of electro-mechanical development and manufacturing engineering experience, Jonathan leads Gii's engineering team in delivering precision solutions for the most demanding medical device applications.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-img">
+            <img src="assets/images/team/mike.jpg" alt="Mike, Director of Project Engineering" />
+          </div>
+          <h3>Mike Melkonian</h3>
+          <p class="title">Director of Project Engineering</p>
+          <p class="bio">Joined Gii in 2014 as a Quality Engineer after a career in commercial HVAC engineering. Mike ensures project teams execute within scope and customer expectations, while continuously improving Gii's project processes and workflows.</p>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="team-card">
+          <div class="team-card-img">
+            <img src="assets/images/team/sarah-nugent.jpg" alt="Sarah Nugent, Director of Quality" />
+          </div>
+          <h3>Sarah Nugent</h3>
+          <p class="title">Director of Quality</p>
+          <p class="bio">Sarah leads Gii's quality management system, ensuring every product meets FDA, ISO 13485, and customer-specific requirements. Her team maintains the zero-defect culture that defines Gii's reputation in medical device manufacturing.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR VALUES ===== -->
+  <section class="about-section">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+        <span class="section-eyebrow">Core Values</span>
+        <h2 class="section-title">What Guides Our Work</h2>
+        <p class="section-desc">These principles define how we operate, lead, and serve our partners every day.</p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+          </div>
+          <h3>Specialization</h3>
+          <p>Cables and connectors for medical devices are our deepest expertise and our greatest strength. That focused depth is what enables us to find cost and quality opportunities that broader manufacturers miss.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3>Quality</h3>
+          <p>Zero failure is our standard. Every connector, assembly, and device is engineered and manufactured to exceed regulatory and customer expectations.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Integrity</h3>
+          <p>We operate with transparency, honesty, and accountability in every customer relationship and business decision we make.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M16 11a2 2 0 11-4 0 2 2 0 014 0zM9 7a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3>Cost Intelligence</h3>
+          <p>We don't just manufacture — we engineer cost out of your cable and connector program. Custom connector design to replace expensive off-the-shelf branded connectors, DFM reviews, and material optimization are standard practice at Gii, not add-ons.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GLOBAL PRESENCE ===== -->
+  <section class="locations-section">
+    <!-- Full-bleed SVG map background -->
+    <div class="map-bg-wrap">
+      <img src="assets/images/World_map_without_Antarctica.svg" alt="" aria-hidden="true" class="map-bg-img" />
+    </div>
+
+    <div class="container locations-overlay">
+      <div class="locations-header">
+        <span class="section-eyebrow">Global Reach</span>
+        <h2 class="section-title">US, Americas &amp; Asia — Manufacturing Where It Works for You</h2>
+      </div>
+
+      <div class="locations-cards">
+        <div class="loc-card">
+          <div class="loc-card-label">Corporate HQ</div>
+          <h3>Massachusetts, USA</h3>
+          <p>Global Interconnect, Inc.<br />
+             11 Jonathan Bourne Drive<br />
+             Pocasset, MA 02559</p>
+        </div>
+        <div class="loc-card loc-card-featured">
+          <div class="loc-card-label">Nearshore Manufacturing</div>
+          <h3>Cartago, Costa Rica</h3>
+          <p>Purpose-built nearshore manufacturing facility — US time zone alignment, fast lead times, and no China tariff exposure for programs that need it.</p>
+        </div>
+        <div class="loc-card">
+          <div class="loc-card-label">Asia HQ</div>
+          <h3>Hong Kong</h3>
+          <p>Global Interconnect, Inc.<br />
+             #2103, Fortune Commercial Bldg<br />
+             362 Sha Tsui Road, Tsuen Wan</p>
+        </div>
+        <div class="loc-card">
+          <div class="loc-card-label">Manufacturing</div>
+          <h3>Humen, China</h3>
+          <p>High-volume cable &amp; connector production</p>
+        </div>
+        <div class="loc-card">
+          <div class="loc-card-label">US Offices</div>
+          <h3>Jacksonville, FL</h3>
+          <p>Jacksonville, Florida, USA</p>
+        </div>
+        <div class="loc-card">
+          <div class="loc-card-label">Warehousing</div>
+          <h3>St. Louis, MO</h3>
+          <p>St. Louis, Missouri, USA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPANY CULTURE & FACILITIES ===== -->
+  <section class="about-section">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+        <span class="section-eyebrow">Our Workplace</span>
+        <h2 class="section-title">Culture &amp; Facilities</h2>
+        <p class="section-desc">State-of-the-art manufacturing facilities combined with a culture of excellence and continuous improvement.</p>
+      </div>
+
+      <div class="company-photos">
+        <div class="photo-item">
+          <img src="assets/images/team/company-beach.jpg" alt="Gii Team Culture" />
+        </div>
+        <div class="photo-item">
+          <img src="assets/images/team/facility-1.jpg" alt="Manufacturing Facility" />
+        </div>
+        <div class="photo-item">
+          <img src="assets/images/team/facility-2.jpg" alt="Clean Room Operations" />
+        </div>
+      </div>
+
+      <div style="margin-top: 50px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <p style="font-size: 1.05rem; line-height: 1.8; color: #555;">Our team is comprised of highly skilled engineers, technicians, and manufacturing professionals united by a commitment to precision, quality, and customer success. We invest in our people, our facilities, and our processes — because excellence in medical device manufacturing requires all three.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="about-section bg-dark">
+    <div class="container" style="text-align: center;">
+      <h2 class="section-title light" style="margin-bottom: 30px;">Ready to Find Out What Your Cable &amp; Connector Should Really Cost?</h2>
+      <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Whether you're scaling production, transferring manufacturing, or designing something entirely new, our team is ready to help bring your medical device vision to life.</p>
+      <a href="index.html#contact" class="btn btn-primary">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="footer-logo" />
+          <p>Medical device cable &amp; connector specialists. Engineering-led, value-driven custom connector and cable assembly for energy-based medical devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. Trusted by leading OEMs for over three decades.</p>
+          <div class="footer-certs">
+            <span>FDA Registered</span>
+            <span>ISO 13485</span>
+            
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#advantage">The Gii Advantage</a></li>
+            <li><a href="index.html#quality">Quality &amp; Certifications</a></li>
+            <li><a href="https://www.globalinterconnect.com/careers/" target="_blank" rel="noopener">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Capabilities</h4>
+          <ul>
+            <li><a href="capabilities.html">Custom Connectors</a></li>
+            <li><a href="capabilities.html">Cable Assemblies</a></li>
+            <li><a href="capabilities.html">Electromechanical Assembly</a></li>
+            <li><a href="capabilities.html">PCBA</a></li>
+            <li><a href="capabilities.html">Metal Stamping</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="https://www.globalinterconnect.com/understanding-medical-cable-assemblies/" target="_blank" rel="noopener">Medical Cable Assemblies</a></li>
+            <li><a href="https://www.globalinterconnect.com/considerations-when-transferring-medical-device-manufacturing/" target="_blank" rel="noopener">Manufacturing Transfers</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Global Interconnect, Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+</body>
+</html>
