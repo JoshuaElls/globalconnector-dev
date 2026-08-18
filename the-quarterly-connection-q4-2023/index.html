@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" /> <!-- STAGING ONLY - remove at launch -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The fourth edition of The Quarterly Connection, powered by Global Interconnect, provides highlights, updates, and insights on the medical device industr…" />
+  <title>The Quarterly Connection – Q4 2023 | Global Interconnect, Inc.</title>
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Global Interconnect, Inc." />
+  <meta property="og:url"         content="https://www.globalinterconnect.com/the-quarterly-connection-q4-2023/" />
+  <meta property="og:title"       content="The Quarterly Connection – Q4 2023" />
+  <meta property="og:description" content="The fourth edition of The Quarterly Connection, powered by Global Interconnect, provides highlights, updates, and insights on the medical device industr…" />
+  <meta property="og:image"       content="https://www.globalinterconnect.com/assets/images/insights/signati.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Medical Cable &amp; Connector Insights | Gii" />
+  <meta name="twitter:description" content="Design guides, whitepapers, and case studies from Gii's cable and connector specialists." />
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== INSIGHTS PAGE STYLES ===== */
+
+    /* Page banner / hero */
+    .insights-banner {
+      background: linear-gradient(135deg, #0d4c3a 0%, #1a5f47 100%);
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .insights-banner-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .insights-banner h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .insights-banner p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* Filter row */
+    .insights-filters {
+      background: #f8f8f8;
+      padding: 2rem;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 3rem;
+    }
+
+    .filters-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filter-btn {
+      padding: 0.625rem 1.25rem;
+      border: 1px solid #d0d0d0;
+      background: white;
+      color: #333;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: #0d4c3a;
+      color: #0d4c3a;
+      background: #f0f8f5;
+    }
+
+    .filter-btn.active {
+      background: #0d4c3a;
+      color: white;
+      border-color: #0d4c3a;
+    }
+
+    /* Articles grid */
+    .insights-articles {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .article-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .article-card:hover {
+      border-color: #0d4c3a;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .article-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .article-tag {
+      display: inline-block;
+      background: #e8f5f1;
+      color: #0d4c3a;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      width: fit-content;
+    }
+
+    .article-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      color: #222;
+    }
+
+    .article-title a {
+      color: #222;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .article-title a:hover {
+      color: #0d4c3a;
+    }
+
+    .article-excerpt {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .article-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid #f0f0f0;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    .article-date {
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    .article-link {
+      color: #0d4c3a;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+
+    .article-link:hover {
+      opacity: 0.7;
+    }
+
+    /* Newsletter / Contact CTA */
+    .insights-cta-section {
+      background: #0d4c3a;
+      color: white;
+      padding: 4rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .insights-cta-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .cta-newsletter {
+      padding-right: 2rem;
+    }
+
+    .cta-newsletter h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .cta-newsletter p {
+      font-size: 1rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      background: white;
+      color: #333;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #999;
+    }
+
+    .newsletter-form button {
+      padding: 0.75rem 1.5rem;
+      background: #1a5f47;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+      background: #0d4c3a;
+    }
+
+    .cta-engineering {
+      padding-left: 2rem;
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .cta-engineering h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .cta-engineering p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .cta-engineering a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .cta-engineering a:hover {
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .insights-banner h1 {
+        font-size: 1.75rem;
+      }
+
+      .insights-banner p {
+        font-size: 0.95rem;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .cta-newsletter {
+        padding-right: 0;
+      }
+
+      .cta-engineering {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 2rem;
+      }
+
+      .filters-container {
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <link rel="canonical" href="https://www.globalinterconnect.com/the-quarterly-connection-q4-2023/" />
+  <style>
+.article-hero { background: linear-gradient(135deg, #1a472a 0%, #2d6e47 100%); color: #fff; padding: 150px 20px 70px; text-align: center; }
+.article-hero .cat { display:inline-block; font-size:.85rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; color:#8BC342; margin-bottom:14px; }
+.article-hero h1 { font-family:'Barlow',sans-serif; font-size: clamp(1.9rem, 4.5vw, 3rem); font-weight:800; max-width: 900px; margin: 0 auto 14px; line-height:1.2; }
+.article-hero .date { opacity:.85; font-size:.95rem; }
+.article-body { max-width: 800px; margin: 0 auto; padding: 60px 20px 40px; font-size: 1.05rem; line-height: 1.8; color: #333; }
+.article-body h1,.article-body h2,.article-body h3,.article-body h4 { font-family:'Barlow',sans-serif; color:#1a1a1a; line-height:1.3; margin:1.6em 0 .6em; }
+.article-body h2 { font-size:1.7rem; } .article-body h3 { font-size:1.35rem; }
+.article-body p { margin: 0 0 1.2em; }
+.article-body ul,.article-body ol { margin: 0 0 1.2em 1.4em; }
+.article-body li { margin-bottom:.5em; }
+.article-body img { max-width:100%; height:auto; border-radius:10px; margin:1.5em auto; display:block; }
+.article-body a { color:#1b5e3f; font-weight:600; }
+.article-cta { text-align:center; padding: 20px 20px 70px; }
+.article-cta .btn-back { display:inline-block; margin-right:14px; color:#1b5e3f; font-weight:600; text-decoration:none; }
+.article-cta .btn-quote { display:inline-block; background:#8BC342; color:#122E18; font-weight:700; padding:14px 28px; border-radius:8px; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="logo-img" />
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../capabilities.html">Capabilities</a></li>
+        <li><a href="../expertise.html">Expertise</a></li>
+        <li><a href="../devices.html">Devices</a></li>
+        <li><a href="../insights.html" class="active">Insights</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="article-hero">
+    <span class="cat">Blog</span>
+    <h1>The Quarterly Connection – Q4 2023</h1>
+    <div class="date">Jan 8, 2024</div>
+  </section>
+
+  <div class="article-body">
+
+<div class="et-l et-l--post">
+<div class="et_builder_inner_content et_pb_gutters3"><div class="et_pb_section et_pb_section_9 et_section_regular">
+<div class="et_pb_row et_pb_row_5 et_pb_equal_columns">
+<div class="et_pb_column et_pb_column_1_2 et_pb_column_7 et_pb_css_mix_blend_mode_passthrough">
+<div class="et_pb_module et_pb_image et_pb_image_3">
+<span class="et_pb_image_wrap"><img alt="" class="wp-image-54433" decoding="async" fetchpriority="high" height="940" src="../assets/images/articles/Q4_Featured-jpg.webp" title="Q4_Featured" width="1280"/></span>
+</div>
+</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_8 et_pb_css_mix_blend_mode_passthrough et-last-child">
+<div class="et_pb_module et_pb_text et_pb_text_1 et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner">
+<p>The fourth edition of The Quarterly Connection, powered by Global Interconnect, provides highlights, updates, and insights on the medical device industry and the Gii company throughout the fourth quarter of 2023.</p></div>
+</div><div class="et_pb_button_module_wrapper et_pb_button_2_wrapper et_pb_button_alignment_left et_pb_module">
+<a class="et_pb_button et_pb_button_2 et_pb_bg_layout_light" data-icon="&amp;" href="https://1926682.hs-sites.com/the-quarterly-connection-q4-2023" target="_blank">Read Now</a>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+
+  </div>
+
+  <div class="article-cta">
+    <a class="btn-back" href="../insights.html">&larr; All Insights</a>
+    <a class="btn-quote" href="../quote.html">Request a Quote</a>
+  </div>
+
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="footer-logo" />
+          <p>Medical device cable &amp; connector specialists. Engineering-led, value-driven custom connector and cable assembly for energy-based medical devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. Trusted by leading OEMs for over three decades.</p>
+          <div class="footer-certs">
+            <span>FDA Registered</span>
+            <span>ISO 13485</span>
+            
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../index.html#advantage">The Gii Advantage</a></li>
+            <li><a href="../index.html#quality">Quality & Certifications</a></li>
+            <li><a href="https://www.globalinterconnect.com/careers/" target="_blank" rel="noopener">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Capabilities</h4>
+          <ul>
+            <li><a href="../capabilities.html">All Capabilities</a></li>
+            <li><a href="../capabilities.html">Custom Connectors</a></li>
+            <li><a href="../capabilities.html">Cable Assemblies</a></li>
+            <li><a href="../capabilities.html">Electromechanical Assembly</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../insights.html">Insights & Resources</a></li>
+            <li><a href="../expertise.html">Engineering Expertise</a></li>
+            <li><a href="../devices.html">Medical Devices</a></li>
+            <li><a href="../index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Global Interconnect, Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Simple filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter articles
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.article-card').forEach(card => {
+          const category = card.dataset.category;
+          if (filter === 'all' || category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Simple newsletter form handling
+    document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      if (email) {
+        alert('Thank you for subscribing! Check your email for confirmation.');
+        e.target.reset();
+      }
+    });
+  </script>
+  <script src="../assets/js/chatbot.js"></script>
+</body>
+</html>

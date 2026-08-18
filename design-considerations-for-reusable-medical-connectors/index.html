@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" /> <!-- STAGING ONLY - remove at launch -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reusable medical connectors require advanced designs, premium materials and components, and complex manufacturing and validation processes. These connec…" />
+  <title>Design Considerations for Reusable Medical Connectors | Global Interconnect, Inc.</title>
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Global Interconnect, Inc." />
+  <meta property="og:url"         content="https://www.globalinterconnect.com/design-considerations-for-reusable-medical-connectors/" />
+  <meta property="og:title"       content="Design Considerations for Reusable Medical Connectors" />
+  <meta property="og:description" content="Reusable medical connectors require advanced designs, premium materials and components, and complex manufacturing and validation processes. These connec…" />
+  <meta property="og:image"       content="https://www.globalinterconnect.com/assets/images/insights/signati.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Medical Cable &amp; Connector Insights | Gii" />
+  <meta name="twitter:description" content="Design guides, whitepapers, and case studies from Gii's cable and connector specialists." />
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== INSIGHTS PAGE STYLES ===== */
+
+    /* Page banner / hero */
+    .insights-banner {
+      background: linear-gradient(135deg, #0d4c3a 0%, #1a5f47 100%);
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .insights-banner-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .insights-banner h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .insights-banner p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* Filter row */
+    .insights-filters {
+      background: #f8f8f8;
+      padding: 2rem;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 3rem;
+    }
+
+    .filters-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filter-btn {
+      padding: 0.625rem 1.25rem;
+      border: 1px solid #d0d0d0;
+      background: white;
+      color: #333;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: #0d4c3a;
+      color: #0d4c3a;
+      background: #f0f8f5;
+    }
+
+    .filter-btn.active {
+      background: #0d4c3a;
+      color: white;
+      border-color: #0d4c3a;
+    }
+
+    /* Articles grid */
+    .insights-articles {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .article-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .article-card:hover {
+      border-color: #0d4c3a;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .article-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .article-tag {
+      display: inline-block;
+      background: #e8f5f1;
+      color: #0d4c3a;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      width: fit-content;
+    }
+
+    .article-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      color: #222;
+    }
+
+    .article-title a {
+      color: #222;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .article-title a:hover {
+      color: #0d4c3a;
+    }
+
+    .article-excerpt {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .article-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid #f0f0f0;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    .article-date {
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    .article-link {
+      color: #0d4c3a;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+
+    .article-link:hover {
+      opacity: 0.7;
+    }
+
+    /* Newsletter / Contact CTA */
+    .insights-cta-section {
+      background: #0d4c3a;
+      color: white;
+      padding: 4rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .insights-cta-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .cta-newsletter {
+      padding-right: 2rem;
+    }
+
+    .cta-newsletter h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .cta-newsletter p {
+      font-size: 1rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      background: white;
+      color: #333;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #999;
+    }
+
+    .newsletter-form button {
+      padding: 0.75rem 1.5rem;
+      background: #1a5f47;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+      background: #0d4c3a;
+    }
+
+    .cta-engineering {
+      padding-left: 2rem;
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .cta-engineering h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .cta-engineering p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .cta-engineering a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .cta-engineering a:hover {
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .insights-banner h1 {
+        font-size: 1.75rem;
+      }
+
+      .insights-banner p {
+        font-size: 0.95rem;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .cta-newsletter {
+        padding-right: 0;
+      }
+
+      .cta-engineering {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 2rem;
+      }
+
+      .filters-container {
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <link rel="canonical" href="https://www.globalinterconnect.com/design-considerations-for-reusable-medical-connectors/" />
+  <style>
+.article-hero { background: linear-gradient(135deg, #1a472a 0%, #2d6e47 100%); color: #fff; padding: 150px 20px 70px; text-align: center; }
+.article-hero .cat { display:inline-block; font-size:.85rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; color:#8BC342; margin-bottom:14px; }
+.article-hero h1 { font-family:'Barlow',sans-serif; font-size: clamp(1.9rem, 4.5vw, 3rem); font-weight:800; max-width: 900px; margin: 0 auto 14px; line-height:1.2; }
+.article-hero .date { opacity:.85; font-size:.95rem; }
+.article-body { max-width: 800px; margin: 0 auto; padding: 60px 20px 40px; font-size: 1.05rem; line-height: 1.8; color: #333; }
+.article-body h1,.article-body h2,.article-body h3,.article-body h4 { font-family:'Barlow',sans-serif; color:#1a1a1a; line-height:1.3; margin:1.6em 0 .6em; }
+.article-body h2 { font-size:1.7rem; } .article-body h3 { font-size:1.35rem; }
+.article-body p { margin: 0 0 1.2em; }
+.article-body ul,.article-body ol { margin: 0 0 1.2em 1.4em; }
+.article-body li { margin-bottom:.5em; }
+.article-body img { max-width:100%; height:auto; border-radius:10px; margin:1.5em auto; display:block; }
+.article-body a { color:#1b5e3f; font-weight:600; }
+.article-cta { text-align:center; padding: 20px 20px 70px; }
+.article-cta .btn-back { display:inline-block; margin-right:14px; color:#1b5e3f; font-weight:600; text-decoration:none; }
+.article-cta .btn-quote { display:inline-block; background:#8BC342; color:#122E18; font-weight:700; padding:14px 28px; border-radius:8px; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="logo-img" />
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../capabilities.html">Capabilities</a></li>
+        <li><a href="../expertise.html">Expertise</a></li>
+        <li><a href="../devices.html">Devices</a></li>
+        <li><a href="../insights.html" class="active">Insights</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="article-hero">
+    <span class="cat">Whitepaper</span>
+    <h1>Design Considerations for Reusable Medical Connectors</h1>
+    <div class="date">Jun 12, 2023</div>
+  </section>
+
+  <div class="article-body">
+
+<div class="et-l et-l--post">
+<div class="et_builder_inner_content et_pb_gutters3">
+<div class="et_pb_section et_pb_section_9 et_section_regular">
+<div class="et_pb_row et_pb_row_5 et_pb_equal_columns et_pb_gutters1">
+<div class="et_pb_column et_pb_column_2_5 et_pb_column_7 et_pb_css_mix_blend_mode_passthrough">
+<div class="et_pb_module et_pb_text et_pb_text_1 et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner"><h2>Reusable medical connectors require advanced designs, premium materials and components, and complex manufacturing and validation processes.</h2>
+<p style="text-align: left;">These connectors are critical components in <strong data-end="436" data-start="389">Energy-Based and Diagnostic Medical Devices</strong>, ensuring reliability and safety in demanding medical applications. Reusable connectors can be designed into the handpiece or attached to a full-length cable that’s hardwired into the handpiece and plugs directly into the device and/or generator.</p>
+<p style="text-align: left;">The selection process should start by understanding the connector’s specific application and user experience for the doctor/hospital, with patient safety at the forefront.</p>
+<p style="text-align: left;">The cycle count and sterilization strategy will heavily influence the overall design, material, and component selection. Typical sterilization cycle counts can be anywhere from 10 to 10,000 cycles and will depend on the type of sterilization process. Sterilization can consist of Isopropyl wipes, hydrogen peroxide, and/or heat and steam.</p>
+<p style="text-align: left;">It’s common to consider how the connector and cable assembly will be handled in the field along with any patient risk. i.e. storage, sterilization process, and daily handling.</p>
+<p style="text-align: left;">Once you’ve determined the specific application and user experience, you are now ready to pursue design considerations for your reusable medical connector.</p></div>
+</div>
+</div><div class="et_pb_column et_pb_column_3_5 et_pb_column_8 et_pb_css_mix_blend_mode_passthrough et-last-child">
+<div class="et_pb_module et_pb_image et_pb_image_3">
+<span class="et_pb_image_wrap"><img alt="" class="wp-image-54186" decoding="async" fetchpriority="high" height="1241" src="../assets/images/articles/Design-Consideration-Reusable-Graphic-Featured.jpg" title="Design Consideration Graphic Featured" width="1689"/></span>
+</div>
+</div>
+</div>
+</div><div class="et_pb_section et_pb_section_10 et_pb_with_background et_section_regular">
+<div class="et_pb_row et_pb_row_6">
+<div class="et_pb_column et_pb_column_4_4 et_pb_column_9 et_pb_css_mix_blend_mode_passthrough et-last-child">
+<div class="et_pb_module et_pb_text et_pb_text_2 et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner"><h2>Critical elements of a reusable medical connector:</h2></div>
+</div>
+</div>
+</div>
+</div><div class="et_pb_section et_pb_section_11 et_section_regular">
+<div class="et_pb_row et_pb_row_7 et_pb_equal_columns">
+<div class="et_pb_column et_pb_column_2_5 et_pb_column_10 et_pb_css_mix_blend_mode_passthrough">
+<div class="et_pb_module et_pb_image et_pb_image_4">
+<span class="et_pb_image_wrap"><img alt="" class="wp-image-54189" decoding="async" height="912" src="../assets/images/articles/ReusablePlaceandMetal.jpg" title="ReusablePlaceandMetal" width="1000"/></span>
+</div>
+</div><div class="et_pb_column et_pb_column_3_5 et_pb_column_11 et_pb_css_mix_blend_mode_passthrough et-last-child">
+<div class="et_pb_module et_pb_text et_pb_text_3 et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner"><h3>Materials</h3></div>
+</div><div class="et_pb_module et_pb_text et_pb_text_4 et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner"><p><strong>Plastic connectors</strong> provide a more competitive price point over metal and are best for lower cycle counts (50 to 100). You can leverage plastic connectors for cycle counts over 100, but these are typically for simple wipe-down sterilization and handling processes.</p>
+<ul>
+<li>PESU, PEI, and/or PSU are common connector materials to consider.</li>
+<li>Some benefits of plastic connectors involve patient safety and minizing risk of electrical shock.</li>
+<li>Heat and steam sterilization can compromise the integrity of plastic connectors over time, causing them to become fragile and break.</li>
+</ul>
+<p><strong>Metal connectors</strong> are best for cycle counts over 100 utilizing heat and steam sterilization.</p></div>
+</div>
+</div>
+</div><div class="et_pb_row et_pb_row_8 et_pb_equal_columns">
+<div class="et_pb_column et_pb_column_4_4 et_pb_column_12 et_pb_css_mix_blend_mode_passthrough et-last-child">
+<div class="et_pb_module et_pb_text et_pb_text_5 et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner"><h3>Mating Style:</h3></div>
+</div><div class="et_pb_module et_pb_text et_pb_text_6 et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner"><p>Depending on patient safety requirements, you’ll want to choose between <strong>locking, non-locking</strong>, and <strong>breakaway</strong> connector mating styles.</p>
+<p><strong>Non-locking connectors</strong> will prevent damage. Users often pull on the cable to disconnect the connector from the generator/console. This will mitigate the number of failures and service requests.</p>
+<p><strong>Breakaway connectors</strong> provide a slightly more sophisticated design and enhanced user experience over non-locking while maintaining a higher insertion and extraction force. A breakaway option will also mitigate the number of failures and service requests.</p>
+<p><strong>Locking connectors</strong> offer the most sophisticated designs with additional components and prevent any accidental disconnections during the procedure.</p></div>
+</div><div class="et_pb_module et_pb_image et_pb_image_5">
+<span class="et_pb_image_wrap"><img alt="" class="wp-image-54190" decoding="async" height="218" src="../assets/images/articles/MatingStyles.png" title="MatingStyles" width="1000"/></span>
+</div>
+</div>
+</div><div class="et_pb_row et_pb_row_9 et_pb_equal_columns et_pb_gutters1">
+<div class="et_pb_column et_pb_column_2_5 et_pb_column_13 et_pb_css_mix_blend_mode_passthrough">
+<div class="et_pb_module et_pb_image et_pb_image_6">
+<span class="et_pb_image_wrap"><img alt="" class="wp-image-54191" decoding="async" height="912" src="../assets/images/articles/contact_reusable.png" title="contact_reusable" width="343"/></span>
+</div>
+</div><div class="et_pb_column et_pb_column_3_5 et_pb_column_14 et_pb_css_mix_blend_mode_passthrough et-last-child">
+<div class="et_pb_module et_pb_text et_pb_text_7 et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner"><h3>Contacts:</h3></div>
+</div><div class="et_pb_module et_pb_text et_pb_text_8 et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner">Machined contacts with gold plating, especially for high-density applications.
+<p>When the number of electrical contacts per connector is considered high, edge cards (PCB style – FR4) can help provide greater reliability.</p>
+<p>Depending on your product application, you may require pneumatic and fluidic contacts that handle gas, saline, and suction.</p>
+<p>Fiber contacts for imaging and sensing are becoming more prevalent and increasingly important for many emerging technologies.</p></div>
+</div>
+</div>
+</div>
+</div><div class="et_pb_section et_pb_section_12 et_section_regular">
+</div><div class="et_pb_section et_pb_section_13 et_pb_with_background et_section_regular">
+<div class="et_pb_row et_pb_row_10">
+<div class="et_pb_column et_pb_column_4_4 et_pb_column_15 et_pb_css_mix_blend_mode_passthrough et-last-child">
+<div class="et_pb_module et_pb_text et_pb_text_9 et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner"><h2>Before selecting any of the options, patient safety and performance requirements should be considered.</h2>
+<p>Global Interconnect is an ISO13485 and FDA-registered contract manufacturing partner with over 30 years of helping medical device OEMs achieve the ideal connector solution for their devices.</p>
+<p>Chat with one of Global Interconnect’s engineers today for a free consultation!</p></div>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+
+  </div>
+
+  <div class="article-cta">
+    <a class="btn-back" href="../insights.html">&larr; All Insights</a>
+    <a class="btn-quote" href="../quote.html">Request a Quote</a>
+  </div>
+
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="footer-logo" />
+          <p>Medical device cable &amp; connector specialists. Engineering-led, value-driven custom connector and cable assembly for energy-based medical devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. Trusted by leading OEMs for over three decades.</p>
+          <div class="footer-certs">
+            <span>FDA Registered</span>
+            <span>ISO 13485</span>
+            
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../index.html#advantage">The Gii Advantage</a></li>
+            <li><a href="../index.html#quality">Quality & Certifications</a></li>
+            <li><a href="https://www.globalinterconnect.com/careers/" target="_blank" rel="noopener">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Capabilities</h4>
+          <ul>
+            <li><a href="../capabilities.html">All Capabilities</a></li>
+            <li><a href="../capabilities.html">Custom Connectors</a></li>
+            <li><a href="../capabilities.html">Cable Assemblies</a></li>
+            <li><a href="../capabilities.html">Electromechanical Assembly</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../insights.html">Insights & Resources</a></li>
+            <li><a href="../expertise.html">Engineering Expertise</a></li>
+            <li><a href="../devices.html">Medical Devices</a></li>
+            <li><a href="../index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Global Interconnect, Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Simple filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter articles
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.article-card').forEach(card => {
+          const category = card.dataset.category;
+          if (filter === 'all' || category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Simple newsletter form handling
+    document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      if (email) {
+        alert('Thank you for subscribing! Check your email for confirmation.');
+        e.target.reset();
+      }
+    });
+  </script>
+  <script src="../assets/js/chatbot.js"></script>
+</body>
+</html>

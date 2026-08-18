@@ -1,0 +1,8 @@
+# STAGING configuration.
+# Pages carry <meta name="robots" content="noindex, nofollow"> while staged;
+# crawling stays allowed so the noindex tag is actually seen.
+# AT LAUNCH: remove the noindex meta tags from every page, keep this file as-is.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.globalinterconnect.com/sitemap.xml

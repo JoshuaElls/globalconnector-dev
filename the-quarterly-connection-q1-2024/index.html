@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" /> <!-- STAGING ONLY - remove at launch -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Quarterly Connection (Q1 2024 Highlights) Dear Valued Partner, Introducing our fifth issue of The Quarterly Connection, highlighting Q1 2024. Upcomi…" />
+  <title>The Quarterly Connection Q1 – 2024 | Global Interconnect, Inc.</title>
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Global Interconnect, Inc." />
+  <meta property="og:url"         content="https://www.globalinterconnect.com/the-quarterly-connection-q1-2024/" />
+  <meta property="og:title"       content="The Quarterly Connection Q1 – 2024" />
+  <meta property="og:description" content="The Quarterly Connection (Q1 2024 Highlights) Dear Valued Partner, Introducing our fifth issue of The Quarterly Connection, highlighting Q1 2024. Upcomi…" />
+  <meta property="og:image"       content="https://www.globalinterconnect.com/assets/images/insights/signati.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Medical Cable &amp; Connector Insights | Gii" />
+  <meta name="twitter:description" content="Design guides, whitepapers, and case studies from Gii's cable and connector specialists." />
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== INSIGHTS PAGE STYLES ===== */
+
+    /* Page banner / hero */
+    .insights-banner {
+      background: linear-gradient(135deg, #0d4c3a 0%, #1a5f47 100%);
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .insights-banner-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .insights-banner h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .insights-banner p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* Filter row */
+    .insights-filters {
+      background: #f8f8f8;
+      padding: 2rem;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 3rem;
+    }
+
+    .filters-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filter-btn {
+      padding: 0.625rem 1.25rem;
+      border: 1px solid #d0d0d0;
+      background: white;
+      color: #333;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: #0d4c3a;
+      color: #0d4c3a;
+      background: #f0f8f5;
+    }
+
+    .filter-btn.active {
+      background: #0d4c3a;
+      color: white;
+      border-color: #0d4c3a;
+    }
+
+    /* Articles grid */
+    .insights-articles {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .article-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .article-card:hover {
+      border-color: #0d4c3a;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .article-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .article-tag {
+      display: inline-block;
+      background: #e8f5f1;
+      color: #0d4c3a;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      width: fit-content;
+    }
+
+    .article-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      color: #222;
+    }
+
+    .article-title a {
+      color: #222;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .article-title a:hover {
+      color: #0d4c3a;
+    }
+
+    .article-excerpt {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .article-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid #f0f0f0;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    .article-date {
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    .article-link {
+      color: #0d4c3a;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+
+    .article-link:hover {
+      opacity: 0.7;
+    }
+
+    /* Newsletter / Contact CTA */
+    .insights-cta-section {
+      background: #0d4c3a;
+      color: white;
+      padding: 4rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .insights-cta-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .cta-newsletter {
+      padding-right: 2rem;
+    }
+
+    .cta-newsletter h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .cta-newsletter p {
+      font-size: 1rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      background: white;
+      color: #333;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #999;
+    }
+
+    .newsletter-form button {
+      padding: 0.75rem 1.5rem;
+      background: #1a5f47;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+      background: #0d4c3a;
+    }
+
+    .cta-engineering {
+      padding-left: 2rem;
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .cta-engineering h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .cta-engineering p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .cta-engineering a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .cta-engineering a:hover {
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .insights-banner h1 {
+        font-size: 1.75rem;
+      }
+
+      .insights-banner p {
+        font-size: 0.95rem;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .cta-newsletter {
+        padding-right: 0;
+      }
+
+      .cta-engineering {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 2rem;
+      }
+
+      .filters-container {
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <link rel="canonical" href="https://www.globalinterconnect.com/the-quarterly-connection-q1-2024/" />
+  <style>
+.article-hero { background: linear-gradient(135deg, #1a472a 0%, #2d6e47 100%); color: #fff; padding: 150px 20px 70px; text-align: center; }
+.article-hero .cat { display:inline-block; font-size:.85rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; color:#8BC342; margin-bottom:14px; }
+.article-hero h1 { font-family:'Barlow',sans-serif; font-size: clamp(1.9rem, 4.5vw, 3rem); font-weight:800; max-width: 900px; margin: 0 auto 14px; line-height:1.2; }
+.article-hero .date { opacity:.85; font-size:.95rem; }
+.article-body { max-width: 800px; margin: 0 auto; padding: 60px 20px 40px; font-size: 1.05rem; line-height: 1.8; color: #333; }
+.article-body h1,.article-body h2,.article-body h3,.article-body h4 { font-family:'Barlow',sans-serif; color:#1a1a1a; line-height:1.3; margin:1.6em 0 .6em; }
+.article-body h2 { font-size:1.7rem; } .article-body h3 { font-size:1.35rem; }
+.article-body p { margin: 0 0 1.2em; }
+.article-body ul,.article-body ol { margin: 0 0 1.2em 1.4em; }
+.article-body li { margin-bottom:.5em; }
+.article-body img { max-width:100%; height:auto; border-radius:10px; margin:1.5em auto; display:block; }
+.article-body a { color:#1b5e3f; font-weight:600; }
+.article-cta { text-align:center; padding: 20px 20px 70px; }
+.article-cta .btn-back { display:inline-block; margin-right:14px; color:#1b5e3f; font-weight:600; text-decoration:none; }
+.article-cta .btn-quote { display:inline-block; background:#8BC342; color:#122E18; font-weight:700; padding:14px 28px; border-radius:8px; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="logo-img" />
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../capabilities.html">Capabilities</a></li>
+        <li><a href="../expertise.html">Expertise</a></li>
+        <li><a href="../devices.html">Devices</a></li>
+        <li><a href="../insights.html" class="active">Insights</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="article-hero">
+    <span class="cat">Blog</span>
+    <h1>The Quarterly Connection Q1 – 2024</h1>
+    <div class="date">Apr 2, 2024</div>
+  </section>
+
+  <div class="article-body">
+
+<div class="et-l et-l--post">
+<div class="et_builder_inner_content et_pb_gutters3"><div class="et_pb_section et_pb_section_9 et_section_regular">
+<div class="et_pb_row et_pb_row_5">
+<div class="et_pb_column et_pb_column_4_4 et_pb_column_7 et_pb_css_mix_blend_mode_passthrough et-last-child">
+<div class="et_pb_module et_pb_code et_pb_code_1">
+<div class="et_pb_code_inner">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml"><head><!--[if !mso]><!-- --><link href="https://fonts.googleapis.com/css?family=Lato|Lato:i,b,bi" hs-webfonts="true" rel="stylesheet" type="text/css"/><!--<![endif]--><!--[if !mso]><!-- --><link href="https://fonts.googleapis.com/css?family=Lato|Lato:i,b,bi" hs-webfonts="true" rel="stylesheet" type="text/css"/><!--<![endif]-->
+<title>The Quarterly Connection (Q1 2024 Highlights)</title>
+<meta content="The Quarterly Connection (Q1 2024 Highlights)" property="og:title"/>
+<meta content="The Quarterly Connection (Q1 2024 Highlights)" name="twitter:title"/>
+<meta name="x-apple-disable-message-reformatting"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!--[if gte mso 9]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+  
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type="text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #cbd6e2;}
+</style>
+<![endif]-->
+<meta content="HubSpot" name="generator"/><meta content="http://1926682.hs-sites.com/the-quarterly-connection-q1-2024-highlights" property="og:url"/><meta content="noindex,follow" name="robots"/><!--[if !((mso)|(IE))]><!-- --><!--<![endif]--></head>
+<body bgcolor="#cbd6e2" data-cmplz="1" id="hs_body" style="margin:0 !important; padding:0 !important; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word">
+<div id="preview_text" lang="en" style="display:none;font-size:1px;color:#cbd6e2;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">Dear Valued Partner, Introducing our fifth issue of The Quarterly Connection, highlighting Q1 2024.</div>
+<!--[if gte mso 9]>
+<v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+    <v:fill type="tile" size="100%,100%" color="#ffffff"/>
+</v:background>
+<![endif]-->
+<div bgcolor="#cbd6e2" class="hse-body-background" lang="en" style="background-color:#cbd6e2">
+<table cellpadding="0" cellspacing="0" class="hse-body-wrapper-table" height="100%" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; margin:0; padding:0; width:100% !important; min-width:320px !important; height:100% !important" width="100%">
+<tbody><tr>
+<td class="hse-body-wrapper-td" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding-top:20px; padding-bottom:20px" valign="top">
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_dnd_area" data-hs-cos-general-type="widget" data-hs-cos-type="dnd_area" id="hs_cos_wrapper_main" style="color: inherit; font-size: inherit; line-height: inherit;">
+<div class="hse-section hse-section-first" id="section_1678113307069" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column_1678113307069_0">
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16865827605391" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:0px; font-size:0px" valign="top">
+<img align="middle" alt="Quarter1_April1, 2024" class="stretch-on-mobile" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/Quarter1_April1%2c%202024.jpg?upscale=true&amp;width=1200&amp;upscale=true&amp;name=Quarter1_April1%2c%202024.jpg" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; max-width:100%; font-size:16px" width="600"/>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1711980600451" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column_1711980600451_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_170421461389911" style="color: inherit; font-size: inherit; line-height: inherit;"><!--[if gte mso 9]>
+<div style="line-height: 0; font-size: 0px">
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:560px; height:2pt;" fillcolor="none">
+    <v:fill type="tile"/>
+    <v:textbox inset="0,0,0,0">
+      <div>
+<![endif]-->
+<table align="center" border="0" role="presentation" style="position:relative; top:-1px; min-width:20px; width:100%; max-width:100%; border-spacing:0; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; font-size:1px" width="100%">
+<tbody><tr><td style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; line-height:0; border:transparent; border-bottom:2px solid #000000; mso-border-bottom-alt:2pt solid #000000; border-bottom-width:2px" valign="middle" width="100%"><!--[if mso 16]> <![endif]--></td></tr>
+</tbody></table>
+<!--[if gte mso 9]>
+      </div>
+    </v:textbox>
+  </v:rect>
+</div>
+<![endif]--></div></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_170421330196910" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_170421330196910_" style="color: inherit; font-size: inherit; line-height: inherit;"><h2 align="center" style="margin:0; mso-line-height-rule:exactly; text-align:center; font-size:36px; line-height:175%"><span style="font-family: Lato, Tahoma, sans-serif;">Upcoming Webinar</span></h2></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1711980468885" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column_1711980468885_0">
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171198047580619" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://events.teams.microsoft.com/event/016d3bd6-747b-46de-8b33-bf3fc9ba10b8@fbe2720f-0521-4ad1-9597-37791d118ddf?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="Chamfr_HowToDesign_Single Use Connector" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/Chamfr_HowToDesign_Single%20Use%20Connector.jpg?upscale=true&amp;width=1120&amp;upscale=true&amp;name=Chamfr_HowToDesign_Single%20Use%20Connector.jpg" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="560"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1711980608093" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column_1711980608093_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171198067291723" style="color: inherit; font-size: inherit; line-height: inherit;"><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate!important" width="100%">
+<tbody><tr>
+<!--[if mso]>
+      <td align="center" valign="middle" bgcolor="#69A84F" style="border-radius:25px;cursor:auto;background-color:#69A84F;padding:12px 18px">
+    <![endif]-->
+<!--[if !mso]><!-- -->
+<td align="center" bgcolor="#69A84F" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; border-radius:25px; cursor:auto; background-color:#69A84F" valign="middle">
+<!--<![endif]-->
+<a data-hs-link-id="1" href="https://events.teams.microsoft.com/event/016d3bd6-747b-46de-8b33-bf3fc9ba10b8@fbe2720f-0521-4ad1-9597-37791d118ddf?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly; font-size:25px; font-family:Arial, sans-serif; Margin:0; text-transform:none; text-decoration:none; padding:12px 18px; display:block" target="_blank">
+<strong style="color:#ffffff;font-weight:bold;text-decoration:none;font-style:normal;">Click here to sign-up for the webinar</strong>
+</a>
+</td>
+</tr>
+</tbody></table></div></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171198063511422" style="color: inherit; font-size: inherit; line-height: inherit;"><!--[if gte mso 9]>
+<div style="line-height: 0; font-size: 0px">
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:560px; height:2pt;" fillcolor="none">
+    <v:fill type="tile"/>
+    <v:textbox inset="0,0,0,0">
+      <div>
+<![endif]-->
+<table align="center" border="0" role="presentation" style="position:relative; top:-1px; min-width:20px; width:100%; max-width:100%; border-spacing:0; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; font-size:1px" width="100%">
+<tbody><tr><td style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; line-height:0; border:transparent; border-bottom:2px solid #000000; mso-border-bottom-alt:2pt solid #000000; border-bottom-width:2px" valign="middle" width="100%"><!--[if mso 16]> <![endif]--></td></tr>
+</tbody></table>
+<!--[if gte mso 9]>
+      </div>
+    </v:textbox>
+  </v:rect>
+</div>
+<![endif]--></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1699043834709" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column_1699043834709_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171198126678525" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_171198126678525_" style="color: inherit; font-size: inherit; line-height: inherit;"><h2 align="center" style="margin:0; mso-line-height-rule:exactly; text-align:center; font-size:36px; line-height:175%"><span style="font-family: Lato, Tahoma, sans-serif;">Highlights of Q1 2024</span></h2></div></div></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17042118985112" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_17042118985112_" style="color: inherit; font-size: inherit; line-height: inherit;"><h2 align="center" style="margin:0; mso-line-height-rule:exactly; text-align:center; font-size:28px; line-height:175%"><span style="font-family: Lato, Tahoma, sans-serif;">Notable Milestones</span></h2></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1711394174033" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="200" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:200px">
+<![endif]-->
+<div class="hse-column hse-size-4" id="column_1711394174033_0">
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17113913240092" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://www.globalinterconnect.com/global-interconnect-partners-with-nearshore-manufacturer-itek-to-expand-offerings-to-medical-device-manufacturers/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="BlogImage2-2-jpg-1" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/BlogImage2-2-jpg-1.webp?upscale=true&amp;width=320&amp;upscale=true&amp;name=BlogImage2-2-jpg-1.webp" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="160"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px 5px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17113907706011" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_17113907706011_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:115%"><span style="font-family: Lato, Tahoma, sans-serif;">We are excited to announce our</span></p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:115%"><span style="font-family: Lato, Tahoma, sans-serif;">new partnership with ITEK in Cartago, </span></p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:115%"><span style="font-family: Lato, Tahoma, sans-serif;">Costa Rica. Click the image to learn more.</span></p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="200" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:200px">
+<![endif]-->
+<div class="hse-column hse-size-4" id="column_1711394174033_1">
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16980761005753" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://www.linkedin.com/in/michael-p-466ba997/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="1707176118562" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/1707176118562.jpg?upscale=true&amp;width=320&amp;upscale=true&amp;name=1707176118562.jpg" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="160"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px 5px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17042127118035" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_17042127118035_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:125%"><span style="font-family: Lato, Tahoma, sans-serif;">Welcome</span></p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:125%"><span style="font-family: Lato, Tahoma, sans-serif;">Michael Poirier</span><br/><span style="font-family: Lato, Tahoma, sans-serif;">As Our New Vice President of Customer Success. Click the image to connect with Mike on LinkedIn.</span></p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="200" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:200px">
+<![endif]-->
+<div class="hse-column hse-size-4" id="column_1711394174033_2">
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171139487106616" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://www.linkedin.com/feed/update/urn:li:activity:7165722349307195393/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="Acumatica" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/Acumatica.png?upscale=true&amp;width=320&amp;upscale=true&amp;name=Acumatica.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="160"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px 5px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171139488360117" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_171139488360117_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:125%"><span style="font-family: Lato, Tahoma, sans-serif;">Gii has selected Acumatica as their new Cloud ERP! Click the image to learn more.</span></p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="module_1704213260895" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="module_1704213260895_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171198061699021" style="color: inherit; font-size: inherit; line-height: inherit;"><!--[if gte mso 9]>
+<div style="line-height: 0; font-size: 0px">
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:560px; height:2pt;" fillcolor="none">
+    <v:fill type="tile"/>
+    <v:textbox inset="0,0,0,0">
+      <div>
+<![endif]-->
+<table align="center" border="0" role="presentation" style="position:relative; top:-1px; min-width:20px; width:100%; max-width:100%; border-spacing:0; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; font-size:1px" width="100%">
+<tbody><tr><td style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; line-height:0; border:transparent; border-bottom:2px solid #000000; mso-border-bottom-alt:2pt solid #000000; border-bottom-width:2px" valign="middle" width="100%"><!--[if mso 16]> <![endif]--></td></tr>
+</tbody></table>
+<!--[if gte mso 9]>
+      </div>
+    </v:textbox>
+  </v:rect>
+</div>
+<![endif]--></div></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171198078752124" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_171198078752124_" style="color: inherit; font-size: inherit; line-height: inherit;"><h2 align="center" style="margin:0; mso-line-height-rule:exactly; text-align:center; font-size:28px; line-height:175%"><span style="font-family: Lato, Tahoma, sans-serif;">Technical Insights</span></h2></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1711977767179" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:300px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="300" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:300px">
+<![endif]-->
+<div class="hse-column hse-size-6" id="column_1711977767179_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px 5px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171197804037910" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_171197804037910_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; line-height:125%; text-align:center; font-weight:bold"><span style="font-family: Lato, Tahoma, sans-serif;">A reusable cable assembly serving as a finished medical device!</span></p> </div></div></td></tr></tbody></table>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17119779390788" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://www.linkedin.com/posts/global-interconnect-inc._medicaldevices-medicaldevice-medicaldevicemanufacturing-activity-7171579695359078401-uXtt/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="TechnicalInsight1" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/TechnicalInsight1.jpg?upscale=true&amp;width=520&amp;upscale=true&amp;name=TechnicalInsight1.jpg" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="260"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171197844251714" style="color: inherit; font-size: inherit; line-height: inherit;"><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate!important">
+<tbody><tr>
+<!--[if mso]>
+      <td align="center" valign="middle" bgcolor="#69A84F" style="border-radius:25px;cursor:auto;background-color:#69A84F;padding:12px 18px">
+    <![endif]-->
+<!--[if !mso]><!-- -->
+<td align="center" bgcolor="#69A84F" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; border-radius:25px; cursor:auto; background-color:#69A84F" valign="middle">
+<!--<![endif]-->
+<a data-hs-link-id="1" href="https://www.linkedin.com/posts/global-interconnect-inc._medicaldevices-medicaldevice-medicaldevicemanufacturing-activity-7171579695359078401-uXtt/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly; font-size:16px; font-family:arial, helvetica, sans-serif; Margin:0; text-transform:none; text-decoration:none; padding:12px 18px; display:block" target="_blank">
+<strong style="color:#ffffff;font-weight:normal;text-decoration:none;font-style:normal;">Click Here</strong>
+</a>
+</td>
+</tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:300px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="300" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:300px">
+<![endif]-->
+<div class="hse-column hse-size-6" id="column_1711977767179_1">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px 5px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171197823276813" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_171197823276813_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:115%; font-weight:bold"><span style="font-family: Lato, Tahoma, sans-serif;">A cost-competitive custom single-use medical connector!</span></p> </div></div></td></tr></tbody></table>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171197820080311" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://www.linkedin.com/posts/global-interconnect-inc._medicaldevice-medicaldevices-activity-7150940166885445633-Qn1D/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="TechnicalInsight2" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/TechnicalInsight2.png?upscale=true&amp;width=520&amp;upscale=true&amp;name=TechnicalInsight2.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="260"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171197855275815" style="color: inherit; font-size: inherit; line-height: inherit;"><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate!important">
+<tbody><tr>
+<!--[if mso]>
+      <td align="center" valign="middle" bgcolor="#69A84F" style="border-radius:25px;cursor:auto;background-color:#69A84F;padding:12px 18px">
+    <![endif]-->
+<!--[if !mso]><!-- -->
+<td align="center" bgcolor="#69A84F" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; border-radius:25px; cursor:auto; background-color:#69A84F" valign="middle">
+<!--<![endif]-->
+<a data-hs-link-id="1" href="https://www.linkedin.com/posts/global-interconnect-inc._medicaldevice-medicaldevices-activity-7150940166885445633-Qn1D/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly; font-size:16px; font-family:arial, helvetica, sans-serif; Margin:0; text-transform:none; text-decoration:none; padding:12px 18px; display:block" target="_blank">
+<strong style="color:#ffffff;font-weight:normal;text-decoration:none;font-style:normal;">Click Here</strong>
+</a>
+</td>
+</tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="module_1711977744461" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="module_1711977744461_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17119777443635" style="color: inherit; font-size: inherit; line-height: inherit;"><!--[if gte mso 9]>
+<div style="line-height: 0; font-size: 0px">
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:560px; height:2pt;" fillcolor="none">
+    <v:fill type="tile"/>
+    <v:textbox inset="0,0,0,0">
+      <div>
+<![endif]-->
+<table align="center" border="0" role="presentation" style="position:relative; top:-1px; min-width:20px; width:100%; max-width:100%; border-spacing:0; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; font-size:1px" width="100%">
+<tbody><tr><td style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; line-height:0; border:transparent; border-bottom:2px solid #000000; mso-border-bottom-alt:2pt solid #000000; border-bottom-width:2px" valign="middle" width="100%"><!--[if mso 16]> <![endif]--></td></tr>
+</tbody></table>
+<!--[if gte mso 9]>
+      </div>
+    </v:textbox>
+  </v:rect>
+</div>
+<![endif]--></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="module_1711977784356" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="module_1711977784356_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17119777842647" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_17119777842647_" style="color: inherit; font-size: inherit; line-height: inherit;"><h2 align="center" style="margin:0; mso-line-height-rule:exactly; text-align:center; font-size:28px; line-height:175%"><span style="font-family: Lato, Tahoma, sans-serif;">Global Mobile!</span></h2></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1711978728858" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="200" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:200px">
+<![endif]-->
+<div class="hse-column hse-size-4" id="column_1711978728858_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:5px 20px 0px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16896953184904" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_16896953184904_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; font-weight:bold; line-height:125%; font-size:16px"><span style="font-family: Lato, Tahoma, sans-serif;">MD&amp;M </span></p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; font-weight:bold; line-height:125%; font-size:16px"><span style="font-family: Lato, Tahoma, sans-serif;">West:</span></p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; font-size:15px; line-height:125%"><span style="font-family: Lato, Tahoma, sans-serif;">February 4-6</span></p> </div></div></td></tr></tbody></table>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16971295406991" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://www.linkedin.com/feed/update/urn:li:activity:7162908865460699136/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="MDMMidwest" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/MDMMidwest.jpg?upscale=true&amp;width=320&amp;upscale=true&amp;name=MDMMidwest.jpg" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="160"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px 5px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16977428581621" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_16977428581621_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:115%"><span style="font-family: Lato, Tahoma, sans-serif;">Click the image to check out our highlight </span></p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:115%"><span style="font-family: Lato, Tahoma, sans-serif;">reel from </span><span style="font-family: Lato, Tahoma, sans-serif;">the show</span></p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="200" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:200px">
+<![endif]-->
+<div class="hse-column hse-size-4" id="column_1711978728858_1">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:5px 20px 0px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17113927603416" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_17113927603416_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; font-weight:bold; line-height:125%; font-size:16px">True Quality</p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; font-weight:bold; line-height:125%; font-size:16px">Road Show:</p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; font-size:15px; line-height:125%">March 14</p> </div></div></td></tr></tbody></table>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17113927603417" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://www.linkedin.com/posts/kruse-missile_medicaldevices-medicaldevice-qualitycontrol-activity-7174779051440504832-acNK/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="greenlight" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/greenlight.png?upscale=true&amp;width=320&amp;upscale=true&amp;name=greenlight.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="160"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px 5px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17113927603418" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_17113927603418_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:125%"><span style="font-family: Lato, Tahoma, sans-serif;">We were back in Boston for the True Quality Roadshow! Click the image for the highlight reel</span></p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="200" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:200px">
+<![endif]-->
+<div class="hse-column hse-size-4" id="column_1711978728858_2">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:5px 20px 0px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16977429041342" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_16977429041342_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; font-weight:bold; line-height:125%; font-size:16px"><span style="font-family: Lato, Tahoma, sans-serif;">MedTech Happy Hour Boston:</span></p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; font-size:15px; line-height:125%"><span style="font-family: Lato, Tahoma, sans-serif;">March 21</span></p> </div></div></td></tr></tbody></table>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16977429240283" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://www.linkedin.com/posts/kruse-missile_medtech-medicaldevices-activity-7176992278035476480-PNx4/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="1711129672278" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/1711129672278.png?upscale=true&amp;width=320&amp;upscale=true&amp;name=1711129672278.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="160"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px 5px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16977429315664" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_16977429315664_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:125%"><span style="font-family: Lato, Tahoma, sans-serif;">Click the image to watch the Happy Hour highlight reel where our own Kyle Kruse </span></p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:125%"><span style="font-family: Lato, Tahoma, sans-serif;">was a featured guest</span></p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1684435063811" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column_1684435063811_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:5px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16941048520761" style="color: inherit; font-size: inherit; line-height: inherit;"><!--[if gte mso 9]>
+<div style="line-height: 0; font-size: 0px">
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:560px; height:2pt;" fillcolor="none">
+    <v:fill type="tile"/>
+    <v:textbox inset="0,0,0,0">
+      <div>
+<![endif]-->
+<table align="center" border="0" role="presentation" style="position:relative; top:-1px; min-width:20px; width:100%; max-width:100%; border-spacing:0; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; font-size:1px" width="100%">
+<tbody><tr><td style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; line-height:0; border:transparent; border-bottom:2px solid #000000; mso-border-bottom-alt:2pt solid #000000; border-bottom-width:2px" valign="middle" width="100%"><!--[if mso 16]> <![endif]--></td></tr>
+</tbody></table>
+<!--[if gte mso 9]>
+      </div>
+    </v:textbox>
+  </v:rect>
+</div>
+<![endif]--></div></td></tr></tbody></table>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16993040495703" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:5px 20px 0px; font-size:0px" valign="top">
+<img align="middle" alt="Section_whiteBG_Looking forward to Q2" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/Section_whiteBG_Looking%20forward%20to%20Q2.jpg?upscale=true&amp;width=1120&amp;upscale=true&amp;name=Section_whiteBG_Looking%20forward%20to%20Q2.jpg" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; max-width:100%; font-size:16px" width="560"/>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1704385652238" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:300px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="300" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:300px">
+<![endif]-->
+<div class="hse-column hse-size-6" id="column_1704385652238_0">
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17043860182271" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://boston.devicetalks.com/?campaignid=886876771&amp;adgroupid=143491758453&amp;adid=636040668955&amp;gad_source=1&amp;gclid=Cj0KCQjwwYSwBhDcARIsAOyL0fjEHdY361AVXsbrarh5rpbmFrfvXK608MdnHHPQbT2OfcJ-nLohIiMaAtBQEALw_wcB&amp;utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="DeviceTalks_Boston-1" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/DeviceTalks_Boston-1.jpg?upscale=true&amp;width=520&amp;upscale=true&amp;name=DeviceTalks_Boston-1.jpg" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="260"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_168443508766319" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_168443508766319_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; font-size:22px; line-height:125%; font-weight:bold">Device Talks Boston</p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:300px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="300" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:300px">
+<![endif]-->
+<div class="hse-column hse-size-6" id="column_1704385652238_1">
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171139390069714" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://www.imengineeringsouth.com/en/show-info/show-brands/mdm-south.html?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="MDM_South" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/MDM_South.jpg?upscale=true&amp;width=520&amp;upscale=true&amp;name=MDM_South.jpg" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="260"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171139397037315" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_171139397037315_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; font-size:22px; line-height:125%; font-weight:bold">MD&amp;M South</p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1678391601628" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column_1678391601628_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_168443505346917" style="color: inherit; font-size: inherit; line-height: inherit;"><!--[if gte mso 9]>
+<div style="line-height: 0; font-size: 0px">
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:560px; height:2pt;" fillcolor="none">
+    <v:fill type="tile"/>
+    <v:textbox inset="0,0,0,0">
+      <div>
+<![endif]-->
+<table align="center" border="0" role="presentation" style="position:relative; top:-1px; min-width:20px; width:100%; max-width:100%; border-spacing:0; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; font-size:1px" width="100%">
+<tbody><tr><td style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; line-height:0; border:transparent; border-bottom:2px solid #000000; mso-border-bottom-alt:2pt solid #000000; border-bottom-width:2px" valign="middle" width="100%"><!--[if mso 16]> <![endif]--></td></tr>
+</tbody></table>
+<!--[if gte mso 9]>
+      </div>
+    </v:textbox>
+  </v:rect>
+</div>
+<![endif]--></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1678116429017" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#8bc443" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#8bc443; padding-bottom:1px; padding-top:5px">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#8bc443">
+      <tr style="background-color:#8bc443;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;padding-bottom:1px; padding-top:5px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column_1678116429017_0">
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_167811832765742" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:0px 20px; font-size:0px" valign="top">
+<img align="middle" alt="TheGii Team" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/TheGii%20Team.png?upscale=true&amp;width=1120&amp;upscale=true&amp;name=TheGii%20Team.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; max-width:100%; font-size:16px" width="560"/>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1711978877434" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="200" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:200px">
+<![endif]-->
+<div class="hse-column hse-size-4" id="column_1711978877434_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:5px 20px 0px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16885851906084" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_16885851906084_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; font-size:16px; line-height:125%"><span style="color: #000000; font-family: Lato, Tahoma, sans-serif;"><strong>New </strong></span></p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; font-size:16px; line-height:125%"><span style="color: #000000; font-family: Lato, Tahoma, sans-serif;"><strong>Unboxing Video</strong></span></p> </div></div></td></tr></tbody></table>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16980759745401" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://www.linkedin.com/feed/update/urn:li:activity:7169042395957829633/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="unboxing" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/unboxing.png?upscale=true&amp;width=320&amp;upscale=true&amp;name=unboxing.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="160"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16977430378879" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_16977430378879_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:115%"><span style="color: #000000;">Click the image above to watch Chris Newell as he unboxes the Tuttnauer T-Edge 11 Autoclave!</span></p>
+<p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:115%"> </p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="200" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:200px">
+<![endif]-->
+<div class="hse-column hse-size-4" id="column_1711978877434_1">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:5px 20px 0px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17042179711681" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_17042179711681_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; font-size:16px; line-height:125%"><span style="color: #000000; font-family: Lato, Tahoma, sans-serif;"><strong>The MedTech Impact Podcast</strong></span></p> </div></div></td></tr></tbody></table>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17047274257523" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://blubrry.com/1473485/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="Medtech_Graphic" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/Medtech_Graphic.png?upscale=true&amp;width=320&amp;upscale=true&amp;name=Medtech_Graphic.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="160"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_17042181231793" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_17042181231793_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:125%"><span style="color: #000000;">Click the image above to stream our latest episodes</span></p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="200" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:200px">
+<![endif]-->
+<div class="hse-column hse-size-4" id="column_1711979555321_2">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:5px 20px 0px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171198000808417" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_171198000808417_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; font-size:16px; line-height:125%; font-weight:bold"><span style="font-family: Lato, Tahoma, sans-serif;">Customer Visit Highlight</span></p> </div></div></td></tr></tbody></table>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171197995084816" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<a data-hs-link-id="0" href="https://www.linkedin.com/feed/update/urn:li:activity:7178383582065786880/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly" target="_blank">
+<img align="middle" alt="Customervisit" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/Customervisit.png?upscale=true&amp;width=320&amp;upscale=true&amp;name=Customervisit.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; max-width:100%; font-size:16px" width="160"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_171198003496118" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_171198003496118_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; line-height:125%"><span style="color: #000000;">Click the image above to read about our latest customer visit</span></p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1694453421567" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#FFFFFF" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#FFFFFF">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#FFFFFF">
+      <tr style="background-color:#FFFFFF;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column_1694453421567_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:5px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16910809211468" style="color: inherit; font-size: inherit; line-height: inherit;"><!--[if gte mso 9]>
+<div style="line-height: 0; font-size: 0px">
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:560px; height:2pt;" fillcolor="none">
+    <v:fill type="tile"/>
+    <v:textbox inset="0,0,0,0">
+      <div>
+<![endif]-->
+<table align="center" border="0" role="presentation" style="position:relative; top:-1px; min-width:20px; width:100%; max-width:100%; border-spacing:0; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; font-size:1px" width="100%">
+<tbody><tr><td style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; line-height:0; border:transparent; border-bottom:2px solid #000000; mso-border-bottom-alt:2pt solid #000000; border-bottom-width:2px" valign="middle" width="100%"><!--[if mso 16]> <![endif]--></td></tr>
+</tbody></table>
+<!--[if gte mso 9]>
+      </div>
+    </v:textbox>
+  </v:rect>
+</div>
+<![endif]--></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1697468188328" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#FFFFFF" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#FFFFFF">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#FFFFFF">
+      <tr style="background-color:#FFFFFF;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="200" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:200px">
+<![endif]-->
+<div class="hse-column hse-size-4" id="column_1697468188328_0">
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16974681943482" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:10px 20px; font-size:0px" valign="top">
+<img align="middle" alt="SaraNugent" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/SaraNugent.png?upscale=true&amp;width=320&amp;upscale=true&amp;name=SaraNugent.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; max-width:100%; font-size:16px" width="160"/>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:400px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="400" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:400px">
+<![endif]-->
+<div class="hse-column hse-size-8" id="column_1697468188328_1">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:5px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16781312074354" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_16781312074354_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; font-size:18px; line-height:175%"><span style="color: #000000;"><strong>Employee Spotlight:</strong></span></p> </div></div></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16974681970733" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_16974681970733_" style="color: inherit; font-size: inherit; line-height: inherit;"><p style="mso-line-height-rule:exactly; line-height:125%; font-weight:bold"><span style="color: #000000;">Being at Global Interconnect for eight years, evolving, improving and maintaining our Quality Management System and Quality Operations has been a great experience.  I learn something new every day which helps to continue to support quality product and deliver positive outcomes.  Supporting our customers and their patients is my number one goal by meeting and exceeding quality standards and customer expectations.</span></p> </div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1695053256159" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#8bc342" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#8bc342; padding-bottom:10px; padding-top:10px">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#8bc342">
+      <tr style="background-color:#8bc342;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;padding-bottom:10px; padding-top:10px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column_1695053256159_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16950558383112" style="color: inherit; font-size: inherit; line-height: inherit;"><!--[if gte mso 9]>
+<div style="line-height: 0; font-size: 0px">
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:560px; height:2pt;" fillcolor="none">
+    <v:fill type="tile"/>
+    <v:textbox inset="0,0,0,0">
+      <div>
+<![endif]-->
+<table align="center" border="0" role="presentation" style="position:relative; top:-1px; min-width:20px; width:100%; max-width:100%; border-spacing:0; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; font-size:1px" width="100%">
+<tbody><tr><td style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; line-height:0; border:transparent; border-bottom:2px solid #ffffff; mso-border-bottom-alt:2pt solid #ffffff; border-bottom-width:2px" valign="middle" width="100%"><!--[if mso 16]> <![endif]--></td></tr>
+</tbody></table>
+<!--[if gte mso 9]>
+      </div>
+    </v:textbox>
+  </v:rect>
+</div>
+<![endif]--></div></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:15px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16950532774141" style="color: inherit; font-size: inherit; line-height: inherit;"><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate!important">
+<tbody><tr>
+<!--[if mso]>
+      <td align="center" valign="middle" bgcolor="#FFFFFF" style="border-radius:8px;cursor:auto;background-color:#FFFFFF;padding:12px 18px">
+    <![endif]-->
+<!--[if !mso]><!-- -->
+<td align="center" bgcolor="#FFFFFF" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; border-radius:8px; cursor:auto; background-color:#FFFFFF" valign="middle">
+<!--<![endif]-->
+<a data-hs-link-id="0" href="https://share.hsforms.com/1WF336IMZTymGf9puCK99xQ15amy?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly; font-size:16px; font-family:Arial, sans-serif; Margin:0; text-transform:none; text-decoration:none; padding:12px 18px; display:block" target="_blank">
+<strong style="color:#8bc342;font-weight:bold;text-decoration:none;font-style:normal;">Click Here to Contact Us!</strong>
+</a>
+</td>
+</tr>
+</tbody></table></div></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_167811642195932" style="color: inherit; font-size: inherit; line-height: inherit;"><!--[if gte mso 9]>
+<div style="line-height: 0; font-size: 0px">
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:560px; height:2pt;" fillcolor="none">
+    <v:fill type="tile"/>
+    <v:textbox inset="0,0,0,0">
+      <div>
+<![endif]-->
+<table align="center" border="0" role="presentation" style="position:relative; top:-1px; min-width:20px; width:100%; max-width:100%; border-spacing:0; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; font-size:1px" width="100%">
+<tbody><tr><td style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; line-height:0; border:transparent; border-bottom:2px solid #ffffff; mso-border-bottom-alt:2pt solid #ffffff; border-bottom-width:2px" valign="middle" width="100%"><!--[if mso 16]> <![endif]--></td></tr>
+</tbody></table>
+<!--[if gte mso 9]>
+      </div>
+    </v:textbox>
+  </v:rect>
+</div>
+<![endif]--></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section-7" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#ffffff" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#ffffff; padding-top:10px">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#ffffff">
+      <tr style="background-color:#ffffff;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;padding-top:10px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column-7-0">
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module-0-0-0" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-image-wrapper" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%">
+<tbody>
+<tr>
+<td align="center" class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; color:#000000; word-break:break-word; text-align:center; padding:0px 20px 5px; font-size:0px" valign="top">
+<img align="middle" alt="New_Global_Interconnect_logo_new_white" class="stretch-on-mobile" decoding="async" src="https://hs-1926682.f.hubspotemail.net/hub/1926682/hubfs/New_Global_Interconnect_logo_new_white.png?upscale=true&amp;width=360&amp;upscale=true&amp;name=New_Global_Interconnect_logo_new_white.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; max-width:100%; font-size:16px" width="180"/>
+</td>
+</tr>
+</tbody>
+</table></div>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 20px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_167811836803343" style="color: inherit; font-size: inherit; line-height: inherit;"><table align="center" class="hs_cos_wrapper_type_social_module" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:auto; text-align:center" width="auto">
+<tbody>
+<tr align="center">
+<td class="social-network-cell" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word">
+<table align="center" class="hs_cos_wrapper_type_social_module_single" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:auto; text-align:center" width="auto">
+<tbody>
+<tr align="center">
+<td class="display_block_on_small_screens" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:8px 5px; line-height:1; vertical-align:middle" valign="middle">
+<a data-hs-link-id="0" href="https://www.linkedin.com/company/global-interconnect-inc./?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly; text-decoration:none !important" target="_blank">
+<img alt="LinkedIn" decoding="async" height="25" src="https://hs-1926682.f.hubspotemail.net/hs/hsstatic/TemplateAssets/static-1.262/img/hs_default_template_images/modules/Follow+Me+-+Email/linkedin_circle_color.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; width:auto!important; height:25px!important; vertical-align:middle" valign="middle"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td class="social-network-cell" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word">
+<table align="center" class="hs_cos_wrapper_type_social_module_single" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:auto; text-align:center" width="auto">
+<tbody>
+<tr align="center">
+<td class="display_block_on_small_screens" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:8px 5px; line-height:1; vertical-align:middle" valign="middle">
+<a data-hs-link-id="0" href="https://www.instagram.com/global_interconnect/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly; text-decoration:none !important" target="_blank">
+<img alt="Instagram" decoding="async" height="25" src="https://hs-1926682.f.hubspotemail.net/hs/hsstatic/TemplateAssets/static-1.262/img/hs_default_template_images/modules/Follow+Me+-+Email/instagram_circle_color.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; width:auto!important; height:25px!important; vertical-align:middle" valign="middle"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td class="social-network-cell" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word">
+<table align="center" class="hs_cos_wrapper_type_social_module_single" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:auto; text-align:center" width="auto">
+<tbody>
+<tr align="center">
+<td class="display_block_on_small_screens" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:8px 5px; line-height:1; vertical-align:middle" valign="middle">
+<a data-hs-link-id="0" href="https://www.youtube.com/channel/UCE1-YEy6aU1jcIhv116TU3w?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly; text-decoration:none !important" target="_blank">
+<img alt="YouTube" decoding="async" height="25" src="https://hs-1926682.f.hubspotemail.net/hs/hsstatic/TemplateAssets/static-1.262/img/hs_default_template_images/modules/Follow+Me+-+Email/youtube_circle_color.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; width:auto!important; height:25px!important; vertical-align:middle" valign="middle"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td class="social-network-cell" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word">
+<table align="center" class="hs_cos_wrapper_type_social_module_single" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:auto; text-align:center" width="auto">
+<tbody>
+<tr align="center">
+<td class="display_block_on_small_screens" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:8px 5px; line-height:1; vertical-align:middle" valign="middle">
+<a data-hs-link-id="0" href="https://www.globalinterconnect.com/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="color:#00a4bd; mso-line-height-rule:exactly; text-decoration:none !important" target="_blank">
+<img alt="Website" decoding="async" height="25" src="https://hs-1926682.f.hubspotemail.net/hs/hsstatic/TemplateAssets/static-1.262/img/hs_default_template_images/modules/Follow+Me+-+Email/website_circle_color.png" style="outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border:none; width:auto!important; height:25px!important; vertical-align:middle" valign="middle"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:0px 33px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module-7-0-0" style="color: inherit; font-size: inherit; line-height: inherit;"><table cellpadding="0" cellspacing="0" class="hse-footer hse-secondary" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; font-family:Arial, sans-serif; font-size:12px; line-height:135%; color:#23496d; margin-bottom:0; padding:0" width="100%">
+<tbody>
+<tr>
+<td align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; text-align:center; margin-bottom:0; line-height:135%; padding:10px 20px" valign="top">
+<p style="mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:12px; font-weight:normal; text-decoration:none; font-style:normal; color:#23496d">
+          Global Interconnect Inc., 11 Jonathan Bourne Drive, Pocasset, MA 02559, United States, 508-563-6306
+        </p>
+<p style="mso-line-height-rule:exactly">
+<a data-hs-link-id="0" data-unsubscribe="true" href="https://hs-1926682.s.hubspotemail.net/hs/preferences-center/en/direct?data=W2nXS-N30h-RFW3d7f3N3z1LVNW4rzmgr1XxW2lW2r4mFR1BGn4gW2y1Hz_2MDJ2nW231vQ434l3s4W21rjn3328fsKW2PCflG1LflF9W2-w45h45r27pW3C0cPJ2xK_MZW1X10l42B0dfZW2FJGtV4rH96zW2q_rhK345ZM3W30khSX1X62MPW3BWsjz4m9XkJW2WN7Jn2YNNdZW1_mjNd2MRsHxW1_rsh03LDqDvW3P5SYv362q-JW2sSk_041LJH2W4cktCP32977pW3QKthq3Vz_JfW2KS8rj4cSPBnW38BQV63STXlrW2HH5gC2MPVfHW1SsNVh2HKfJ5W4ms8Wl32rfTpW2zG5LX38DtNRW1BLvF02v-b5rW3dnB1V3_sXzLW3z1LK03F8JN-W43JpwJ2vJ_ZPW2r4lfq1NxWwWW3XxGHZ30KXYd0&amp;utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="mso-line-height-rule:exactly; font-family:Helvetica,Arial,sans-serif; font-size:12px; color:#00a4bd; font-weight:normal; text-decoration:underline; font-style:normal" target="_blank">Unsubscribe</a>
+<a data-hs-link-id="0" data-unsubscribe="true" href="https://hs-1926682.s.hubspotemail.net/hs/preferences-center/en/page?data=W2nXS-N30h-LXW3R4sYP2vKRyKW256cGM45mHClW1BF7sN1_nB2zW1Vy-fV3JW8mDW4rDMdK254-dhW1Zks904tFKb4W1--z0x3QCyFpW1XfstN3_YmvNW49rr134mc8plW3P4BVK3K48RJW47F2Xv4fr6GlW2-kvMJ2MT6MxW2vTmg-4fxtBWW3XHCbM4czkpFW1ZkwSZ43npjNW3XvcFP4m71kBW24_c9S2r39XDW3NVLTQ4thBwZW4cqT0q36C339W4pJhyN2sCP7kW3H7jrQ4pbdPcW4pBQHN3F0TblW3by4L22Rm8x7W32GK8J23mPWNW3VXhNF34l0FyW2MMhFM4kMbD5W4knxl61Qcg93W34n8lw2Px2SBW36q0TX4tgKbjW1ZcblB2B0hNxW232Mkx30j1gZW1Nt8rh3ZJ8MFW34f1zL1SrYLR0&amp;utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="mso-line-height-rule:exactly; font-family:Helvetica,Arial,sans-serif; font-size:12px; color:#00a4bd; font-weight:normal; text-decoration:underline; font-style:normal" target="_blank">Manage preferences</a>
+</p>
+</td>
+</tr>
+</tbody>
+</table></div></td></tr></tbody></table>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16794270070952" style="color: inherit; font-size: inherit; line-height: inherit;"><div style="overflow:hidden">
+<table align="right" cellpadding="0" cellspacing="0" class="hse-pre-header hse-secondary" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align:right; font-family:Arial, sans-serif; font-size:12px; line-height:135%; color:#23496d; margin-bottom:0; padding:0" width="100%">
+<tbody>
+<tr>
+<td align="center" style="border-collapse:collapse; mso-line-height-rule:exactly; color:#000000; word-break:break-word; text-align:center; font-family:Arial, sans-serif; font-size:12px; padding:10px 0; margin-bottom:0; line-height:135%" valign="top">
+<a data-hs-link-id="0" href="http://1926682.hs-sites.com/the-quarterly-connection-q1-2024-highlights?ecid=&amp;utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="mso-line-height-rule:exactly; color:#8bc342; font-weight:normal; text-decoration:underline; font-style:normal" target="_blank">View in browser</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section" id="section_1678386798116" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#8bc342" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#8bc342; padding-top:5px">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#8bc342">
+      <tr style="background-color:#8bc342;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;padding-top:5px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column_1678386798116_0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:10px 20px 0px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_16950558296611" style="color: inherit; font-size: inherit; line-height: inherit;"><!--[if gte mso 9]>
+<div style="line-height: 0; font-size: 0px">
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:560px; height:2pt;" fillcolor="none">
+    <v:fill type="tile"/>
+    <v:textbox inset="0,0,0,0">
+      <div>
+<![endif]-->
+<table align="center" border="0" role="presentation" style="position:relative; top:-1px; min-width:20px; width:100%; max-width:100%; border-spacing:0; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; font-size:1px" width="100%">
+<tbody><tr><td style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; line-height:0; border:transparent; border-bottom:2px solid #ffffff; mso-border-bottom-alt:2pt solid #ffffff; border-bottom-width:2px" valign="middle" width="100%"><!--[if mso 16]> <![endif]--></td></tr>
+</tbody></table>
+<!--[if gte mso 9]>
+      </div>
+    </v:textbox>
+  </v:rect>
+</div>
+<![endif]--></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+<div class="hse-section hse-section-last" id="section-6" style="padding-left:10px; padding-right:10px">
+<!--[if !((mso)|(IE))]><!-- -->
+<div bgcolor="#8bc342" class="hse-column-container" style="min-width:280px; max-width:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; border-spacing:0; background-color:#8bc342; padding-bottom:5px; padding-top:4px">
+<!--<![endif]-->
+<!--[if (mso)|(IE)]>
+      <div class="hse-column-container" style="min-width:280px;max-width:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:collapse;border-spacing:0;">
+      <table align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px;" cellpadding="0" cellspacing="0" role="presentation" width="600" bgcolor="#8bc342">
+      <tr style="background-color:#8bc342;">
+    <![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign="top" style="width:600px;padding-bottom:5px; padding-top:4px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:600px">
+<![endif]-->
+<div class="hse-column hse-size-12" id="column-6-0">
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:5px 20px 0px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module-6-0-0" style="color: inherit; font-size: inherit; line-height: inherit;"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module-6-0-0_" style="color: inherit; font-size: inherit; line-height: inherit;"><p align="center" style="mso-line-height-rule:exactly; text-align:center; font-size:22px; line-height:175%"><span style="color: #ffffff;"><strong>We're Hiring!</strong></span></p>
+<p align="center" style="mso-line-height-rule:exactly; line-height:175%; text-align:center"><span style="color: #ffffff;">Interested in joining the Gii Team?</span> <span style="color: #444444;"><a data-hs-link-id="0" href="https://www.globalinterconnect.com/careers/?utm_campaign=Quarterly%20Connection&amp;utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--w2QBi36_zqIJtpuako6a1plWdnRdjubl0yFuYYixMPU_LtF9l3k8vEQfqRwG5TBeooKTg" rel="noopener" style="mso-line-height-rule:exactly; color:#444444" target="_blank">Click Here to Apply!</a></span></p> </div></div></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt" width="100%"><tbody><tr><td class="hs_padded" style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; padding:14px 20px 10px"><div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_167872084662010" style="color: inherit; font-size: inherit; line-height: inherit;"><!--[if gte mso 9]>
+<div style="line-height: 0; font-size: 0px">
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:560px; height:2pt;" fillcolor="none">
+    <v:fill type="tile"/>
+    <v:textbox inset="0,0,0,0">
+      <div>
+<![endif]-->
+<table align="center" border="0" role="presentation" style="position:relative; top:-1px; min-width:20px; width:100%; max-width:100%; border-spacing:0; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; font-size:1px" width="100%">
+<tbody><tr><td style="border-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15px; color:#000000; word-break:break-word; line-height:0; border:transparent; border-bottom:2px solid #ffffff; mso-border-bottom-alt:2pt solid #ffffff; border-bottom-width:2px" valign="middle" width="100%"><!--[if mso 16]> <![endif]--></td></tr>
+</tbody></table>
+<!--[if gte mso 9]>
+      </div>
+    </v:textbox>
+  </v:rect>
+</div>
+<![endif]--></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table><![endif]-->
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</body></html></div>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+
+  </div>
+
+  <div class="article-cta">
+    <a class="btn-back" href="../insights.html">&larr; All Insights</a>
+    <a class="btn-quote" href="../quote.html">Request a Quote</a>
+  </div>
+
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="footer-logo" />
+          <p>Medical device cable &amp; connector specialists. Engineering-led, value-driven custom connector and cable assembly for energy-based medical devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. Trusted by leading OEMs for over three decades.</p>
+          <div class="footer-certs">
+            <span>FDA Registered</span>
+            <span>ISO 13485</span>
+            
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../index.html#advantage">The Gii Advantage</a></li>
+            <li><a href="../index.html#quality">Quality & Certifications</a></li>
+            <li><a href="https://www.globalinterconnect.com/careers/" target="_blank" rel="noopener">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Capabilities</h4>
+          <ul>
+            <li><a href="../capabilities.html">All Capabilities</a></li>
+            <li><a href="../capabilities.html">Custom Connectors</a></li>
+            <li><a href="../capabilities.html">Cable Assemblies</a></li>
+            <li><a href="../capabilities.html">Electromechanical Assembly</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../insights.html">Insights & Resources</a></li>
+            <li><a href="../expertise.html">Engineering Expertise</a></li>
+            <li><a href="../devices.html">Medical Devices</a></li>
+            <li><a href="../index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Global Interconnect, Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Simple filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter articles
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.article-card').forEach(card => {
+          const category = card.dataset.category;
+          if (filter === 'all' || category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Simple newsletter form handling
+    document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      if (email) {
+        alert('Thank you for subscribing! Check your email for confirmation.');
+        e.target.reset();
+      }
+    });
+  </script>
+  <script src="../assets/js/chatbot.js"></script>
+</body>
+</html>
