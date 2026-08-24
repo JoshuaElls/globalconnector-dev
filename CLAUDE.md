@@ -12,20 +12,30 @@ www.globalinterconnect.com at launch. Owner: Josh (jbates897@gmail.com).
    folder names, or URLs. Site-wide sweeps (find/replace, link updates,
    restyling) must exclude these folders.
 
-2. **US = engineering only, never manufacturing.** Gii has engineering,
+2. **Manufacturing voice: first-person, ownership-leaning.** Describe
+   manufacturing as Gii's own ("our manufacturing network", "our facilities",
+   "Gii manufactures across its own nearshore facility in Cartago and its
+   established manufacturing operations in Asia"). Gii will own the Costa
+   Rica facility; the China facility is not Gii-owned — keep Asia wording
+   vague but possessive. Never use "partners", "partner network", "curated
+   network", or "vetted" for the manufacturing footprint on main pages.
+   (Blog articles openly discuss the partner-network model; per rule 1 they
+   stay as-is.)
+
+3. **US = engineering only, never manufacturing.** Gii has engineering,
    design, and rapid prototyping in the US (HQ: Pocasset, MA) — but NO US
    manufacturing. Manufacturing is in Cartago, Costa Rica (nearshore) and
    Asia (Hong Kong HQ, Humen China production). Never write copy implying US
    manufacturing or production. US offices/warehousing (Jacksonville FL,
    St. Louis MO) and US-related trade compliance are fine to mention.
 
-3. **No invented facts or stats.** Capacity/volume figures (sq ft, worker
+4. **No invented facts or stats.** Capacity/volume figures (sq ft, worker
    counts, unit volumes) were removed deliberately — do not reintroduce
    numbers without Josh providing them. The one approved proof point: the $7M
    orthopedics case study ($7M / 500,000 pieces / 6→2 components / 3→1
    suppliers / 75% pin cost reduction).
 
-4. **Keep the SEO safety rails until launch:** the
+5. **Keep the SEO safety rails until launch:** the
    `<meta name="robots" content="noindex, nofollow">` staging tags on every
    page, the "value engineering" phrase in the homepage methodology H2 and
    capabilities title, and article canonical tags pointing at
