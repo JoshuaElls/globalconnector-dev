@@ -14,7 +14,7 @@ www.globalinterconnect.com at launch. Owner: Josh (jbates897@gmail.com).
 
 2. **Manufacturing voice: first-person, ownership-leaning.** Describe
    manufacturing as Gii's own ("our manufacturing network", "our facilities",
-   "Gii manufactures across its own nearshore facility in Cartago and its
+   "Gii manufactures across its own nearshore facility in Heredia and its
    established manufacturing operations in Asia"). Gii will own the Costa
    Rica facility; the China facility is not Gii-owned — keep Asia wording
    vague but possessive. Never use "partners", "partner network", "curated
@@ -24,7 +24,7 @@ www.globalinterconnect.com at launch. Owner: Josh (jbates897@gmail.com).
 
 3. **US = engineering only, never manufacturing.** Gii has engineering,
    design, and rapid prototyping in the US (HQ: Pocasset, MA) — but NO US
-   manufacturing. Manufacturing is in Cartago, Costa Rica (nearshore) and
+   manufacturing. Manufacturing is in Heredia, Costa Rica (nearshore) and
    Asia (Hong Kong HQ, Dongguan China production). Never write copy implying US
    manufacturing or production. US offices/warehousing (Jacksonville FL,
    St. Louis MO) and US-related trade compliance are fine to mention.
