@@ -25,7 +25,7 @@ www.globalinterconnect.com at launch. Owner: Josh (jbates897@gmail.com).
 3. **US = engineering only, never manufacturing.** Gii has engineering,
    design, and rapid prototyping in the US (HQ: Pocasset, MA) — but NO US
    manufacturing. Manufacturing is in Cartago, Costa Rica (nearshore) and
-   Asia (Hong Kong HQ, Humen China production). Never write copy implying US
+   Asia (Hong Kong HQ, Dongguan China production). Never write copy implying US
    manufacturing or production. US offices/warehousing (Jacksonville FL,
    St. Louis MO) and US-related trade compliance are fine to mention.
 
