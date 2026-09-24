@@ -345,7 +345,18 @@
         justify-content: center;
       }
     }
-  </style>
+  
+    /* Section heads + featured (Insights restructure) */
+    .insights-section-head { text-align: center; max-width: 720px; margin: 3.5rem auto 1.75rem; }
+    .insights-section-head p { color: #666; margin-top: .5rem; }
+    .insights-articles .filters-container { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; align-items: center; margin: 0 auto 2rem; padding: 0; }
+    .filter-jump { margin-left: .5rem; font-size: .875rem; font-weight: 600; color: #0d4c3a; text-decoration: none; }
+    .filter-jump:hover { text-decoration: underline; }
+    .article-card.is-featured { border-color: rgba(139,195,66,.6); }
+    .article-card.is-featured .article-tag { background: #8BC342; color: #0f2a1d; }
+    .insights-news { border-top: 1px solid #e5e5e5; }
+    .insights-news .article-image { height: 160px; }
+</style>
 </head>
 <body>
 <!-- ===== NAVIGATION ===== -->
@@ -376,118 +387,57 @@
 <p>Engineering Knowledge from the Medical Cable &amp; Connector Specialists — Design Smarter, Cost Less, Get to Market Faster</p>
 </div>
 </section>
-<!-- ===== FILTER ROW ===== -->
-<section class="insights-filters">
-<div class="filters-container">
-<button class="filter-btn active" data-filter="all">All</button>
+<!-- ===== ENGINEERING RESOURCES ===== -->
+<section class="insights-articles" id="resources">
+<div class="insights-section-head">
+<span class="section-eyebrow">Engineering Resources</span>
+<h2 class="section-title">Design Guides, Case Studies &amp; Technical Articles</h2>
+<p>Practical cable and connector engineering from the Gii team — the questions OEM engineers and sourcing teams ask us most.</p>
+</div>
+<div class="filters-container" role="group" aria-label="Filter engineering resources">
+<button class="filter-btn active" data-filter="all">All Resources</button>
 <button class="filter-btn" data-filter="Case Study">Case Studies</button>
 <button class="filter-btn" data-filter="Design Guide">Design Guides</button>
-<button class="filter-btn" data-filter="Whitepaper">Whitepapers</button>
 <button class="filter-btn" data-filter="Technical Article">Technical Articles</button>
-<button class="filter-btn" data-filter="News">News</button>
+<button class="filter-btn" data-filter="Whitepaper">Whitepapers</button>
+<a class="filter-jump" href="#news">Company News ↓</a>
 </div>
-</section>
-<!-- ===== ARTICLES GRID ===== -->
-<section class="insights-articles">
-<div class="articles-grid">
-<!-- Article 1 -->
-<article class="article-card" data-category="Design Guide">
-<img alt="Design Considerations for Single-Use Medical Connectors" class="article-image" src="assets/images/insights/single-use-connector.jpg"/>
+<div class="articles-grid" id="resources-grid">
+<article class="article-card is-featured" data-category="Case Study">
+<a href="accelerating-clinical-trials-for-a-vascular-care-medical-device-company/" tabindex="-1" aria-hidden="true"><img alt="Accelerating Clinical Trials for a Vascular Care Medical Device Company" class="article-image" loading="lazy" src="assets/images/articles/7-IMG_6341-scaled.avif"/></a>
 <div class="article-body">
-<span class="article-tag">Design Guide</span>
-<h2 class="article-title">
-<a href="design-considerations-single-use-medical-connectors/">Design Considerations for Single-Use Medical Connectors</a>
-</h2>
-<p class="article-excerpt">Key engineering factors when designing connectors for single-use applications — from materials selection to validation. Covers biocompatibility, sterilization compatibility, and cost drivers.</p>
+<span class="article-tag">Case Study · Featured</span>
+<h3 class="article-title">
+<a href="accelerating-clinical-trials-for-a-vascular-care-medical-device-company/">Accelerating Clinical Trials for a Vascular Care Medical Device Company</a>
+</h3>
+<p class="article-excerpt">A vascular care OEM faced a 22-week lead time that threatened its clinical trial timeline. See how Gii cut that lead time and kept the trial on schedule.</p>
 <div class="article-footer">
-<span class="article-date">August 2024</span>
-<a class="article-link" href="design-considerations-single-use-medical-connectors/" rel="noopener" target="_blank">Read More →</a>
+<span class="article-date">August 2026</span>
+<a class="article-link" href="accelerating-clinical-trials-for-a-vascular-care-medical-device-company/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 2 -->
-<article class="article-card" data-category="Technical Article">
-<img alt="Understanding Medical Cable Assemblies" class="article-image" src="assets/images/insights/blog1.jpg"/>
+<article class="article-card is-featured" data-category="Whitepaper">
+<a href="the-value-engineering-advantage-improving-efficiency-compliance-and-innovation-in-medtech/" tabindex="-1" aria-hidden="true"><img alt="The Value Engineering Advantage: Improving Efficiency, Compliance, and Innovation in MedTech" class="article-image" loading="lazy" src="assets/images/articles/RFPainManagementProbe_001_Stryker-probe_green.png"/></a>
 <div class="article-body">
-<span class="article-tag">Technical Article</span>
-<h2 class="article-title">
-<a href="understanding-medical-cable-assemblies/">Understanding Medical Cable Assemblies</a>
-</h2>
-<p class="article-excerpt">A comprehensive look at medical cable assembly construction, materials, performance requirements, and the reusable vs. disposable decision framework.</p>
+<span class="article-tag">Whitepaper · Featured</span>
+<h3 class="article-title">
+<a href="the-value-engineering-advantage-improving-efficiency-compliance-and-innovation-in-medtech/">The Value Engineering Advantage: Improving Efficiency, Compliance, and Innovation in MedTech</a>
+</h3>
+<p class="article-excerpt">How optimized designs, cost reduction, and collaborative manufacturing streamline medical device development.</p>
 <div class="article-footer">
-<span class="article-date">August 2024</span>
-<a class="article-link" href="understanding-medical-cable-assemblies/" rel="noopener" target="_blank">Read More →</a>
+<span class="article-date">July 2026</span>
+<a class="article-link" href="the-value-engineering-advantage-improving-efficiency-compliance-and-innovation-in-medtech/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 3 -->
-<article class="article-card" data-category="Technical Article">
-<img alt="Understanding Custom Medical Connectors" class="article-image" src="assets/images/insights/design-considerations.jpg"/>
+<article class="article-card is-featured" data-category="Case Study">
+<a href="how-global-interconnect-changed-the-game-for-a-global-sports-medical-device-manufacturer/" tabindex="-1" aria-hidden="true"><img alt="How Gii Changed the Game for a Global Sports Medical Device Manufacturer" class="article-image" loading="lazy" src="assets/images/insights/signati.jpg"/></a>
 <div class="article-body">
-<span class="article-tag">Technical Article</span>
-<h2 class="article-title">
-<a href="understanding-custom-medical-connectors/">Understanding Custom Medical Connectors</a>
-</h2>
-<p class="article-excerpt">When off-the-shelf connectors fall short, custom connectors can improve human factors, reduce lead times, and differentiate your product in the market.</p>
-<div class="article-footer">
-<span class="article-date">May 2022</span>
-<a class="article-link" href="understanding-custom-medical-connectors/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 4 -->
-<article class="article-card" data-category="News">
-<img alt="Forging Stronger Relationships with Our Manufacturing Partners" class="article-image" src="assets/images/insights/forging-relationships.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="forging-stronger-partnerships-and-optimizing-engineering-operations/">Forging Stronger Relationships with Our Manufacturing Partners</a>
-</h2>
-<p class="article-excerpt">How Gii's global manufacturing model — spanning the US, nearshore Costa Rica, and Asia — creates transparency and quality alignment across the supply chain, and what that means for OEM customers.</p>
-<div class="article-footer">
-<span class="article-date">July 2023</span>
-<a class="article-link" href="forging-stronger-partnerships-and-optimizing-engineering-operations/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 5 -->
-<article class="article-card" data-category="Technical Article">
-<img alt="RF Ablation Connector: Improve Cost &amp; Performance" class="article-image" src="assets/images/devices/rf-ablation.jpg"/>
-<div class="article-body">
-<span class="article-tag">Technical Article</span>
-<h2 class="article-title">
-<a href="radio-frequency-rf-ablation-connector-improve-cost-performance/">RF Ablation Connector: Improve Cost &amp; Performance</a>
-</h2>
-<p class="article-excerpt">A deep-dive into RF ablation connector design options — from overmolded banana plugs to push-pull configurations — and how to optimize for cost without sacrificing reliability.</p>
-<div class="article-footer">
-<span class="article-date">2021</span>
-<a class="article-link" href="radio-frequency-rf-ablation-connector-improve-cost-performance/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 6 -->
-<article class="article-card" data-category="Design Guide">
-<img alt="4 Steps to Choosing the Correct Medical Connector" class="article-image" src="assets/images/insights/stamping.jpg"/>
-<div class="article-body">
-<span class="article-tag">Design Guide</span>
-<h2 class="article-title">
-<a href="4-steps-to-choosing-the-correct-medical-connector/">4 Steps to Choosing the Correct Medical Connector</a>
-</h2>
-<p class="article-excerpt">Single-use or reusable? Locking or non-locking? This step-by-step guide walks through the key decision factors for selecting the right medical connector for your device.</p>
-<div class="article-footer">
-<span class="article-date">February 2025</span>
-<a class="article-link" href="4-steps-to-choosing-the-correct-medical-connector/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 7 -->
-<article class="article-card" data-category="Case Study">
-<img alt="How Gii Changed the Game for a Global Sports Medical Device Manufacturer" class="article-image" src="assets/images/insights/signati.jpg"/>
-<div class="article-body">
-<span class="article-tag">Case Study</span>
-<h2 class="article-title">
+<span class="article-tag">Case Study · Featured</span>
+<h3 class="article-title">
 <a href="how-global-interconnect-changed-the-game-for-a-global-sports-medical-device-manufacturer/">How Gii Changed the Game for a Global Sports Medical Device Manufacturer</a>
-</h2>
+</h3>
 <p class="article-excerpt">A custom connector solution that enabled a leading orthopedics OEM to scale production while hitting aggressive cost targets and maintaining zero-defect quality standards.</p>
 <div class="article-footer">
 <span class="article-date">2024</span>
@@ -495,442 +445,534 @@
 </div>
 </div>
 </article>
-<!-- Article 8 -->
 <article class="article-card" data-category="Technical Article">
-<img alt="Considerations When Transferring Medical Device Manufacturing" class="article-image" src="assets/images/insights/blog-post-2.jpg"/>
+<a href="the-critical-role-of-custom-connectors-in-energy-based-and-diagnostic-medical-devices/" tabindex="-1" aria-hidden="true"><img alt="The Critical Role of Custom Connectors in Energy-Based and Diagnostic Medical Devices" class="article-image" loading="lazy" src="assets/images/articles/AR_6482_A_validation_325.jpg"/></a>
 <div class="article-body">
 <span class="article-tag">Technical Article</span>
-<h2 class="article-title">
-<a href="considerations-when-transferring-medical-device-manufacturing/">Considerations When Transferring Medical Device Manufacturing</a>
-</h2>
-<p class="article-excerpt">Manufacturing transfers are complex but essential for scaling. This guide covers regulatory, supply chain, process, and quality considerations when moving production to a new partner.</p>
-<div class="article-footer">
-<span class="article-date">May 2024</span>
-<a class="article-link" href="considerations-when-transferring-medical-device-manufacturing/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 9 -->
-<article class="article-card" data-category="News">
-<img alt="Understanding LEMO and Fischer Push-Pull Connectors" class="article-image" src="assets/images/insights/china-mfg.png"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="understanding-lemo-and-fischer-push-pull-connectors/">Understanding LEMO and Fischer Push-Pull Connectors</a>
-</h2>
-<p class="article-excerpt">A technical overview of push-pull connector systems used in medical devices — how they work, industry standards, and when to consider purpose-built alternatives.</p>
-<div class="article-footer">
-<span class="article-date">2023</span>
-<a class="article-link" href="understanding-lemo-and-fischer-push-pull-connectors/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 10 -->
-<article class="article-card" data-category="Technical Article">
-<img alt="The Critical Role of Custom Connectors in Energy-Based and Diagnostic Medical Devices" class="article-image" src="assets/images/insights/single-use-connector.jpg"/>
-<div class="article-body">
-<span class="article-tag">Technical Article</span>
-<h2 class="article-title">
+<h3 class="article-title">
 <a href="the-critical-role-of-custom-connectors-in-energy-based-and-diagnostic-medical-devices/">The Critical Role of Custom Connectors in Energy-Based and Diagnostic Medical Devices</a>
-</h2>
+</h3>
 <p class="article-excerpt">In the medical device industry, custom-engineered connectors and cable assemblies are crucial to ensuring reliability, regulatory compliance, and cost efficiency across energy-based and diagnostic applications.</p>
 <div class="article-footer">
 <span class="article-date">May 2025</span>
-<a class="article-link" href="the-critical-role-of-custom-connectors-in-energy-based-and-diagnostic-medical-devices/" rel="noopener" target="_blank">Read More →</a>
+<a class="article-link" href="the-critical-role-of-custom-connectors-in-energy-based-and-diagnostic-medical-devices/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 11 -->
-<article class="article-card" data-category="News">
-<img alt="Global Interconnect at MD&amp;M West: Event Recap &amp; Key Takeaways" class="article-image" src="assets/images/insights/blog-post-2.jpg"/>
+<article class="article-card" data-category="Design Guide">
+<a href="4-steps-to-choosing-the-correct-medical-connector/" tabindex="-1" aria-hidden="true"><img alt="4 Steps to Choosing the Correct Medical Connector" class="article-image" loading="lazy" src="assets/images/articles/image-4-1.png"/></a>
 <div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="global-interconnect-at-mdm-west-event-recap-key-takeaways/">Global Interconnect at MD&amp;M West: Event Recap &amp; Key Takeaways</a>
-</h2>
-<p class="article-excerpt">Global Interconnect exhibited at MD&amp;M West in Anaheim, California — one of the largest medical device manufacturing events in the US. Recap of conversations, industry trends, and key takeaways from the show floor.</p>
+<span class="article-tag">Design Guide</span>
+<h3 class="article-title">
+<a href="4-steps-to-choosing-the-correct-medical-connector/">4 Steps to Choosing the Correct Medical Connector</a>
+</h3>
+<p class="article-excerpt">Single-use or reusable? Locking or non-locking? This step-by-step guide walks through the key decision factors for selecting the right medical connector for your device.</p>
 <div class="article-footer">
-<span class="article-date">March 2025</span>
-<a class="article-link" href="global-interconnect-at-mdm-west-event-recap-key-takeaways/" rel="noopener" target="_blank">Read More →</a>
+<span class="article-date">February 2025</span>
+<a class="article-link" href="4-steps-to-choosing-the-correct-medical-connector/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 12 -->
-
-<!-- Article 13 -->
-
-<!-- Article 14 -->
-
-<!-- Article 15 -->
+<article class="article-card" data-category="Design Guide">
+<a href="design-considerations-single-use-medical-connectors/" tabindex="-1" aria-hidden="true"><img alt="Design Considerations for Single-Use Medical Connectors" class="article-image" loading="lazy" src="assets/images/articles/GII1PLocking9K_004_web.png"/></a>
+<div class="article-body">
+<span class="article-tag">Design Guide</span>
+<h3 class="article-title">
+<a href="design-considerations-single-use-medical-connectors/">Design Considerations for Single-Use Medical Connectors</a>
+</h3>
+<p class="article-excerpt">Key engineering factors when designing connectors for single-use applications — from materials selection to validation. Covers biocompatibility, sterilization compatibility, and cost drivers.</p>
+<div class="article-footer">
+<span class="article-date">August 2024</span>
+<a class="article-link" href="design-considerations-single-use-medical-connectors/">Read More →</a>
+</div>
+</div>
+</article>
 <article class="article-card" data-category="Technical Article">
-<img alt="Design Considerations for Single-Use Medical Connectors: Webinar Overview" class="article-image" src="assets/images/insights/single-use-connector.jpg"/>
+<a href="understanding-medical-cable-assemblies/" tabindex="-1" aria-hidden="true"><img alt="Understanding Medical Cable Assemblies" class="article-image" loading="lazy" src="assets/images/insights/blog1.jpg"/></a>
 <div class="article-body">
 <span class="article-tag">Technical Article</span>
-<h2 class="article-title">
+<h3 class="article-title">
+<a href="understanding-medical-cable-assemblies/">Understanding Medical Cable Assemblies</a>
+</h3>
+<p class="article-excerpt">A comprehensive look at medical cable assembly construction, materials, performance requirements, and the reusable vs. disposable decision framework.</p>
+<div class="article-footer">
+<span class="article-date">August 2024</span>
+<a class="article-link" href="understanding-medical-cable-assemblies/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="Technical Article">
+<a href="design-considerations-for-single-use-medical-connectors-a-webinar-overview/" tabindex="-1" aria-hidden="true"><img alt="Design Considerations for Single-Use Medical Connectors: Webinar Overview" class="article-image" loading="lazy" src="assets/images/insights/single-use-connector.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">Technical Article</span>
+<h3 class="article-title">
 <a href="design-considerations-for-single-use-medical-connectors-a-webinar-overview/">Design Considerations for Single-Use Medical Connectors: A Webinar Overview</a>
-</h2>
+</h3>
 <p class="article-excerpt">A summary of key engineering and design principles for single-use connector development, drawn from Gii's technical webinar — covering materials, testing, validation, and cost drivers.</p>
 <div class="article-footer">
 <span class="article-date">August 2024</span>
-<a class="article-link" href="design-considerations-for-single-use-medical-connectors-a-webinar-overview/" rel="noopener" target="_blank">Read More →</a>
+<a class="article-link" href="design-considerations-for-single-use-medical-connectors-a-webinar-overview/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 16 -->
-<article class="article-card" data-category="News">
-<img alt="Gii Announces New ISO 8 Cleanroom" class="article-image" src="assets/images/insights/stamping.jpg"/>
+<article class="article-card" data-category="Technical Article">
+<a href="considerations-when-transferring-medical-device-manufacturing/" tabindex="-1" aria-hidden="true"><img alt="Considerations When Transferring Medical Device Manufacturing" class="article-image" loading="lazy" src="assets/images/articles/china-mfg-2-jpg.webp"/></a>
 <div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="gii-announces-new-iso-8-cleanroom/">Gii Announces New ISO 8 Cleanroom</a>
-</h2>
-<p class="article-excerpt">Global Interconnect, Inc. announces the addition of a new ISO 8 cleanroom facility — expanding sterile and critical medical cable and connector assembly capacity to meet growing OEM demand.</p>
+<span class="article-tag">Technical Article</span>
+<h3 class="article-title">
+<a href="considerations-when-transferring-medical-device-manufacturing/">Considerations When Transferring Medical Device Manufacturing</a>
+</h3>
+<p class="article-excerpt">Manufacturing transfers are complex but essential for scaling. This guide covers regulatory, supply chain, process, and quality considerations when moving production to a new partner.</p>
 <div class="article-footer">
-<span class="article-date">July 2024</span>
-<a class="article-link" href="gii-announces-new-iso-8-cleanroom/" rel="noopener" target="_blank">Read More →</a>
+<span class="article-date">May 2024</span>
+<a class="article-link" href="considerations-when-transferring-medical-device-manufacturing/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 17 -->
 <article class="article-card" data-category="Case Study">
-<img alt="Collaboration, Communication and Innovation: The Reusable Surgical Device Project" class="article-image" src="assets/images/capabilities/cleanroom.jpg"/>
+<a href="collaboration-communication-and-innovation/" tabindex="-1" aria-hidden="true"><img alt="Collaboration, Communication and Innovation: The Reusable Surgical Device Project" class="article-image" loading="lazy" src="assets/images/capabilities/cleanroom.jpg"/></a>
 <div class="article-body">
 <span class="article-tag">Case Study</span>
-<h2 class="article-title">
+<h3 class="article-title">
 <a href="collaboration-communication-and-innovation/">Collaboration, Communication, and Innovation: The Reusable Surgical Device Project</a>
-</h2>
+</h3>
 <p class="article-excerpt">A case study exploring how Global Interconnect partnered with an OEM to develop a reusable surgical device assembly — navigating complex engineering, quality, and supply chain challenges to deliver a production-ready solution.</p>
 <div class="article-footer">
 <span class="article-date">April 2024</span>
-<a class="article-link" href="collaboration-communication-and-innovation/" rel="noopener" target="_blank">Read More →</a>
+<a class="article-link" href="collaboration-communication-and-innovation/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 18 -->
-<article class="article-card" data-category="News">
-<img alt="The Quarterly Connection Q1 2024" class="article-image" src="assets/images/insights/blog1.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="the-quarterly-connection-q1-2024/">The Quarterly Connection – Q1 2024</a>
-</h2>
-<p class="article-excerpt">The fifth edition of The Quarterly Connection — highlights, program updates, and engineering insights from Global Interconnect's team for Q1 2024.</p>
-<div class="article-footer">
-<span class="article-date">April 2024</span>
-<a class="article-link" href="the-quarterly-connection-q1-2024/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 19 -->
-<article class="article-card" data-category="News">
-<img alt="The Quarterly Connection Q4 2023" class="article-image" src="assets/images/insights/blog1.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="the-quarterly-connection-q4-2023/">The Quarterly Connection – Q4 2023</a>
-</h2>
-<p class="article-excerpt">The fourth edition of The Quarterly Connection — highlights, industry news, and program updates from Global Interconnect for Q4 2023.</p>
-<div class="article-footer">
-<span class="article-date">January 2024</span>
-<a class="article-link" href="the-quarterly-connection-q4-2023/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 20 -->
-<article class="article-card" data-category="News">
-<img alt="Global Interconnect Appoints Ken Daignault as Technical Advisor" class="article-image" src="assets/images/insights/forging-relationships.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="global-interconnect-appoints-ken-daignault-as-technical-advisor/">Global Interconnect Appoints Ken Daignault as Technical Advisor</a>
-</h2>
-<p class="article-excerpt">Global Interconnect announces the appointment of Ken Daignault, President of Daignault Medtech Consulting, as Technical Advisor — bringing additional depth in medical device design and regulatory expertise.</p>
-<div class="article-footer">
-<span class="article-date">November 2023</span>
-<a class="article-link" href="global-interconnect-appoints-ken-daignault-as-technical-advisor/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 21 -->
-<article class="article-card" data-category="News">
-<img alt="Reflections on Gii's Experience at Trade Shows in 2023" class="article-image" src="assets/images/insights/blog-post-2.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="reflections-on-giis-experience-at-trade-shows-in-2023/">Reflections on Gii's Experience at Trade Shows in 2023</a>
-</h2>
-<p class="article-excerpt">Global Interconnect has been an active trade show participant since 1997. A look back at Gii's 2023 show season — the conversations, themes, and industry signals from the floor.</p>
-<div class="article-footer">
-<span class="article-date">November 2023</span>
-<a class="article-link" href="reflections-on-giis-experience-at-trade-shows-in-2023/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 22 -->
-<article class="article-card" data-category="News">
-<img alt="The Quarterly Connection Q3 2023" class="article-image" src="assets/images/insights/blog1.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="the-quarterly-connection-q3-2023/">The Quarterly Connection – Q3 2023</a>
-</h2>
-<p class="article-excerpt">The third edition of The Quarterly Connection — updates, engineering insights, and highlights from the Gii team for Q3 2023.</p>
-<div class="article-footer">
-<span class="article-date">October 2023</span>
-<a class="article-link" href="the-quarterly-connection-q3-2023/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 23 -->
 <article class="article-card" data-category="Technical Article">
-<img alt="The Paradigm Shift in Pain Management" class="article-image" src="assets/images/devices/rf-ablation.jpg"/>
+<a href="the-paradigm-shift-in-pain-management/" tabindex="-1" aria-hidden="true"><img alt="The Paradigm Shift in Pain Management" class="article-image" loading="lazy" src="assets/images/articles/PainManagement_rev.png"/></a>
 <div class="article-body">
 <span class="article-tag">Technical Article</span>
-<h2 class="article-title">
+<h3 class="article-title">
 <a href="the-paradigm-shift-in-pain-management/">The Paradigm Shift in Pain Management</a>
-</h2>
+</h3>
 <p class="article-excerpt">Reusable radiofrequency ablation probes were once the standard for pain management — but the market is shifting to single-use. What that means for cable and connector design, validation, and cost.</p>
 <div class="article-footer">
 <span class="article-date">August 2023</span>
-<a class="article-link" href="the-paradigm-shift-in-pain-management/" rel="noopener" target="_blank">Read More →</a>
+<a class="article-link" href="the-paradigm-shift-in-pain-management/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 24 -->
-<article class="article-card" data-category="News">
-<img alt="Global Interconnect's Core Values" class="article-image" src="assets/images/insights/forging-relationships.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="global-interconnects-core-values/">Global Interconnect's Core Values</a>
-</h2>
-<p class="article-excerpt">Gii's core values — developed in 2010 — define the standards and expectations that guide how the company works with OEM partners, manufacturing partners, and its own team.</p>
-<div class="article-footer">
-<span class="article-date">August 2023</span>
-<a class="article-link" href="global-interconnects-core-values/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 25 -->
-<article class="article-card" data-category="News">
-<img alt="The Quarterly Connection Q2 2023" class="article-image" src="assets/images/insights/blog1.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="the-quarterly-connection-q2-2023/">The Quarterly Connection – Q2 2023</a>
-</h2>
-<p class="article-excerpt">The second edition of The Quarterly Connection — updates, industry developments, and program highlights from the Gii team for Q2 2023.</p>
-<div class="article-footer">
-<span class="article-date">July 2023</span>
-<a class="article-link" href="the-quarterly-connection-q2-2023/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 26 -->
-<article class="article-card" data-category="News">
-<img alt="Global Interconnect's Director of Quality Enhances Product Quality With Asia Visit" class="article-image" src="assets/images/insights/china-mfg.png"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="global-interconnects-director-of-quality-enhances-product-quality-with-asia-visit/">Global Interconnect's Director of Quality Enhances Product Quality With Asia Visit</a>
-</h2>
-<p class="article-excerpt">Gii's Director of Quality traveled to Asia manufacturing partners to strengthen quality standards, drive supplier development, and ensure alignment with Gii's zero-defect manufacturing principles.</p>
-<div class="article-footer">
-<span class="article-date">July 2023</span>
-<a class="article-link" href="global-interconnects-director-of-quality-enhances-product-quality-with-asia-visit/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 27 -->
-<article class="article-card" data-category="News">
-<img alt="Global Interconnect Partners with Materialogic" class="article-image" src="assets/images/insights/blog-post-2.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="global-interconnect-partners-with-materialogic-to-provide-enhanced-logistics-to-their-medical-device-customers/">Global Interconnect Partners with Materialogic for Enhanced Logistics</a>
-</h2>
-<p class="article-excerpt">Global Interconnect partners with Materialogic to offer OEM customers enhanced logistics capabilities — improving delivery performance, inventory management, and supply chain visibility.</p>
-<div class="article-footer">
-<span class="article-date">April 2023</span>
-<a class="article-link" href="global-interconnect-partners-with-materialogic-to-provide-enhanced-logistics-to-their-medical-device-customers/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 28 -->
-<article class="article-card" data-category="News">
-<img alt="The Quarterly Connection Q1 2023" class="article-image" src="assets/images/insights/blog1.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="the-quarterly-connection-q1-2023/">The Quarterly Connection – Q1 2023</a>
-</h2>
-<p class="article-excerpt">The first edition of The Quarterly Connection — introducing Gii's new newsletter with company updates, engineering insights, and industry highlights for Q1 2023.</p>
-<div class="article-footer">
-<span class="article-date">April 2023</span>
-<a class="article-link" href="the-quarterly-connection-q1-2023/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 29 -->
-<article class="article-card" data-category="Case Study">
-<img alt="Custom Components and Assemblies" class="article-image" src="assets/images/insights/design-considerations.jpg"/>
-<div class="article-body">
-<span class="article-tag">Case Study</span>
-<h2 class="article-title">
-<a href="custom-components-and-assemblies/">Custom Components and Assemblies</a>
-</h2>
-<p class="article-excerpt">A company was stuck with a supplier unwilling to customize an off-the-shelf push-pull connector. Gii engineered a purpose-built replacement — better performance, lower cost, and no supply chain dependency on an uncooperative vendor.</p>
-<div class="article-footer">
-<span class="article-date">December 2020</span>
-<a class="article-link" href="custom-components-and-assemblies/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 30 -->
-<article class="article-card" data-category="News">
-<img alt="A Message from Our CEO: The Benefits of Our Model" class="article-image" src="assets/images/insights/forging-relationships.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="a-message-from-our-ceo-the-benefits-of-our-model/">A Message from Our CEO: The Benefits of Our Model</a>
-</h2>
-<p class="article-excerpt">A personal message from Gii's CEO on why the company's curated network model — rather than a single vertically integrated facility — delivers better outcomes for OEM partners across cost, quality, and flexibility.</p>
-<div class="article-footer">
-<span class="article-date">June 2020</span>
-<a class="article-link" href="a-message-from-our-ceo-the-benefits-of-our-model/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 31 -->
-
-<!-- Article 32 -->
-<article class="article-card" data-category="Technical Article">
-<img alt="Human Factors and Medical Devices" class="article-image" src="assets/images/insights/blog-post-2.jpg"/>
-<div class="article-body">
-<span class="article-tag">Technical Article</span>
-<h2 class="article-title">
-<a href="human-factors-and-medical-devices/">Human Factors and Medical Devices</a>
-</h2>
-<p class="article-excerpt">Human factors and usability engineering continue to be a key FDA focus for new medical device submissions. How cable and connector design decisions affect usability — and how to design for them from the start.</p>
-<div class="article-footer">
-<span class="article-date">November 2019</span>
-<a class="article-link" href="human-factors-and-medical-devices/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 33 -->
-
-<!-- Article 34 -->
-<article class="article-card" data-category="Technical Article">
-<img alt="Exploring PVC: The Versatile Choice for Disposable Medical Devices" class="article-image" src="assets/images/insights/single-use-connector.jpg"/>
-<div class="article-body">
-<span class="article-tag">Technical Article</span>
-<h2 class="article-title">
-<a href="exploring-pvc-the-versatile-choice-of-disposable-medical-devices/">Exploring PVC: The Versatile Choice for Disposable Medical Devices</a>
-</h2>
-<p class="article-excerpt">The world of flexible plastic compounds for disposable medical devices is vast. A breakdown of PVC formulations, their performance characteristics, biocompatibility considerations, and where they fit in cable jacket and overmold applications.</p>
-<div class="article-footer">
-<span class="article-date">January 2019</span>
-<a class="article-link" href="exploring-pvc-the-versatile-choice-of-disposable-medical-devices/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 35 -->
-<article class="article-card" data-category="Case Study">
-<img alt="The Truth About Push-Pull Connectors" class="article-image" src="assets/images/capabilities/molding.jpg"/>
-<div class="article-body">
-<span class="article-tag">Case Study</span>
-<h2 class="article-title">
-<a href="truth-push-pull-connectors-2/">The Truth About Push-Pull Connectors</a>
-</h2>
-<p class="article-excerpt">An honest technical look at push-pull connector systems for medical devices — what they do well, where they're overused, and how purpose-built alternatives can deliver the same clinical performance at significantly lower cost.</p>
-<div class="article-footer">
-<span class="article-date">February 2019</span>
-<a class="article-link" href="truth-push-pull-connectors-2/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 36 -->
-<article class="article-card" data-category="News">
-<img alt="Our Son, Charlie" class="article-image" src="assets/images/insights/blog1.jpg"/>
-<div class="article-body">
-<span class="article-tag">News</span>
-<h2 class="article-title">
-<a href="our-son-charlie/">Our Son, Charlie</a>
-</h2>
-<p class="article-excerpt">A personal story from Gii's founder about family, perspective, and the deeper reason behind the company's mission to make high-quality medical devices more accessible and affordable.</p>
-<div class="article-footer">
-<span class="article-date">December 2018</span>
-<a class="article-link" href="our-son-charlie/" rel="noopener" target="_blank">Read More →</a>
-</div>
-</div>
-</article>
-<!-- Article 37 -->
-
-<!-- Article 38 -->
-
-<!-- Article 39 – Whitepaper -->
 <article class="article-card" data-category="Whitepaper">
-<img alt="Design Considerations for Reusable Medical Connectors" class="article-image" src="assets/images/insights/design-considerations.jpg"/>
+<a href="design-considerations-for-reusable-medical-connectors/" tabindex="-1" aria-hidden="true"><img alt="Design Considerations for Reusable Medical Connectors" class="article-image" loading="lazy" src="assets/images/articles/Design-Consideration-Reusable-Graphic-Featured.jpg"/></a>
 <div class="article-body">
 <span class="article-tag">Whitepaper</span>
-<h2 class="article-title">
+<h3 class="article-title">
 <a href="design-considerations-for-reusable-medical-connectors/">Design Considerations for Reusable Medical Connectors</a>
-</h2>
+</h3>
 <p class="article-excerpt">Reusable medical connectors require premium materials, advanced designs, and complex sterilization compatibility. This whitepaper covers the key engineering decisions — from contact design to cleaning cycle durability.</p>
 <div class="article-footer">
 <span class="article-date">June 2023</span>
-<a class="article-link" href="design-considerations-for-reusable-medical-connectors/" rel="noopener" target="_blank">Read More →</a>
+<a class="article-link" href="design-considerations-for-reusable-medical-connectors/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 40 – Whitepaper -->
+<article class="article-card" data-category="Technical Article">
+<a href="understanding-lemo-and-fischer-push-pull-connectors/" tabindex="-1" aria-hidden="true"><img alt="Understanding LEMO and Fischer Push-Pull Connectors" class="article-image" loading="lazy" src="assets/images/articles/Understanding-Lemo-and-Fischer-Push-Pull-Connectors-2.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">Technical Article</span>
+<h3 class="article-title">
+<a href="understanding-lemo-and-fischer-push-pull-connectors/">Understanding LEMO and Fischer Push-Pull Connectors</a>
+</h3>
+<p class="article-excerpt">A technical overview of push-pull connector systems used in medical devices — how they work, industry standards, and when to consider purpose-built alternatives.</p>
+<div class="article-footer">
+<span class="article-date">2023</span>
+<a class="article-link" href="understanding-lemo-and-fischer-push-pull-connectors/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="Technical Article">
+<a href="understanding-custom-medical-connectors/" tabindex="-1" aria-hidden="true"><img alt="Understanding Custom Medical Connectors" class="article-image" loading="lazy" src="assets/images/insights/design-considerations.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">Technical Article</span>
+<h3 class="article-title">
+<a href="understanding-custom-medical-connectors/">Understanding Custom Medical Connectors</a>
+</h3>
+<p class="article-excerpt">When off-the-shelf connectors fall short, custom connectors can improve human factors, reduce lead times, and differentiate your product in the market.</p>
+<div class="article-footer">
+<span class="article-date">May 2022</span>
+<a class="article-link" href="understanding-custom-medical-connectors/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="Technical Article">
+<a href="radio-frequency-rf-ablation-connector-improve-cost-performance/" tabindex="-1" aria-hidden="true"><img alt="RF Ablation Connector: Improve Cost &amp; Performance" class="article-image" loading="lazy" src="assets/images/articles/Scott_RF-Ablation-Connector-Design-Considerations_rev-1.png"/></a>
+<div class="article-body">
+<span class="article-tag">Technical Article</span>
+<h3 class="article-title">
+<a href="radio-frequency-rf-ablation-connector-improve-cost-performance/">RF Ablation Connector: Improve Cost &amp; Performance</a>
+</h3>
+<p class="article-excerpt">A deep-dive into RF ablation connector design options — from overmolded banana plugs to push-pull configurations — and how to optimize for cost without sacrificing reliability.</p>
+<div class="article-footer">
+<span class="article-date">2021</span>
+<a class="article-link" href="radio-frequency-rf-ablation-connector-improve-cost-performance/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="Case Study">
+<a href="custom-components-and-assemblies/" tabindex="-1" aria-hidden="true"><img alt="Custom Components and Assemblies" class="article-image" loading="lazy" src="assets/images/insights/design-considerations.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">Case Study</span>
+<h3 class="article-title">
+<a href="custom-components-and-assemblies/">Custom Components and Assemblies</a>
+</h3>
+<p class="article-excerpt">A company was stuck with a supplier unwilling to customize an off-the-shelf push-pull connector. Gii engineered a purpose-built replacement — better performance, lower cost, and no supply chain dependency on an uncooperative vendor.</p>
+<div class="article-footer">
+<span class="article-date">December 2020</span>
+<a class="article-link" href="custom-components-and-assemblies/">Read More →</a>
+</div>
+</div>
+</article>
 <article class="article-card" data-category="Whitepaper">
-<img alt="Learning Custom Medical Cable Assembly Materials" class="article-image" src="assets/images/insights/stamping.jpg"/>
+<a href="learning-custom-medical-cable-assembly-materials/" tabindex="-1" aria-hidden="true"><img alt="Learning Custom Medical Cable Assembly Materials" class="article-image" loading="lazy" src="assets/images/insights/stamping.jpg"/></a>
 <div class="article-body">
 <span class="article-tag">Whitepaper</span>
-<h2 class="article-title">
+<h3 class="article-title">
 <a href="learning-custom-medical-cable-assembly-materials/">Learning Custom Medical Cable Assembly Materials</a>
-</h2>
+</h3>
 <p class="article-excerpt">Material selection is one of the most consequential decisions in cable assembly design. A guide to jacket materials, insulation compounds, shielding options, and biocompatibility requirements for medical applications.</p>
 <div class="article-footer">
 <span class="article-date">November 2020</span>
-<a class="article-link" href="learning-custom-medical-cable-assembly-materials/" rel="noopener" target="_blank">Read More →</a>
+<a class="article-link" href="learning-custom-medical-cable-assembly-materials/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 41 – Whitepaper -->
 <article class="article-card" data-category="Whitepaper">
-<img alt="Braided Cable Sleeve vs. Extruded Cables" class="article-image" src="assets/images/insights/blog1.jpg"/>
+<a href="braided-cable-sleeve-vs-extrusion/" tabindex="-1" aria-hidden="true"><img alt="Braided Cable Sleeve vs. Extruded Cables" class="article-image" loading="lazy" src="assets/images/insights/blog1.jpg"/></a>
 <div class="article-body">
 <span class="article-tag">Whitepaper</span>
-<h2 class="article-title">
+<h3 class="article-title">
 <a href="braided-cable-sleeve-vs-extrusion/">Braided Cable Sleeve vs. Extruded Cables</a>
-</h2>
+</h3>
 <p class="article-excerpt">Braided cable sleeves and extruded cables are two distinct construction approaches with different performance, cost, and design implications. A practical comparison to help OEMs make the right choice for their application.</p>
 <div class="article-footer">
 <span class="article-date">December 2019</span>
-<a class="article-link" href="braided-cable-sleeve-vs-extrusion/" rel="noopener" target="_blank">Read More →</a>
+<a class="article-link" href="braided-cable-sleeve-vs-extrusion/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 42 – Whitepaper -->
+<article class="article-card" data-category="Technical Article">
+<a href="human-factors-and-medical-devices/" tabindex="-1" aria-hidden="true"><img alt="Human Factors and Medical Devices" class="article-image" loading="lazy" src="assets/images/articles/Careers-Page-Photo-13_resize.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">Technical Article</span>
+<h3 class="article-title">
+<a href="human-factors-and-medical-devices/">Human Factors and Medical Devices</a>
+</h3>
+<p class="article-excerpt">Human factors and usability engineering continue to be a key FDA focus for new medical device submissions. How cable and connector design decisions affect usability — and how to design for them from the start.</p>
+<div class="article-footer">
+<span class="article-date">November 2019</span>
+<a class="article-link" href="human-factors-and-medical-devices/">Read More →</a>
+</div>
+</div>
+</article>
 <article class="article-card" data-category="Whitepaper">
-<img alt="Electrical Connector Mechanics" class="article-image" src="assets/images/insights/stamping.jpg"/>
+<a href="electrical-connector-mechanics/" tabindex="-1" aria-hidden="true"><img alt="Electrical Connector Mechanics" class="article-image" loading="lazy" src="assets/images/insights/stamping.jpg"/></a>
 <div class="article-body">
 <span class="article-tag">Whitepaper</span>
-<h2 class="article-title">
+<h3 class="article-title">
 <a href="electrical-connector-mechanics/">Electrical Connector Mechanics</a>
-</h2>
+</h3>
 <p class="article-excerpt">A practical primer on electrical connector and contact theory — covering contact resistance, normal force, mating cycles, plating, and the mechanical principles that determine real-world connector reliability.</p>
 <div class="article-footer">
 <span class="article-date">April 2019</span>
-<a class="article-link" href="electrical-connector-mechanics/" rel="noopener" target="_blank">Read More →</a>
+<a class="article-link" href="electrical-connector-mechanics/">Read More →</a>
 </div>
 </div>
 </article>
-<!-- Article 43 – Whitepaper -->
-
+<article class="article-card" data-category="Case Study">
+<a href="truth-push-pull-connectors-2/" tabindex="-1" aria-hidden="true"><img alt="The Truth About Push-Pull Connectors" class="article-image" loading="lazy" src="assets/images/capabilities/molding.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">Case Study</span>
+<h3 class="article-title">
+<a href="truth-push-pull-connectors-2/">The Truth About Push-Pull Connectors</a>
+</h3>
+<p class="article-excerpt">An honest technical look at push-pull connector systems for medical devices — what they do well, where they're overused, and how purpose-built alternatives can deliver the same clinical performance at significantly lower cost.</p>
+<div class="article-footer">
+<span class="article-date">February 2019</span>
+<a class="article-link" href="truth-push-pull-connectors-2/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="Technical Article">
+<a href="exploring-pvc-the-versatile-choice-of-disposable-medical-devices/" tabindex="-1" aria-hidden="true"><img alt="Exploring PVC: The Versatile Choice for Disposable Medical Devices" class="article-image" loading="lazy" src="assets/images/insights/single-use-connector.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">Technical Article</span>
+<h3 class="article-title">
+<a href="exploring-pvc-the-versatile-choice-of-disposable-medical-devices/">Exploring PVC: The Versatile Choice for Disposable Medical Devices</a>
+</h3>
+<p class="article-excerpt">The world of flexible plastic compounds for disposable medical devices is vast. A breakdown of PVC formulations, their performance characteristics, biocompatibility considerations, and where they fit in cable jacket and overmold applications.</p>
+<div class="article-footer">
+<span class="article-date">January 2019</span>
+<a class="article-link" href="exploring-pvc-the-versatile-choice-of-disposable-medical-devices/">Read More →</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- ===== COMPANY NEWS ===== -->
+<section class="insights-articles insights-news" id="news">
+<div class="insights-section-head">
+<span class="section-eyebrow">Company News</span>
+<h2 class="section-title">News from Gii</h2>
+<p>Team announcements, trade shows, facility updates, and company milestones.</p>
+</div>
+<div class="articles-grid">
+<article class="article-card" data-category="News">
+<a href="investing-in-people-partnerships-and-the-future-of-medical-device-manufacturing/" tabindex="-1" aria-hidden="true"><img alt="Investing in People, Partnerships, and the Future of Medical Device Manufacturing" class="article-image" loading="lazy" src="assets/images/articles/Future-of-Medical-Device-Manufacturing-growth-strat-cover-scaled.avif"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="investing-in-people-partnerships-and-the-future-of-medical-device-manufacturing/">Investing in People, Partnerships, and the Future of Medical Device Manufacturing</a>
+</h3>
+<p class="article-excerpt">How intentional investment, strong relationships, and a commitment to value are driving Gii’s growth.</p>
+<div class="article-footer">
+<span class="article-date">July 2026</span>
+<a class="article-link" href="investing-in-people-partnerships-and-the-future-of-medical-device-manufacturing/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnect-welcomes-ryan-martin/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect Welcomes Ryan Martin!" class="article-image" loading="lazy" src="assets/images/articles/Ryan-Martin_outside.webp"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnect-welcomes-ryan-martin/">Global Interconnect Welcomes Ryan Martin!</a>
+</h3>
+<p class="article-excerpt">Ryan joins the Gii Sales organization as a Business Development Representative.</p>
+<div class="article-footer">
+<span class="article-date">June 2026</span>
+<a class="article-link" href="global-interconnect-welcomes-ryan-martin/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnect-welcomes-nick-foley/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect Welcomes Nick Foley!" class="article-image" loading="lazy" src="assets/images/articles/Nick-Foley_outside.webp"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnect-welcomes-nick-foley/">Global Interconnect Welcomes Nick Foley!</a>
+</h3>
+<p class="article-excerpt">Nick joins the Gii Sales organization as a Business Development Representative.</p>
+<div class="article-footer">
+<span class="article-date">June 2026</span>
+<a class="article-link" href="global-interconnect-welcomes-nick-foley/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="enhancing-project-efficiency-customer-outcomes-with-project-management-software/" tabindex="-1" aria-hidden="true"><img alt="Enhancing Project Efficiency & Customer Outcomes with Project Management Software" class="article-image" loading="lazy" src="assets/images/articles/gii1-scaled.webp"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="enhancing-project-efficiency-customer-outcomes-with-project-management-software/">Enhancing Project Efficiency &amp; Customer Outcomes with Project Management Software</a>
+</h3>
+<p class="article-excerpt">How Gii rolled out Smartsheet across project management, engineering, and operations to give customers better visibility into their programs.</p>
+<div class="article-footer">
+<span class="article-date">May 2026</span>
+<a class="article-link" href="enhancing-project-efficiency-customer-outcomes-with-project-management-software/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnect-at-mdm-west-event-recap-key-takeaways/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect at MD&amp;M West: Event Recap &amp; Key Takeaways" class="article-image" loading="lazy" src="assets/images/articles/MdMwest-bg.jpeg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnect-at-mdm-west-event-recap-key-takeaways/">Global Interconnect at MD&amp;M West: Event Recap &amp; Key Takeaways</a>
+</h3>
+<p class="article-excerpt">Global Interconnect exhibited at MD&amp;M West in Anaheim, California — one of the largest medical device manufacturing events in the US. Recap of conversations, industry trends, and key takeaways from the show floor.</p>
+<div class="article-footer">
+<span class="article-date">March 2025</span>
+<a class="article-link" href="global-interconnect-at-mdm-west-event-recap-key-takeaways/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="gii-announces-new-iso-8-cleanroom/" tabindex="-1" aria-hidden="true"><img alt="Gii Announces New ISO 8 Cleanroom" class="article-image" loading="lazy" src="assets/images/articles/Gii-Announces-New-ISO-8-Cleanroom_img1.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="gii-announces-new-iso-8-cleanroom/">Gii Announces New ISO 8 Cleanroom</a>
+</h3>
+<p class="article-excerpt">Global Interconnect, Inc. announces the addition of a new ISO 8 cleanroom facility — expanding sterile and critical medical cable and connector assembly capacity to meet growing OEM demand.</p>
+<div class="article-footer">
+<span class="article-date">July 2024</span>
+<a class="article-link" href="gii-announces-new-iso-8-cleanroom/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="the-quarterly-connection-q1-2024/" tabindex="-1" aria-hidden="true"><img alt="The Quarterly Connection Q1 2024" class="article-image" loading="lazy" src="assets/images/insights/blog1.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="the-quarterly-connection-q1-2024/">The Quarterly Connection – Q1 2024</a>
+</h3>
+<p class="article-excerpt">The fifth edition of The Quarterly Connection — highlights, program updates, and engineering insights from Global Interconnect's team for Q1 2024.</p>
+<div class="article-footer">
+<span class="article-date">April 2024</span>
+<a class="article-link" href="the-quarterly-connection-q1-2024/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="the-quarterly-connection-q4-2023/" tabindex="-1" aria-hidden="true"><img alt="The Quarterly Connection Q4 2023" class="article-image" loading="lazy" src="assets/images/articles/Q4_Featured-jpg.webp"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="the-quarterly-connection-q4-2023/">The Quarterly Connection – Q4 2023</a>
+</h3>
+<p class="article-excerpt">The fourth edition of The Quarterly Connection — highlights, industry news, and program updates from Global Interconnect for Q4 2023.</p>
+<div class="article-footer">
+<span class="article-date">January 2024</span>
+<a class="article-link" href="the-quarterly-connection-q4-2023/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnect-appoints-ken-daignault-as-technical-advisor/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect Appoints Ken Daignault as Technical Advisor" class="article-image" loading="lazy" src="assets/images/articles/Ken-Daignault.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnect-appoints-ken-daignault-as-technical-advisor/">Global Interconnect Appoints Ken Daignault as Technical Advisor</a>
+</h3>
+<p class="article-excerpt">Global Interconnect announces the appointment of Ken Daignault, President of Daignault Medtech Consulting, as Technical Advisor — bringing additional depth in medical device design and regulatory expertise.</p>
+<div class="article-footer">
+<span class="article-date">November 2023</span>
+<a class="article-link" href="global-interconnect-appoints-ken-daignault-as-technical-advisor/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="reflections-on-giis-experience-at-trade-shows-in-2023/" tabindex="-1" aria-hidden="true"><img alt="Reflections on Gii's Experience at Trade Shows in 2023" class="article-image" loading="lazy" src="assets/images/articles/KyleKruse_photo_email.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="reflections-on-giis-experience-at-trade-shows-in-2023/">Reflections on Gii's Experience at Trade Shows in 2023</a>
+</h3>
+<p class="article-excerpt">Global Interconnect has been an active trade show participant since 1997. A look back at Gii's 2023 show season — the conversations, themes, and industry signals from the floor.</p>
+<div class="article-footer">
+<span class="article-date">November 2023</span>
+<a class="article-link" href="reflections-on-giis-experience-at-trade-shows-in-2023/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="the-quarterly-connection-q3-2023/" tabindex="-1" aria-hidden="true"><img alt="The Quarterly Connection Q3 2023" class="article-image" loading="lazy" src="assets/images/articles/HeaderandQuote3.jpeg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="the-quarterly-connection-q3-2023/">The Quarterly Connection – Q3 2023</a>
+</h3>
+<p class="article-excerpt">The third edition of The Quarterly Connection — updates, engineering insights, and highlights from the Gii team for Q3 2023.</p>
+<div class="article-footer">
+<span class="article-date">October 2023</span>
+<a class="article-link" href="the-quarterly-connection-q3-2023/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnects-core-values/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect's Core Values" class="article-image" loading="lazy" src="assets/images/articles/2-GlobalInterconnectACTION-68-52775-scaled.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnects-core-values/">Global Interconnect's Core Values</a>
+</h3>
+<p class="article-excerpt">Gii's core values — developed in 2010 — define the standards and expectations that guide how the company works with OEM partners, manufacturing partners, and its own team.</p>
+<div class="article-footer">
+<span class="article-date">August 2023</span>
+<a class="article-link" href="global-interconnects-core-values/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="forging-stronger-partnerships-and-optimizing-engineering-operations/" tabindex="-1" aria-hidden="true"><img alt="Forging Stronger Relationships with Our Manufacturing Partners" class="article-image" loading="lazy" src="assets/images/articles/GlobalBlog_image_ForgingStrongerRelationships.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="forging-stronger-partnerships-and-optimizing-engineering-operations/">Forging Stronger Relationships with Our Manufacturing Partners</a>
+</h3>
+<p class="article-excerpt">How Gii's global manufacturing model — spanning the US, nearshore Costa Rica, and Asia — creates transparency and quality alignment across the supply chain, and what that means for OEM customers.</p>
+<div class="article-footer">
+<span class="article-date">July 2023</span>
+<a class="article-link" href="forging-stronger-partnerships-and-optimizing-engineering-operations/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="the-quarterly-connection-q2-2023/" tabindex="-1" aria-hidden="true"><img alt="The Quarterly Connection Q2 2023" class="article-image" loading="lazy" src="assets/images/articles/Blog_post_photo2.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="the-quarterly-connection-q2-2023/">The Quarterly Connection – Q2 2023</a>
+</h3>
+<p class="article-excerpt">The second edition of The Quarterly Connection — updates, industry developments, and program highlights from the Gii team for Q2 2023.</p>
+<div class="article-footer">
+<span class="article-date">July 2023</span>
+<a class="article-link" href="the-quarterly-connection-q2-2023/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnects-director-of-quality-enhances-product-quality-with-asia-visit/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect's Director of Quality Enhances Product Quality With Asia Visit" class="article-image" loading="lazy" src="assets/images/insights/china-mfg.png"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnects-director-of-quality-enhances-product-quality-with-asia-visit/">Global Interconnect's Director of Quality Enhances Product Quality With Asia Visit</a>
+</h3>
+<p class="article-excerpt">Gii's Director of Quality traveled to Asia manufacturing partners to strengthen quality standards, drive supplier development, and ensure alignment with Gii's zero-defect manufacturing principles.</p>
+<div class="article-footer">
+<span class="article-date">July 2023</span>
+<a class="article-link" href="global-interconnects-director-of-quality-enhances-product-quality-with-asia-visit/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnect-partners-with-materialogic-to-provide-enhanced-logistics-to-their-medical-device-customers/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect Partners with Materialogic" class="article-image" loading="lazy" src="assets/images/articles/Materialogic-Photo-3.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnect-partners-with-materialogic-to-provide-enhanced-logistics-to-their-medical-device-customers/">Global Interconnect Partners with Materialogic for Enhanced Logistics</a>
+</h3>
+<p class="article-excerpt">Global Interconnect partners with Materialogic to offer OEM customers enhanced logistics capabilities — improving delivery performance, inventory management, and supply chain visibility.</p>
+<div class="article-footer">
+<span class="article-date">April 2023</span>
+<a class="article-link" href="global-interconnect-partners-with-materialogic-to-provide-enhanced-logistics-to-their-medical-device-customers/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="the-quarterly-connection-q1-2023/" tabindex="-1" aria-hidden="true"><img alt="The Quarterly Connection Q1 2023" class="article-image" loading="lazy" src="assets/images/articles/Blog_post_photo.webp"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="the-quarterly-connection-q1-2023/">The Quarterly Connection – Q1 2023</a>
+</h3>
+<p class="article-excerpt">The first edition of The Quarterly Connection — introducing Gii's new newsletter with company updates, engineering insights, and industry highlights for Q1 2023.</p>
+<div class="article-footer">
+<span class="article-date">April 2023</span>
+<a class="article-link" href="the-quarterly-connection-q1-2023/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="a-message-from-our-ceo-the-benefits-of-our-model/" tabindex="-1" aria-hidden="true"><img alt="A Message from Our CEO: The Benefits of Our Model" class="article-image" loading="lazy" src="assets/images/insights/forging-relationships.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="a-message-from-our-ceo-the-benefits-of-our-model/">A Message from Our CEO: The Benefits of Our Model</a>
+</h3>
+<p class="article-excerpt">A personal message from Gii's CEO on why the company's curated network model — rather than a single vertically integrated facility — delivers better outcomes for OEM partners across cost, quality, and flexibility.</p>
+<div class="article-footer">
+<span class="article-date">June 2020</span>
+<a class="article-link" href="a-message-from-our-ceo-the-benefits-of-our-model/">Read More →</a>
+</div>
+</div>
+</article>
 </div>
 </section>
 <!-- ===== CONTACT / NEWSLETTER CTA ===== -->
@@ -1013,7 +1055,7 @@
 
         // Filter articles
         const filter = btn.dataset.filter;
-        document.querySelectorAll('.article-card').forEach(card => {
+        document.querySelectorAll('#resources-grid .article-card').forEach(card => {
           const category = card.dataset.category;
           if (filter === 'all' || category === filter) {
             card.style.display = '';
@@ -1024,14 +1066,16 @@
       });
     });
 
-    // Simple newsletter form handling
+    // Newsletter sign-up: no mailing-list service is connected yet, so open a pre-filled
+    // email to info@ rather than showing a false confirmation.
     document.getElementById('newsletter-form').addEventListener('submit', (e) => {
       e.preventDefault();
-      const email = e.target.querySelector('input[type="email"]').value;
-      if (email) {
-        alert('Thank you for subscribing! Check your email for confirmation.');
-        e.target.reset();
-      }
+      const email = e.target.querySelector('input[type="email"]').value.trim();
+      if (!email) return;
+      window.location.href = 'mailto:info@globalinterconnect.com?subject=' +
+        encodeURIComponent('Newsletter sign-up') + '&body=' +
+        encodeURIComponent('Please add ' + email + ' to the Gii newsletter list.');
+      e.target.reset();
     });
   </script>
 <script src="assets/js/chatbot.js"></script>

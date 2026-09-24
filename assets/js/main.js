@@ -32,9 +32,24 @@ const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // --- Contact form ---
+// Set FORM_ENDPOINT to the lead destination (e.g. a Formspree or CRM form URL) to submit
+// directly. While it is empty, the forms open a pre-filled email to FORM_FALLBACK_EMAIL.
+const FORM_ENDPOINT = '';
+const FORM_FALLBACK_EMAIL = 'info@globalinterconnect.com';
 const form       = document.getElementById('contact-form');
 const submitBtn  = document.getElementById('form-submit');
 const successMsg = document.getElementById('form-success');
+
+function showFormMessage(msgHtml) {
+  const icon = successMsg.querySelector('svg');
+  successMsg.innerHTML = '';
+  if (icon) successMsg.appendChild(icon);
+  const span = document.createElement('span');
+  span.innerHTML = msgHtml;
+  successMsg.appendChild(span);
+  successMsg.hidden = false;
+  submitBtn.hidden = true;
+}
 
 if (form) {
   form.addEventListener('submit', async (e) => {
@@ -67,24 +82,39 @@ if (form) {
 
     // Build form data
     const data = new FormData(form);
-    const payload = Object.fromEntries(data.entries());
 
     try {
-      // TODO: Replace this URL with your actual form endpoint (e.g. Formspree, Netlify Forms, or custom API)
-      // const res = await fetch('YOUR_FORM_ENDPOINT', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      //   body: JSON.stringify(payload),
-      // });
-      // if (!res.ok) throw new Error('Network response was not ok');
-
-      // For now, simulate a successful submission (remove this line once real endpoint is wired up)
-      await new Promise(resolve => setTimeout(resolve, 900));
-
-      form.reset();
-      successMsg.hidden = false;
-      submitBtn.hidden = true;
-
+      if (FORM_ENDPOINT) {
+        // Real submission (FormData so file attachments on the quote form are included)
+        const res = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data,
+        });
+        if (!res.ok) throw new Error('Network response was not ok');
+        form.reset();
+        showFormMessage(successMsg.dataset.sent || "Thank you! We'll be in touch shortly.");
+      } else {
+        // No endpoint configured yet: hand the request to the visitor's email app
+        // so no inquiry is silently lost.
+        const lines = [];
+        data.forEach((value, key) => {
+          if (value instanceof File) return;
+          const v = String(value).trim();
+          if (!v) return;
+          const label = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+          lines.push(label + ': ' + v);
+        });
+        const hasFiles = [...data.values()].some(v => v instanceof File && v.size > 0);
+        if (hasFiles) lines.push('', '(Please attach your drawings/specs to this email.)');
+        const subject = (form.classList.contains('quote-form') ? 'Quote request' : 'Website inquiry') +
+          ' — ' + (data.get('company') || ((data.get('first_name') || '') + ' ' + (data.get('last_name') || '')).trim());
+        window.location.href = 'mailto:' + FORM_FALLBACK_EMAIL +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(lines.join('\n'));
+        showFormMessage('Your email app should open with your request filled in — just press send. ' +
+          'If it didn\'t open, email us at <a href="mailto:' + FORM_FALLBACK_EMAIL + '">' + FORM_FALLBACK_EMAIL + '</a>.');
+      }
     } catch (err) {
       console.error('Form submission error:', err);
       submitBtn.querySelector('.btn-text').hidden = false;

@@ -985,6 +985,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: var(--green-dark);
   font-weight: 600;
 }
+.form-success[hidden] { display: none; }
+.form-success a { color: inherit; text-decoration: underline; }
 .form-success svg {
   width: 20px;
   height: 20px;
