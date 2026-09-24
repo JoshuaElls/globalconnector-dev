@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="noindex, nofollow" name="robots"/> <!-- STAGING ONLY - remove at launch -->
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Global Interconnect, Inc. (Gii) company news — team announcements, trade shows, facility updates, and milestones from the medical cable and connector specialists." name="description"/>
+<title>News | Global Interconnect, Inc.</title>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Global Interconnect, Inc." property="og:site_name"/>
+<meta content="https://www.globalinterconnect.com/news/" property="og:url"/>
+<meta content="News | Global Interconnect, Inc." property="og:title"/>
+<meta content="Engineering knowledge from the specialists — case studies, whitepapers, and technical articles covering custom connector design, DFM cost reduction, and medical cable assembly for OEM teams." property="og:description"/>
+<meta content="https://www.globalinterconnect.com/assets/images/insights/signati.jpg" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Medical Cable &amp; Connector Insights | Gii" name="twitter:title"/>
+<meta content="Design guides, whitepapers, and case studies from Gii's cable and connector specialists." name="twitter:description"/>
+<link href="assets/images/favicon.png" rel="icon" type="image/png"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Barlow:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* ===== INSIGHTS PAGE STYLES ===== */
+
+    /* Page banner / hero */
+    .insights-banner {
+      background: linear-gradient(135deg, #0d4c3a 0%, #1a5f47 100%);
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .insights-banner-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .insights-banner h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .insights-banner p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* Filter row */
+    .insights-filters {
+      background: #f8f8f8;
+      padding: 2rem;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 3rem;
+    }
+
+    .filters-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filter-btn {
+      padding: 0.625rem 1.25rem;
+      border: 1px solid #d0d0d0;
+      background: white;
+      color: #333;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: #0d4c3a;
+      color: #0d4c3a;
+      background: #f0f8f5;
+    }
+
+    .filter-btn.active {
+      background: #0d4c3a;
+      color: white;
+      border-color: #0d4c3a;
+    }
+
+    /* Articles grid */
+    .insights-articles {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .article-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .article-card:hover {
+      border-color: #0d4c3a;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .article-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .article-tag {
+      display: inline-block;
+      background: #e8f5f1;
+      color: #0d4c3a;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      width: fit-content;
+    }
+
+    .article-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      color: #222;
+    }
+
+    .article-title a {
+      color: #222;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .article-title a:hover {
+      color: #0d4c3a;
+    }
+
+    .article-excerpt {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .article-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid #f0f0f0;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    .article-date {
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    .article-link {
+      color: #0d4c3a;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+
+    .article-link:hover {
+      opacity: 0.7;
+    }
+
+    /* Newsletter / Contact CTA */
+    .insights-cta-section {
+      background: #0d4c3a;
+      color: white;
+      padding: 4rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .insights-cta-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .cta-newsletter {
+      padding-right: 2rem;
+    }
+
+    .cta-newsletter h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .cta-newsletter p {
+      font-size: 1rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      background: white;
+      color: #333;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #999;
+    }
+
+    .newsletter-form button {
+      padding: 0.75rem 1.5rem;
+      background: #1a5f47;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+      background: #0d4c3a;
+    }
+
+    .cta-engineering {
+      padding-left: 2rem;
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .cta-engineering h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .cta-engineering p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .cta-engineering a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .cta-engineering a:hover {
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .insights-banner h1 {
+        font-size: 1.75rem;
+      }
+
+      .insights-banner p {
+        font-size: 0.95rem;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .cta-newsletter {
+        padding-right: 0;
+      }
+
+      .cta-engineering {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 2rem;
+      }
+
+      .filters-container {
+        justify-content: center;
+      }
+    }
+  
+    /* Section heads + featured (Insights restructure) */
+    .insights-section-head { text-align: center; max-width: 720px; margin: 3.5rem auto 1.75rem; }
+    .insights-section-head p { color: #666; margin-top: .5rem; }
+    .insights-articles .filters-container { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; align-items: center; margin: 0 auto 2rem; padding: 0; }
+    .filter-jump { margin-left: .5rem; font-size: .875rem; font-weight: 600; color: #0d4c3a; text-decoration: none; }
+    .filter-jump:hover { text-decoration: underline; }
+    .article-card.is-featured { border-color: rgba(139,195,66,.6); }
+    .article-card.is-featured .article-tag { background: #8BC342; color: #0f2a1d; }
+    .insights-news { border-top: 1px solid #e5e5e5; }
+    .insights-news .article-image { height: 160px; }
+</style>
+</head>
+<body>
+<!-- ===== NAVIGATION ===== -->
+<header class="site-header" id="site-header">
+<nav class="nav-container">
+<a class="nav-logo" href="index.html">
+<img alt="Global Interconnect, Inc." class="logo-img" src="assets/images/logos/logo-white.svg"/>
+</a>
+<button aria-label="Toggle navigation" class="nav-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="capabilities.html">Capabilities</a></li>
+<li><a href="expertise.html">Expertise</a></li>
+<li><a href="devices.html">Devices</a></li>
+<li><a href="insights.html">Insights</a></li>
+<li><a class="active" href="news.html">News</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a class="nav-cta" href="quote.html">Get a Quote</a></li>
+</ul>
+</nav>
+</header>
+<!-- ===== INSIGHTS BANNER ===== -->
+<section class="insights-banner">
+<div class="insights-banner-content">
+<h1>News from Gii</h1>
+<p>What’s happening at Global Interconnect — our people, our facilities, and where to find us next.</p>
+</div>
+</section>
+<!-- ===== NEWS ===== -->
+<section class="insights-articles" id="news">
+<div class="insights-section-head">
+<span class="section-eyebrow">Latest</span>
+<h2 class="section-title">Company Announcements &amp; Updates</h2>
+<p>Team announcements, trade shows, facility updates, and company milestones. Looking for engineering content? Visit <a href="insights.html">Insights</a>.</p>
+</div>
+<div class="articles-grid">
+<article class="article-card" data-category="News">
+<a href="investing-in-people-partnerships-and-the-future-of-medical-device-manufacturing/" tabindex="-1" aria-hidden="true"><img alt="Investing in People, Partnerships, and the Future of Medical Device Manufacturing" class="article-image" loading="lazy" src="assets/images/articles/Future-of-Medical-Device-Manufacturing-growth-strat-cover-scaled.avif"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="investing-in-people-partnerships-and-the-future-of-medical-device-manufacturing/">Investing in People, Partnerships, and the Future of Medical Device Manufacturing</a>
+</h3>
+<p class="article-excerpt">How intentional investment, strong relationships, and a commitment to value are driving Gii’s growth.</p>
+<div class="article-footer">
+<span class="article-date">July 2026</span>
+<a class="article-link" href="investing-in-people-partnerships-and-the-future-of-medical-device-manufacturing/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnect-welcomes-ryan-martin/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect Welcomes Ryan Martin!" class="article-image" loading="lazy" src="assets/images/articles/Ryan-Martin_outside.webp"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnect-welcomes-ryan-martin/">Global Interconnect Welcomes Ryan Martin!</a>
+</h3>
+<p class="article-excerpt">Ryan joins the Gii Sales organization as a Business Development Representative.</p>
+<div class="article-footer">
+<span class="article-date">June 2026</span>
+<a class="article-link" href="global-interconnect-welcomes-ryan-martin/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnect-welcomes-nick-foley/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect Welcomes Nick Foley!" class="article-image" loading="lazy" src="assets/images/articles/Nick-Foley_outside.webp"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnect-welcomes-nick-foley/">Global Interconnect Welcomes Nick Foley!</a>
+</h3>
+<p class="article-excerpt">Nick joins the Gii Sales organization as a Business Development Representative.</p>
+<div class="article-footer">
+<span class="article-date">June 2026</span>
+<a class="article-link" href="global-interconnect-welcomes-nick-foley/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="enhancing-project-efficiency-customer-outcomes-with-project-management-software/" tabindex="-1" aria-hidden="true"><img alt="Enhancing Project Efficiency & Customer Outcomes with Project Management Software" class="article-image" loading="lazy" src="assets/images/articles/gii1-scaled.webp"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="enhancing-project-efficiency-customer-outcomes-with-project-management-software/">Enhancing Project Efficiency &amp; Customer Outcomes with Project Management Software</a>
+</h3>
+<p class="article-excerpt">How Gii rolled out Smartsheet across project management, engineering, and operations to give customers better visibility into their programs.</p>
+<div class="article-footer">
+<span class="article-date">May 2026</span>
+<a class="article-link" href="enhancing-project-efficiency-customer-outcomes-with-project-management-software/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnect-at-mdm-west-event-recap-key-takeaways/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect at MD&amp;M West: Event Recap &amp; Key Takeaways" class="article-image" loading="lazy" src="assets/images/articles/MdMwest-bg.jpeg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnect-at-mdm-west-event-recap-key-takeaways/">Global Interconnect at MD&amp;M West: Event Recap &amp; Key Takeaways</a>
+</h3>
+<p class="article-excerpt">Global Interconnect exhibited at MD&amp;M West in Anaheim, California — one of the largest medical device manufacturing events in the US. Recap of conversations, industry trends, and key takeaways from the show floor.</p>
+<div class="article-footer">
+<span class="article-date">March 2025</span>
+<a class="article-link" href="global-interconnect-at-mdm-west-event-recap-key-takeaways/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="gii-announces-new-iso-8-cleanroom/" tabindex="-1" aria-hidden="true"><img alt="Gii Announces New ISO 8 Cleanroom" class="article-image" loading="lazy" src="assets/images/articles/Gii-Announces-New-ISO-8-Cleanroom_img1.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="gii-announces-new-iso-8-cleanroom/">Gii Announces New ISO 8 Cleanroom</a>
+</h3>
+<p class="article-excerpt">Global Interconnect, Inc. announces the addition of a new ISO 8 cleanroom facility — expanding sterile and critical medical cable and connector assembly capacity to meet growing OEM demand.</p>
+<div class="article-footer">
+<span class="article-date">July 2024</span>
+<a class="article-link" href="gii-announces-new-iso-8-cleanroom/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="the-quarterly-connection-q1-2024/" tabindex="-1" aria-hidden="true"><img alt="The Quarterly Connection Q1 2024" class="article-image" loading="lazy" src="assets/images/insights/blog1.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="the-quarterly-connection-q1-2024/">The Quarterly Connection – Q1 2024</a>
+</h3>
+<p class="article-excerpt">The fifth edition of The Quarterly Connection — highlights, program updates, and engineering insights from Global Interconnect's team for Q1 2024.</p>
+<div class="article-footer">
+<span class="article-date">April 2024</span>
+<a class="article-link" href="the-quarterly-connection-q1-2024/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="the-quarterly-connection-q4-2023/" tabindex="-1" aria-hidden="true"><img alt="The Quarterly Connection Q4 2023" class="article-image" loading="lazy" src="assets/images/articles/Q4_Featured-jpg.webp"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="the-quarterly-connection-q4-2023/">The Quarterly Connection – Q4 2023</a>
+</h3>
+<p class="article-excerpt">The fourth edition of The Quarterly Connection — highlights, industry news, and program updates from Global Interconnect for Q4 2023.</p>
+<div class="article-footer">
+<span class="article-date">January 2024</span>
+<a class="article-link" href="the-quarterly-connection-q4-2023/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnect-appoints-ken-daignault-as-technical-advisor/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect Appoints Ken Daignault as Technical Advisor" class="article-image" loading="lazy" src="assets/images/articles/Ken-Daignault.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnect-appoints-ken-daignault-as-technical-advisor/">Global Interconnect Appoints Ken Daignault as Technical Advisor</a>
+</h3>
+<p class="article-excerpt">Global Interconnect announces the appointment of Ken Daignault, President of Daignault Medtech Consulting, as Technical Advisor — bringing additional depth in medical device design and regulatory expertise.</p>
+<div class="article-footer">
+<span class="article-date">November 2023</span>
+<a class="article-link" href="global-interconnect-appoints-ken-daignault-as-technical-advisor/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="reflections-on-giis-experience-at-trade-shows-in-2023/" tabindex="-1" aria-hidden="true"><img alt="Reflections on Gii's Experience at Trade Shows in 2023" class="article-image" loading="lazy" src="assets/images/articles/KyleKruse_photo_email.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="reflections-on-giis-experience-at-trade-shows-in-2023/">Reflections on Gii's Experience at Trade Shows in 2023</a>
+</h3>
+<p class="article-excerpt">Global Interconnect has been an active trade show participant since 1997. A look back at Gii's 2023 show season — the conversations, themes, and industry signals from the floor.</p>
+<div class="article-footer">
+<span class="article-date">November 2023</span>
+<a class="article-link" href="reflections-on-giis-experience-at-trade-shows-in-2023/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="the-quarterly-connection-q3-2023/" tabindex="-1" aria-hidden="true"><img alt="The Quarterly Connection Q3 2023" class="article-image" loading="lazy" src="assets/images/articles/HeaderandQuote3.jpeg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="the-quarterly-connection-q3-2023/">The Quarterly Connection – Q3 2023</a>
+</h3>
+<p class="article-excerpt">The third edition of The Quarterly Connection — updates, engineering insights, and highlights from the Gii team for Q3 2023.</p>
+<div class="article-footer">
+<span class="article-date">October 2023</span>
+<a class="article-link" href="the-quarterly-connection-q3-2023/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnects-core-values/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect's Core Values" class="article-image" loading="lazy" src="assets/images/articles/2-GlobalInterconnectACTION-68-52775-scaled.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnects-core-values/">Global Interconnect's Core Values</a>
+</h3>
+<p class="article-excerpt">Gii's core values — developed in 2010 — define the standards and expectations that guide how the company works with OEM partners, manufacturing partners, and its own team.</p>
+<div class="article-footer">
+<span class="article-date">August 2023</span>
+<a class="article-link" href="global-interconnects-core-values/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="forging-stronger-partnerships-and-optimizing-engineering-operations/" tabindex="-1" aria-hidden="true"><img alt="Forging Stronger Relationships with Our Manufacturing Partners" class="article-image" loading="lazy" src="assets/images/articles/GlobalBlog_image_ForgingStrongerRelationships.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="forging-stronger-partnerships-and-optimizing-engineering-operations/">Forging Stronger Relationships with Our Manufacturing Partners</a>
+</h3>
+<p class="article-excerpt">How Gii's global manufacturing model — spanning the US, nearshore Costa Rica, and Asia — creates transparency and quality alignment across the supply chain, and what that means for OEM customers.</p>
+<div class="article-footer">
+<span class="article-date">July 2023</span>
+<a class="article-link" href="forging-stronger-partnerships-and-optimizing-engineering-operations/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="the-quarterly-connection-q2-2023/" tabindex="-1" aria-hidden="true"><img alt="The Quarterly Connection Q2 2023" class="article-image" loading="lazy" src="assets/images/articles/Blog_post_photo2.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="the-quarterly-connection-q2-2023/">The Quarterly Connection – Q2 2023</a>
+</h3>
+<p class="article-excerpt">The second edition of The Quarterly Connection — updates, industry developments, and program highlights from the Gii team for Q2 2023.</p>
+<div class="article-footer">
+<span class="article-date">July 2023</span>
+<a class="article-link" href="the-quarterly-connection-q2-2023/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnects-director-of-quality-enhances-product-quality-with-asia-visit/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect's Director of Quality Enhances Product Quality With Asia Visit" class="article-image" loading="lazy" src="assets/images/insights/china-mfg.png"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnects-director-of-quality-enhances-product-quality-with-asia-visit/">Global Interconnect's Director of Quality Enhances Product Quality With Asia Visit</a>
+</h3>
+<p class="article-excerpt">Gii's Director of Quality traveled to Asia manufacturing partners to strengthen quality standards, drive supplier development, and ensure alignment with Gii's zero-defect manufacturing principles.</p>
+<div class="article-footer">
+<span class="article-date">July 2023</span>
+<a class="article-link" href="global-interconnects-director-of-quality-enhances-product-quality-with-asia-visit/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="global-interconnect-partners-with-materialogic-to-provide-enhanced-logistics-to-their-medical-device-customers/" tabindex="-1" aria-hidden="true"><img alt="Global Interconnect Partners with Materialogic" class="article-image" loading="lazy" src="assets/images/articles/Materialogic-Photo-3.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="global-interconnect-partners-with-materialogic-to-provide-enhanced-logistics-to-their-medical-device-customers/">Global Interconnect Partners with Materialogic for Enhanced Logistics</a>
+</h3>
+<p class="article-excerpt">Global Interconnect partners with Materialogic to offer OEM customers enhanced logistics capabilities — improving delivery performance, inventory management, and supply chain visibility.</p>
+<div class="article-footer">
+<span class="article-date">April 2023</span>
+<a class="article-link" href="global-interconnect-partners-with-materialogic-to-provide-enhanced-logistics-to-their-medical-device-customers/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="the-quarterly-connection-q1-2023/" tabindex="-1" aria-hidden="true"><img alt="The Quarterly Connection Q1 2023" class="article-image" loading="lazy" src="assets/images/articles/Blog_post_photo.webp"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="the-quarterly-connection-q1-2023/">The Quarterly Connection – Q1 2023</a>
+</h3>
+<p class="article-excerpt">The first edition of The Quarterly Connection — introducing Gii's new newsletter with company updates, engineering insights, and industry highlights for Q1 2023.</p>
+<div class="article-footer">
+<span class="article-date">April 2023</span>
+<a class="article-link" href="the-quarterly-connection-q1-2023/">Read More →</a>
+</div>
+</div>
+</article>
+<article class="article-card" data-category="News">
+<a href="a-message-from-our-ceo-the-benefits-of-our-model/" tabindex="-1" aria-hidden="true"><img alt="A Message from Our CEO: The Benefits of Our Model" class="article-image" loading="lazy" src="assets/images/insights/forging-relationships.jpg"/></a>
+<div class="article-body">
+<span class="article-tag">News</span>
+<h3 class="article-title">
+<a href="a-message-from-our-ceo-the-benefits-of-our-model/">A Message from Our CEO: The Benefits of Our Model</a>
+</h3>
+<p class="article-excerpt">A personal message from Gii's CEO on why the company's curated network model — rather than a single vertically integrated facility — delivers better outcomes for OEM partners across cost, quality, and flexibility.</p>
+<div class="article-footer">
+<span class="article-date">June 2020</span>
+<a class="article-link" href="a-message-from-our-ceo-the-benefits-of-our-model/">Read More →</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- ===== CONTACT / NEWSLETTER CTA ===== -->
+<section class="insights-cta-section">
+<div class="insights-cta-content">
+<div class="cta-row">
+<div class="cta-newsletter">
+<h2>Stay Connected</h2>
+<p>Get cable and connector engineering insights, cost-down strategies, and Gii news delivered to your inbox.</p>
+<form class="newsletter-form" id="newsletter-form" novalidate="">
+<input placeholder="your@company.com" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
+</div>
+<div class="cta-engineering">
+<h3>Have a Technical Question?</h3>
+<p>Talk to our engineering team about your project or specific technical needs.</p>
+<a href="index.html#contact">Contact Our Engineers →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<img alt="Global Interconnect, Inc." class="footer-logo" src="assets/images/logos/logo-white.svg"/>
+<p>Medical device cable &amp; connector specialists. Engineering-led, value-driven custom connector and cable assembly for energy-based medical devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. Trusted by leading OEMs for over three decades.</p>
+<div class="footer-certs">
+<span>FDA Registered</span>
+<span>ISO 13485</span>
+</div>
+</div>
+<div class="footer-nav-col">
+<h4>Company</h4>
+<ul>
+<li><a href="about.html">About Us</a></li>
+<li><a href="index.html#advantage">The Gii Advantage</a></li>
+<li><a href="index.html#quality">Quality &amp; Certifications</a></li>
+<li><a href="https://www.globalinterconnect.com/careers/" rel="noopener" target="_blank">Careers</a></li>
+</ul>
+</div>
+<div class="footer-nav-col">
+<h4>Capabilities</h4>
+<ul>
+<li><a href="capabilities.html">All Capabilities</a></li>
+<li><a href="capabilities.html">Custom Connectors</a></li>
+<li><a href="capabilities.html">Cable Assemblies</a></li>
+<li><a href="capabilities.html">Electromechanical Assembly</a></li>
+</ul>
+</div>
+<div class="footer-nav-col">
+<h4>Resources</h4>
+<ul>
+<li><a href="insights.html">Insights &amp; Resources</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="expertise.html">Engineering Expertise</a></li>
+<li><a href="devices.html">Medical Devices</a></li>
+<li><a href="index.html#contact">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© <span id="year"></span> Global Interconnect, Inc. All rights reserved.</p>
+<div class="footer-bottom-links">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Use</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script>
+    // Simple filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter articles
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('#resources-grid .article-card').forEach(card => {
+          const category = card.dataset.category;
+          if (filter === 'all' || category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Newsletter sign-up: no mailing-list service is connected yet, so open a pre-filled
+    // email to info@ rather than showing a false confirmation.
+    document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value.trim();
+      if (!email) return;
+      window.location.href = 'mailto:info@globalinterconnect.com?subject=' +
+        encodeURIComponent('Newsletter sign-up') + '&body=' +
+        encodeURIComponent('Please add ' + email + ' to the Gii newsletter list.');
+      e.target.reset();
+    });
+  </script>
+<script src="assets/js/chatbot.js"></script>
+</body>
+</html>

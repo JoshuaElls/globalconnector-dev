@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
     <meta name="robots" content="noindex, nofollow" /> <!-- STAGING ONLY - remove at launch -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Engineering-led development, value engineering, global supply chain, and manufacturing transfers behind Gii's custom cable &amp; connector sub-assemblies for energy-based medical devices." />
+  <meta name="description" content="Cost-down, manufacturing transfers, tariff and lead-time reduction, supply chain resilience, and scale-up for medical device cable &amp; connector programs — the challenges OEMs bring to Gii and how we solve them." />
   <title>Engineering &amp; Manufacturing Expertise | Global Interconnect, Inc.</title>
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
@@ -261,6 +261,8 @@
       margin-right: auto;
     }
 
+    @media (max-width:1024px){ .situation-picker{ grid-template-columns:repeat(3,1fr);} }
+    @media (max-width:640px){ .situation-picker{ grid-template-columns:1fr;} }
     .section-anchor {
       scroll-margin-top: 90px;
     }
@@ -448,7 +450,27 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
-  </style>
+  
+    /* ===== Situation-based layout ===== */
+    .situation-picker-title { text-align:center; font-size:1.5rem; margin:48px 0 20px; color:#1b5e3f; }
+    .situation-picker { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; max-width:1100px; margin:0 auto; }
+    .situation-card { display:flex; flex-direction:column; gap:10px; padding:20px; border:1px solid #dfe6dc; border-radius:10px; background:#fff; text-decoration:none; color:#1a1a1a; transition:border-color .2s, transform .2s, box-shadow .2s; }
+    .situation-card:hover { border-color:#8BC342; transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.06); }
+    .situation-num { font-size:.8rem; font-weight:700; letter-spacing:.08em; color:#8BC342; }
+    .situation-label { font-weight:600; line-height:1.35; flex-grow:1; }
+    .situation-arrow { color:#1b5e3f; font-weight:700; }
+    .section-anchor { scroll-margin-top:100px; }
+    .situation-eyebrow { display:block; font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#8BC342; margin-bottom:8px; }
+    .situation-fit { background:#f3f7ef; border-left:3px solid #8BC342; border-radius:6px; padding:16px 20px; margin:0 0 22px; }
+    .situation-fit h4, .situation-how { font-size:.95rem; font-weight:700; color:#1b5e3f; margin:0 0 10px; }
+    .expertise-area-content .fit-list li::before { content:'•'; font-size:1.2rem; }
+    .expertise-area-content .fit-list li { margin-bottom:6px; }
+    .situation-actions { display:flex; flex-wrap:wrap; gap:14px 22px; align-items:center; margin-top:24px; }
+    .situation-cta { background:#8BC342; color:#0f2a1d; font-weight:700; padding:12px 20px; border-radius:6px; text-decoration:none; }
+    .situation-cta:hover { background:#7aad35; }
+    .situation-proof { color:#1b5e3f; font-weight:600; text-decoration:none; }
+    .situation-proof:hover { text-decoration:underline; }
+</style>
 </head>
 <body>
 
@@ -470,6 +492,7 @@
         <li><a href="expertise.html" class="active">Expertise</a></li>
         <li><a href="devices.html">Devices</a></li>
         <li><a href="insights.html">Insights</a></li>
+        <li><a href="news.html">News</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
       </ul>
@@ -477,147 +500,196 @@
   </header>
 
   <!-- ===== EXPERTISE BANNER ===== -->
-  <section class="expertise-banner">
-    <div class="expertise-banner-bg"></div>
-    <div class="expertise-banner-overlay"></div>
-    <div class="expertise-banner-content">
-      <h1>The Expertise Behind Our Specialization</h1>
-      <p>Supply Chain. Transfers. Compliance. Cost Strategy. The Organizational Muscle That Makes Complex Programs Run.</p>
-    </div>
-  </section>
-
-  <!-- ===== EXPERTISE INTRO ===== -->
-  <section class="expertise-intro">
-    <div class="container">
-      <div class="expertise-intro-text">
-        <p>Building custom cables and connectors for energy-based medical devices is what Gii does. But what makes Gii different from a domestic specialty shop is the organizational infrastructure that surrounds that capability — a global manufacturing network, a supply chain built across three continents, and three decades of experience managing the complexity that comes with it.</p>
-        <p>The expertise on this page isn't about what we make. It's about what we know how to do — the supply chain management, regulatory navigation, program transfers, and cost strategy that most contract manufacturers claim but few have actually built. For OEM partners who need more than a vendor, this is what a true manufacturing partner looks like.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EXPERTISE AREAS ===== -->
-  <section class="expertise-areas">
-    <div class="container">
-
-      <!-- Global Supply Chain Management -->
-      <div class="expertise-area">
-        <div class="expertise-area-content">
-          <h3>Global Supply Chain Management</h3>
-          <p>Most OEMs don't need a parts vendor — they need someone who can manage the complexity of sourcing across multiple countries, qualify suppliers to medical standards, and protect production continuity when something goes wrong halfway around the world. That's what Gii's supply chain infrastructure is built to do.</p>
-          <ul>
-            <li>Multi-country component sourcing and supplier qualification</li>
-            <li>Dual-sourcing strategies to eliminate single points of failure</li>
-            <li>Tariff management and trade compliance across US, Costa Rica, and Asia</li>
-            <li>Long-lead-time component management and strategic buffer inventory</li>
-            <li>Vendor managed inventory (VMI) programs for high-volume programs</li>
-            <li>Supplier audits and ongoing performance monitoring</li>
-          </ul>
-        </div>
-        <div class="expertise-area-image">
-          <img src="assets/images/capabilities/assembly.jpg" alt="Global Supply Chain Management" />
-        </div>
-      </div>
-
-      <!-- Manufacturing Transfer Management -->
-      <div class="expertise-area">
-        <div class="expertise-area-content">
-          <h3>Manufacturing Transfer Management</h3>
-          <p>Transferring a medical device program — whether from OEM internal production, an outgoing supplier, or another CMO — is one of the most operationally complex things an OEM team can do. Gii has executed these transfers dozens of times. We know what goes wrong, where the documentation gaps appear, and how to keep production running while a transfer is in progress.</p>
-          <ul>
-            <li>Full engineering review of existing processes, tooling, and designs</li>
-            <li>Process revalidation and capability studies at the receiving facility</li>
-            <li>Supply chain remapping and vendor requalification</li>
-            <li>Regulatory documentation support — DHR, DHF, change control</li>
-            <li>First-article inspection and lot acceptance procedures</li>
-            <li>Zero-disruption transfer methodology to protect your production continuity</li>
-          </ul>
-        </div>
-        <div class="expertise-area-image">
-          <img src="assets/images/validation.jpg" alt="Manufacturing Transfer Management" />
-        </div>
-      </div>
-
-      <!-- Regulatory Navigation -->
-      <div class="expertise-area">
-        <div class="expertise-area-content">
-          <h3>Regulatory &amp; Compliance Navigation</h3>
-          <p>For a medical device OEM, a supplier that can't keep up with your regulatory requirements isn't a partner — it's a liability. Gii's quality systems are built specifically for the documentation burden of medical device manufacturing, and our team understands the regulatory frameworks that govern what we build.</p>
-          <ul>
-            <li>FDA-registered manufacturing with full Quality Management System</li>
-            <li>ISO 13485 certified quality management across the network</li>
-            <li>IEC 60601 electrical safety compliance for powered devices</li>
-            <li>DHR and DHF documentation built to support your regulatory submissions</li>
-            <li>Robust change control processes that don't slow production</li>
-            <li>Audit-ready facilities — customer and regulatory audits welcomed</li>
-          </ul>
-        </div>
-        <div class="expertise-area-image">
-          <img src="assets/images/capabilities/validation-process.jpg" alt="Regulatory and Compliance" />
-        </div>
-      </div>
-
-      <!-- Nearshore & Offshore Cost Strategy -->
-      <div class="expertise-area">
-        <div class="expertise-area-content">
-          <h3>Nearshore &amp; Offshore Cost Strategy</h3>
-          <p>Not every program should be built in the same place. Gii's global footprint lets us match each program to the manufacturing location that delivers the best combination of quality, cost, and supply chain risk — and we manage that complexity so you don't have to. In today's tariff environment, knowing where and how to build is itself a competitive advantage.</p>
-          <ul>
-            <li>Strategic facility selection across Costa Rica and Asia</li>
-            <li>Costa Rica nearshore: same time zone, audit-accessible, no China tariff exposure</li>
-            <li>Total landed cost modeling — not just unit price</li>
-            <li>Tariff risk assessment and mitigation strategy for your BOM</li>
-            <li>Dual-region production for supply chain resilience</li>
-            <li>On-site customer audit access at all manufacturing locations</li>
-          </ul>
-        </div>
-        <div class="expertise-area-image">
-          <img src="assets/images/capabilities/cleanroom.jpg" alt="Nearshore Manufacturing Costa Rica" />
-        </div>
-      </div>
-
-      <!-- Program Management at Scale -->
-      <div class="expertise-area">
-        <div class="expertise-area-content">
-          <h3>Program Management at Scale</h3>
-          <p>Running a complex medical device program across multiple suppliers, time zones, and regulatory environments requires organizational discipline that most companies underestimate. Gii provides a single point of accountability from prototype through volume production — so your team isn't spending its time coordinating between vendors.</p>
-          <ul>
-            <li>Single point of contact across engineering, quality, and supply chain</li>
-            <li>Multi-supplier coordination and sub-tier management</li>
-            <li>Cross-time-zone program management without quality or schedule risk</li>
-            <li>Prototype through high-volume production continuity</li>
-            <li>Proactive communication and escalation protocols</li>
-            <li>Regular program reviews with full visibility into status and risk</li>
-          </ul>
-        </div>
-        <div class="expertise-area-image">
-          <img src="assets/images/capabilities/subassembly.jpg" alt="Program Management" />
-        </div>
-      </div>
-
-      <!-- Cost Reduction as a Discipline -->
-      <div class="expertise-area">
-        <div class="expertise-area-content">
-          <h3>Cost Reduction as an Organizational Discipline</h3>
-          <p>Any supplier can quote a lower price. Few can systematically find and eliminate the cost that's hidden in your BOM, your connector specifications, and your production process. At Gii, cost reduction isn't a project — it's how our engineering culture operates. It's built into every DFM review, every BOM audit, and every supplier negotiation we run on your behalf.</p>
-          <ul>
-            <li>Design for Manufacturability (DFM) reviews that find real savings</li>
-            <li>BOM optimization — identifying over-specified components and materials</li>
-            <li>Component consolidation across programs to build purchasing leverage</li>
-            <li>Make vs. buy analysis for connector and cable subassemblies</li>
-            <li>Continuous improvement programs in volume production</li>
-            <li>Open-book cost modeling so you understand where every dollar goes</li>
-          </ul>
-        </div>
-        <div class="expertise-area-image">
-          <img src="assets/images/capabilities/molding.jpg" alt="Cost Reduction Engineering" />
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== 4-STEP PROCESS ===== -->
+<section class="expertise-banner">
+<div class="expertise-banner-bg"></div>
+<div class="expertise-banner-overlay"></div>
+<div class="expertise-banner-content">
+<h1>Expertise Built Around Your Challenge</h1>
+<p>Cost-Down. Transfers. Tariffs. Supply Resilience. Scale. Find Your Situation Below.</p>
+</div>
+</section>
+<!-- ===== SITUATION PICKER ===== -->
+<section class="expertise-intro">
+<div class="container">
+<div class="expertise-intro-text">
+<p>OEMs rarely come to us for &ldquo;cable and connector manufacturing.&rdquo; They come with a specific problem — a cost target, a supplier that&rsquo;s exiting, a tariff bill, a supply scare, or a program that has to scale. Our capabilities are <a href="capabilities.html">what we make</a>. This page is about <strong>what we solve</strong> — and the supply chain, transfer, regulatory, and program-management experience behind it.</p>
+</div>
+<h2 class="situation-picker-title">Which of these sounds like you?</h2>
+<div class="situation-picker">
+<a class="situation-card" href="#cost-down"><span class="situation-num">01</span><span class="situation-label">Cut cost on an existing assembly</span><span class="situation-arrow">→</span></a>
+<a class="situation-card" href="#transfer"><span class="situation-num">02</span><span class="situation-label">Transfer a program to a new manufacturer</span><span class="situation-arrow">→</span></a>
+<a class="situation-card" href="#nearshore"><span class="situation-num">03</span><span class="situation-label">Reduce tariff exposure and lead times</span><span class="situation-arrow">→</span></a>
+<a class="situation-card" href="#resilience"><span class="situation-num">04</span><span class="situation-label">De-risk your supply chain</span><span class="situation-arrow">→</span></a>
+<a class="situation-card" href="#scale"><span class="situation-num">05</span><span class="situation-label">Scale a program to volume</span><span class="situation-arrow">→</span></a>
+</div>
+</div>
+</section>
+<!-- ===== SITUATIONS ===== -->
+<section class="expertise-areas">
+<div class="container">
+<!-- Cut Cost on an Existing Cable or Connector Assembly -->
+<div class="expertise-area section-anchor" id="cost-down">
+<div class="expertise-area-content">
+<span class="situation-eyebrow">Situation 01</span>
+<h3>Cut Cost on an Existing Cable or Connector Assembly</h3>
+<p>Any supplier can quote a lower price. Few can systematically find and remove the cost hidden in your BOM, your connector specifications, and your production process. At Gii, cost reduction is how our engineering culture operates — built into every DFM review, every BOM audit, and every supplier negotiation we run on your behalf.</p>
+<div class="situation-fit">
+<h4>Sounds like you if…</h4>
+<ul class="fit-list">
+<li>You’re paying a premium for branded off-the-shelf connectors</li>
+<li>One assembly involves several components and several suppliers</li>
+<li>Leadership has handed you a cost-down target for a program already in production</li>
+<li>Your volumes have grown, but your unit price hasn’t moved</li>
+</ul>
+</div>
+<h4 class="situation-how">How Gii helps</h4>
+<ul>
+<li>Design for Manufacturability (DFM) reviews that find real savings</li>
+<li>Purpose-built custom connectors that replace expensive branded parts</li>
+<li>BOM optimization — over-specified components and materials identified</li>
+<li>Component consolidation and make-vs-buy analysis</li>
+<li>Open-book cost modeling so you see where every dollar goes</li>
+</ul>
+<div class="situation-actions">
+<a class="situation-cta" href="index.html?inquiry=cost-down-review#contact">Request a Free Cost-Down Review</a>
+<a class="situation-proof" href="how-global-interconnect-changed-the-game-for-a-global-sports-medical-device-manufacturer/">Case study: $7M saved for a $5B orthopedics OEM →</a>
+</div>
+</div>
+<div class="expertise-area-image">
+<img src="assets/images/devices/purpose-built-connector.png" alt="Purpose-built custom connector" />
+</div>
+</div>
+<!-- Transfer a Program Without Disrupting Production -->
+<div class="expertise-area section-anchor" id="transfer">
+<div class="expertise-area-content">
+<span class="situation-eyebrow">Situation 02</span>
+<h3>Transfer a Program Without Disrupting Production</h3>
+<p>Transferring a medical device program — from OEM internal production, an outgoing supplier, or another CMO — is one of the most operationally complex things an OEM team can do. Gii has executed these transfers dozens of times. We know where the documentation gaps appear and how to keep production running while a transfer is in progress.</p>
+<div class="situation-fit">
+<h4>Sounds like you if…</h4>
+<ul class="fit-list">
+<li>Your current supplier is exiting, underperforming, or can’t scale</li>
+<li>You’re moving a program out of internal production</li>
+<li>You need the transfer done without a gap in supply</li>
+<li>Your documentation needs to hold up to change control and audits</li>
+</ul>
+</div>
+<h4 class="situation-how">How Gii helps</h4>
+<ul>
+<li>Full engineering review of existing processes, tooling, and designs</li>
+<li>Process revalidation and capability studies at the receiving facility</li>
+<li>Supply chain remapping and vendor requalification</li>
+<li>Regulatory documentation support — DHR, DHF, change control</li>
+<li>First-article inspection and a zero-disruption transfer methodology</li>
+</ul>
+<div class="situation-actions">
+<a class="situation-cta" href="index.html?inquiry=manufacturing-transfer#contact">Talk to Us About a Transfer</a>
+<a class="situation-proof" href="considerations-when-transferring-medical-device-manufacturing/">Read: Considerations when transferring medical device manufacturing →</a>
+</div>
+</div>
+<div class="expertise-area-image">
+<img src="assets/images/validation.jpg" alt="Manufacturing transfer validation" />
+</div>
+</div>
+<!-- Reduce Tariff Exposure and Lead Times -->
+<div class="expertise-area section-anchor" id="nearshore">
+<div class="expertise-area-content">
+<span class="situation-eyebrow">Situation 03</span>
+<h3>Reduce Tariff Exposure and Lead Times</h3>
+<p>Not every program should be built in the same place. Gii’s footprint lets us match each program to the manufacturing location that delivers the best combination of quality, cost, and risk. In today’s tariff environment, knowing where and how to build is itself a competitive advantage.</p>
+<div class="situation-fit">
+<h4>Sounds like you if…</h4>
+<ul class="fit-list">
+<li>China tariffs are eroding your margins</li>
+<li>Long Asia lead times are putting launches or clinical timelines at risk</li>
+<li>You want your manufacturer in your time zone and a short flight away</li>
+<li>You need to compare total landed cost, not just unit price</li>
+</ul>
+</div>
+<h4 class="situation-how">How Gii helps</h4>
+<ul>
+<li>Nearshore manufacturing in Heredia, Costa Rica — same time zone, audit-accessible</li>
+<li>No China tariff exposure for programs built in Costa Rica</li>
+<li>Total landed cost modeling — not just unit price</li>
+<li>Tariff risk assessment and mitigation strategy for your BOM</li>
+<li>Trade compliance across the US, Costa Rica, and Asia</li>
+</ul>
+<div class="situation-actions">
+<a class="situation-cta" href="index.html#contact">Ask About Our Costa Rica Facility</a>
+<a class="situation-proof" href="accelerating-clinical-trials-for-a-vascular-care-medical-device-company/">Case study: beating a 22-week lead time for a vascular OEM →</a>
+</div>
+</div>
+<div class="expertise-area-image">
+<img src="assets/images/capabilities/cleanroom.jpg" alt="Nearshore manufacturing in Heredia, Costa Rica" />
+</div>
+</div>
+<!-- De-Risk Your Supply Chain -->
+<div class="expertise-area section-anchor" id="resilience">
+<div class="expertise-area-content">
+<span class="situation-eyebrow">Situation 04</span>
+<h3>De-Risk Your Supply Chain</h3>
+<p>Most OEMs don’t need a parts vendor — they need someone who can manage sourcing across multiple countries, qualify suppliers to medical standards, and protect production continuity when something goes wrong halfway around the world. Gii builds dual-sourcing and geographic diversification into programs from the start.</p>
+<div class="situation-fit">
+<h4>Sounds like you if…</h4>
+<ul class="fit-list">
+<li>A single supplier or single region is a point of failure for your device</li>
+<li>A recent disruption cost you production time</li>
+<li>Your quality team is asking for a dual-source plan</li>
+<li>Long-lead components keep threatening your schedule</li>
+</ul>
+</div>
+<h4 class="situation-how">How Gii helps</h4>
+<ul>
+<li>Dual-region production across Costa Rica and Asia</li>
+<li>Dual-sourcing strategies to eliminate single points of failure</li>
+<li>Multi-country component sourcing and supplier qualification</li>
+<li>Long-lead-time component management and strategic buffer inventory</li>
+<li>Supplier audits and ongoing performance monitoring</li>
+</ul>
+<div class="situation-actions">
+<a class="situation-cta" href="index.html#contact">Discuss a Dual-Source Plan</a>
+<a class="situation-proof" href="index.html#global">See where we manufacture →</a>
+</div>
+</div>
+<div class="expertise-area-image">
+<img src="assets/images/capabilities/assembly.jpg" alt="Cable assembly production line" />
+</div>
+</div>
+<!-- Scale a Program to High Volume -->
+<div class="expertise-area section-anchor" id="scale">
+<div class="expertise-area-content">
+<span class="situation-eyebrow">Situation 05</span>
+<h3>Scale a Program to High Volume</h3>
+<p>Running a medical device program across multiple suppliers, time zones, and regulatory environments takes organizational discipline most companies underestimate. Gii provides a single point of accountability from prototype through volume production — so your team isn’t spending its time coordinating vendors.</p>
+<div class="situation-fit">
+<h4>Sounds like you if…</h4>
+<ul class="fit-list">
+<li>Demand is outgrowing your current supplier’s capacity</li>
+<li>You’re coordinating several vendors for one device</li>
+<li>You need visibility into schedule and risk without chasing updates</li>
+<li>You want continuous cost improvement as volumes climb</li>
+</ul>
+</div>
+<h4 class="situation-how">How Gii helps</h4>
+<ul>
+<li>Single point of contact across engineering, quality, and supply chain</li>
+<li>Multi-supplier coordination and sub-tier management</li>
+<li>Vendor managed inventory (VMI) for high-volume programs</li>
+<li>Regular program reviews with full visibility into status and risk</li>
+<li>Continuous improvement programs in volume production</li>
+</ul>
+<div class="situation-actions">
+<a class="situation-cta" href="quote.html">Request a Quote</a>
+<a class="situation-proof" href="how-global-interconnect-changed-the-game-for-a-global-sports-medical-device-manufacturer/">Case study: ramping from 1,000 to 20,000 pieces a week →</a>
+</div>
+</div>
+<div class="expertise-area-image">
+<img src="assets/images/capabilities/subassembly.jpg" alt="Subassembly production" />
+</div>
+</div>
+</div>
+</section>
+<!-- ===== 4-STEP PROCESS ===== -->
   <section class="expertise-process section-anchor" id="process">
     <div class="container">
       <div class="section-header">
@@ -712,8 +784,8 @@
   <!-- ===== EXPERTISE CTA ===== -->
   <section class="expertise-cta">
     <div class="container">
-      <h2>Bring Us Your Program — We'll Show You What's Possible</h2>
-      <p>Whether you're looking to transfer a program, reduce costs, de-risk your supply chain, or find a partner who can manage the full complexity of global medical manufacturing — Gii is ready to talk. Tell us about your program and let's see where we can help.</p>
+      <h2>Don’t See Your Situation? Bring Us Your Program.</h2>
+<p>Every program is different. Tell us what you’re up against — cost, supply, schedule, or scale — and a Gii engineer will tell you honestly where we can help.</p>
       <a href="index.html#contact" class="btn-cta">Start the Conversation</a>
     </div>
   </section>
@@ -756,6 +828,7 @@
           <h4>Resources</h4>
           <ul>
             <li><a href="insights.html">Insights</a></li>
+            <li><a href="news.html">News</a></li>
             <li><a href="devices.html">Medical Devices</a></li>
             <li><a href="index.html#contact">Contact Us</a></li>
           </ul>

@@ -51,6 +51,13 @@ function showFormMessage(msgHtml) {
   submitBtn.hidden = true;
 }
 
+// Pre-select the inquiry type from a link such as index.html?inquiry=cost-down-review#contact
+const inquiryParam = new URLSearchParams(window.location.search).get('inquiry');
+const inquirySelect = document.getElementById('inquiry');
+if (inquiryParam && inquirySelect && [...inquirySelect.options].some(o => o.value === inquiryParam)) {
+  inquirySelect.value = inquiryParam;
+}
+
 if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();

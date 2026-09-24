@@ -1110,6 +1110,30 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .advantage-visual { order: -1; }
 }
 
+/* Nav fit: tighten between 1025-1280px, switch to the menu button at 1024px and below */
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .nav-links { gap: 1.25rem; }
+  .nav-links a { font-size: .85rem; }
+  .nav-cta { white-space: nowrap; padding: .45rem 1rem !important; }
+}
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    inset: var(--nav-h) 0 0 0;
+    background: var(--green-dark);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1.5rem;
+    z-index: 999;
+    overflow-y: auto;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { font-size: 1.125rem; color: var(--white); }
+  .nav-toggle { display: flex; }
+}
+
 @media (max-width: 768px) {
   :root { --section-pad: 56px; --nav-h: 64px; }
 
