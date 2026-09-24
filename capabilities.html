@@ -444,6 +444,17 @@
     }
       .transfer-content a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
     .transfer-content a:hover { color: #8BC342; }
+      .cap-index { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:32px; text-align:left; }
+    .cap-index-card { display:flex; flex-direction:column; gap:4px; padding:16px 18px; background:#fff; border:1px solid #dfe6dc; border-radius:10px; text-decoration:none; color:#1a1a1a; transition:border-color .2s, transform .2s; }
+    .cap-index-card:hover { border-color:#8BC342; transform:translateY(-2px); }
+    .cap-index-num { font-size:.75rem; font-weight:700; letter-spacing:.08em; color:#8BC342; }
+    .cap-index-card strong { font-size:1rem; line-height:1.3; }
+    .cap-index-card span:last-child { font-size:.85rem; color:#666; line-height:1.4; }
+    .capability-section { scroll-margin-top:90px; }
+    .cap-more-link { display:inline-block; margin-top:16px; font-weight:600; color:#1b5e3f; text-decoration:none; }
+    .cap-more-link:hover { text-decoration:underline; }
+    @media (max-width:1024px){ .cap-index{ grid-template-columns:repeat(2,1fr);} }
+    @media (max-width:520px){ .cap-index{ grid-template-columns:1fr;} }
   </style>
 </head>
 <body>
@@ -460,11 +471,11 @@
       </button>
 
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="capabilities.html" class="active">Capabilities</a></li>
-        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
         <li><a href="devices.html">Devices</a></li>
+        <li><a href="quality.html">Quality</a></li>
         <li><a href="insights.html">Insights</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="faq.html">FAQ</a></li>
@@ -485,17 +496,24 @@
   <section class="capabilities-intro">
     <div class="capabilities-intro-content">
       <h2>Value Engineering — The Gii Difference</h2>
-      <p>The single biggest driver of cable and connector cost in medical devices isn't manufacturing overhead — it's the choice of connector itself. When OEMs default to expensive branded off-the-shelf connectors, they pay a significant price premium that compounds across every unit shipped. Gii's engineers design purpose-built custom connector solutions that meet your exact performance and regulatory requirements at a fraction of that cost. Paired with rigorous DFM reviews and material optimization on every program, that value-engineering approach is how Gii consistently delivers meaningful cost reductions for OEMs building energy-based devices — across electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management.</p>
-      <p>On the manufacturing side, Gii manufactures across its own nearshore facility in Heredia, Costa Rica and its established manufacturing operations in Asia, guided by US-based engineering — selecting the right facility for each element of your program based on capability, quality, and cost, rather than constraining you to a single location. That flexibility is a competitive advantage most contract manufacturers simply can't offer.</p>
-      <p>And while cables and connectors are always our deepest specialty, Gii's capabilities don't stop at the connector. For programs where it makes sense, we support full device-level builds — complete electromechanical assembly, PCBA integration, and finished device production — giving partners who want a single accountable team from concept through finished goods exactly that.</p>
-
+      <p>Gii&rsquo;s engineers value-engineer every program &mdash; designing purpose-built connectors instead of defaulting to expensive branded parts, and reviewing every design for manufacturability before anything is built. Our US engineering team works with our nearshore facility in Heredia, Costa Rica and our manufacturing operations in Asia to build each part of your program where it&rsquo;s built best.</p>
+      <div class="cap-index" aria-label="Jump to a capability">
+        <a class="cap-index-card" href="#cap-connectors"><span class="cap-index-num">01</span><strong>Custom Connector Design</strong><span>Purpose-built connectors instead of branded premiums</span></a>
+        <a class="cap-index-card" href="#cap-cable"><span class="cap-index-num">02</span><strong>Cable Assembly</strong><span>Wire cut to 100%-tested finished assembly</span></a>
+        <a class="cap-index-card" href="#cap-device-build"><span class="cap-index-num">03</span><strong>Subassembly &amp; Device Builds</strong><span>From cable subassembly to finished device</span></a>
+        <a class="cap-index-card" href="#cap-pcba"><span class="cap-index-num">04</span><strong>Connector Electronics &amp; PCBA</strong><span>SMT and through-hole, IPC Class 2/3</span></a>
+        <a class="cap-index-card" href="#cap-stamping"><span class="cap-index-num">05</span><strong>Stamping &amp; Contacts</strong><span>Precision contacts, pins, and shields</span></a>
+        <a class="cap-index-card" href="#cap-coating"><span class="cap-index-num">06</span><strong>Coating &amp; Surface Treatment</strong><span>Lubricity, biocompatible, electrical</span></a>
+        <a class="cap-index-card" href="#cap-cleanroom"><span class="cap-index-num">07</span><strong>Clean Room Manufacturing</strong><span>ISO 8 clean room production</span></a>
+        <a class="cap-index-card" href="#cap-validation"><span class="cap-index-num">08</span><strong>Validation &amp; Quality</strong><span>IQ/OQ/PQ, DHR/DHF, 100% electrical test</span></a>
+      </div>
     </div>
   </section>
 
   <!-- ===== CAPABILITY SECTIONS ===== -->
 
   <!-- Custom Connector Design & Molding -->
-  <section class="capability-section">
+  <section id="cap-connectors" class="capability-section">
     <div class="capability-container">
       <div class="capability-image">
         <img src="assets/images/capabilities/molding.jpg" alt="Custom Connector Design & Molding" />
@@ -515,7 +533,7 @@
   </section>
 
   <!-- Cable Assembly Manufacturing -->
-  <section class="capability-section reverse">
+  <section id="cap-cable" class="capability-section reverse">
     <div class="capability-container">
       <div class="capability-image">
         <img src="assets/images/capabilities/assembly.jpg" alt="Cable Assembly Manufacturing" />
@@ -534,7 +552,7 @@
   </section>
 
   <!-- Electromechanical Assembly -->
-  <section class="capability-section">
+  <section id="cap-device-build" class="capability-section">
     <div class="capability-container">
       <div class="capability-image">
         <img src="assets/images/capabilities/subassembly.jpg" alt="Electromechanical Assembly" />
@@ -555,7 +573,7 @@
   </section>
 
   <!-- PCB Assembly -->
-  <section class="capability-section reverse">
+  <section id="cap-pcba" class="capability-section reverse">
     <div class="capability-container">
       <div class="capability-image">
         <img src="assets/images/capabilities/pcba.jpg" alt="PCB Assembly (PCBA)" />
@@ -575,7 +593,7 @@
   </section>
 
   <!-- Metal Stamping & Machining -->
-  <section class="capability-section">
+  <section id="cap-stamping" class="capability-section">
     <div class="capability-container">
       <div class="capability-image">
         <img src="assets/images/capabilities/machining.jpg" alt="Metal Stamping & Machining" />
@@ -595,7 +613,7 @@
   </section>
 
   <!-- Coating & Surface Treatment -->
-  <section class="capability-section reverse">
+  <section id="cap-coating" class="capability-section reverse">
     <div class="capability-container">
       <div class="capability-image">
         <img src="assets/images/capabilities/coating.jpg" alt="Coating & Surface Treatment" />
@@ -615,7 +633,7 @@
   </section>
 
   <!-- Clean Room Manufacturing -->
-  <section class="capability-section">
+  <section id="cap-cleanroom" class="capability-section">
     <div class="capability-container">
       <div class="capability-image">
         <img src="assets/images/capabilities/cleanroom.jpg" alt="Clean Room Manufacturing" />
@@ -635,14 +653,14 @@
   </section>
 
   <!-- Validation & Quality -->
-  <section class="capability-section reverse">
+  <section id="cap-validation" class="capability-section reverse">
     <div class="capability-container">
       <div class="capability-image">
         <img src="assets/images/capabilities/validation-process.jpg" alt="Validation & Quality" />
       </div>
       <div class="capability-text">
         <h3>Validation &amp; Quality — Built for Zero-Failure</h3>
-        <p>FDA-registered and ISO 13485 certified, with full IQ/OQ/PQ validation protocols and complete DHR/DHF documentation specific to cable and connector manufacturing. Our quality systems are built to support your regulatory submissions Our quality systems are built to support your regulatory submissions and ensure nothing ships unless it meets your exact specification.</p>
+        <p>FDA-registered and ISO 13485 certified, with full IQ/OQ/PQ validation protocols and complete DHR/DHF documentation specific to cable and connector manufacturing. Our quality systems are built to support your regulatory submissions and ensure nothing ships unless it meets your exact specification.</p>
         <ul>
           <li>IQ/OQ/PQ validation protocols</li>
           <li>Full DHR/DHF documentation</li>
@@ -650,6 +668,7 @@
           <li>ISO 13485 compliance</li>
           <li>Supplier and process audits</li>
         </ul>
+        <a class="cap-more-link" href="quality.html">See our full Quality &amp; Compliance page &rarr;</a>
       </div>
     </div>
   </section>
@@ -664,11 +683,11 @@
       <div class="transfer-content">
         <p>Most OEMs come to Gii with a specific challenge, not a shopping list. See how these capabilities come together for the situations we handle most often:</p>
         <ul>
-          <li><a href="expertise.html#cost-down">Cutting cost on an existing cable or connector assembly</a></li>
-          <li><a href="expertise.html#transfer">Transferring a program without disrupting production</a></li>
-          <li><a href="expertise.html#nearshore">Reducing tariff exposure and lead times</a></li>
-          <li><a href="expertise.html#resilience">De-risking your supply chain</a></li>
-          <li><a href="expertise.html#scale">Scaling a program to high volume</a></li>
+          <li><a href="solutions.html#cost-down">Cutting cost on an existing cable or connector assembly</a></li>
+          <li><a href="solutions.html#transfer">Transferring a program without disrupting production</a></li>
+          <li><a href="solutions.html#nearshore">Reducing tariff exposure and lead times</a></li>
+          <li><a href="solutions.html#resilience">De-risking your supply chain</a></li>
+          <li><a href="solutions.html#scale">Scaling a program to high volume</a></li>
         </ul>
       </div>
     </div>
@@ -712,7 +731,7 @@
           <h4>Company</h4>
           <ul>
             <li><a href="index.html#advantage">The Gii Advantage</a></li>
-            <li><a href="index.html#quality">Quality &amp; Certifications</a></li>
+            <li><a href="quality.html">Quality &amp; Certifications</a></li>
             <li><a href="index.html#global">Global Reach</a></li>
             <li><a href="https://www.globalinterconnect.com/careers/" target="_blank" rel="noopener">Careers</a></li>
           </ul>

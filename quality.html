@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" /> <!-- STAGING ONLY - remove at launch -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Global Interconnect (Gii) quality and compliance: ISO 13485 certified, FDA-registered, IEC 60601, IQ/OQ/PQ validation, full traceability and DHR/DHF documentation, and audit-ready facilities for medical cable and connector programs." />
+  <title>Quality &amp; Compliance | ISO 13485 Medical Cable &amp; Connector Manufacturing | Global Interconnect, Inc.</title>
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Global Interconnect, Inc." />
+  <meta property="og:url"         content="https://www.globalinterconnect.com/quality/" />
+  <meta property="og:title"       content="Quality &amp; Compliance | Global Interconnect, Inc." />
+  <meta property="og:description" content="ISO 13485, FDA-registered, IEC 60601, IQ/OQ/PQ validation, traceability, and audit-ready facilities." />
+  <meta property="og:image"       content="https://www.globalinterconnect.com/assets/images/capabilities/validation-process.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Quality &amp; Compliance | Gii" />
+  <meta name="twitter:description" content="ISO 13485 quality systems for medical cable &amp; connector programs." />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* Expertise Page Specific Styles */
+
+    .expertise-banner {
+      position: relative;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .expertise-banner-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1b5e3f 0%, #0f4c2f 100%);
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .expertise-banner-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/images/validation.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .expertise-banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(27, 94, 63, 0.75);
+      z-index: -1;
+    }
+
+    .expertise-banner-content {
+      position: relative;
+      z-index: 1;
+      padding: 80px 20px;
+      max-width: 900px;
+    }
+
+    .expertise-banner-content h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .expertise-banner-content p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+      opacity: 0.95;
+      font-weight: 300;
+    }
+
+    @media (max-width: 768px) {
+      .expertise-banner-content h1 {
+        font-size: 2.5rem;
+      }
+      .expertise-banner-content p {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Expertise Intro Section */
+    .expertise-intro {
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .expertise-intro .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .expertise-intro-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .expertise-intro-text p {
+      margin-bottom: 20px;
+    }
+
+    .expertise-intro-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Expertise Area Cards */
+    .expertise-areas {
+      padding: 80px 20px;
+      background: #f9f9f9;
+    }
+
+    .expertise-area {
+      margin-bottom: 120px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .expertise-area:nth-child(even) {
+      grid-template-columns: 1fr 1fr;
+      direction: rtl;
+    }
+
+    .expertise-area:nth-child(even) > * {
+      direction: ltr;
+    }
+
+    .expertise-area-content h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1b5e3f;
+    }
+
+    .expertise-area-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .expertise-area-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .expertise-area-content li {
+      padding-left: 30px;
+      margin-bottom: 12px;
+      position: relative;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .expertise-area-content li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #1b5e3f;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .expertise-area-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 12px;
+      background: white;
+      min-height: 350px;
+    }
+
+    .expertise-area-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 1024px) {
+      .expertise-area {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .expertise-area:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+      .expertise-area-content h3 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Process Section */
+    .expertise-process {
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .expertise-process .container {
+      max-width: 1200px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1b5e3f;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+    }
+
+    .section-desc {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 0;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width:1024px){ .situation-picker{ grid-template-columns:repeat(3,1fr);} }
+    @media (max-width:640px){ .situation-picker{ grid-template-columns:1fr;} }
+    .section-anchor {
+      scroll-margin-top: 90px;
+    }
+
+    .process-timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f9f9f9;
+      border-radius: 12px;
+      border: 2px solid #e0e0e0;
+      position: relative;
+    }
+
+    .process-step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: #1b5e3f;
+      color: white;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .process-step h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #1a1a1a;
+    }
+
+    .process-step p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .process-arrow {
+      display: none;
+    }
+
+    @media (min-width: 1025px) {
+      .process-step::after {
+        content: '→';
+        position: absolute;
+        right: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: #1b5e3f;
+        font-weight: 700;
+      }
+
+      .process-step:last-child::after {
+        content: '';
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .process-timeline {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Why Gii Section */
+    .why-gii {
+      padding: 80px 20px;
+      background: #1b5e3f;
+      color: white;
+    }
+
+    .why-gii .container {
+      max-width: 1200px;
+    }
+
+    .why-gii .section-header {
+      margin-bottom: 60px;
+    }
+
+    .why-gii .section-eyebrow {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .why-gii .section-title {
+      color: white;
+    }
+
+    .why-gii .section-desc {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .why-gii-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .why-gii-item {
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      border-left: 4px solid #4ade80;
+    }
+
+    .why-gii-item h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .why-gii-item p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .why-gii-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* CTA Section */
+    .expertise-cta {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #1b5e3f 0%, #0f4c2f 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .expertise-cta .container {
+      max-width: 800px;
+    }
+
+    .expertise-cta h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .expertise-cta p {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      padding: 16px 40px;
+      background: white;
+      color: #1b5e3f;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 1.1rem;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+  
+    /* ===== Situation-based layout ===== */
+    .situation-picker-title { text-align:center; font-size:1.5rem; margin:48px 0 20px; color:#1b5e3f; }
+    .situation-picker { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; max-width:1100px; margin:0 auto; }
+    .situation-card { display:flex; flex-direction:column; gap:10px; padding:20px; border:1px solid #dfe6dc; border-radius:10px; background:#fff; text-decoration:none; color:#1a1a1a; transition:border-color .2s, transform .2s, box-shadow .2s; }
+    .situation-card:hover { border-color:#8BC342; transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.06); }
+    .situation-num { font-size:.8rem; font-weight:700; letter-spacing:.08em; color:#8BC342; }
+    .situation-label { font-weight:600; line-height:1.35; flex-grow:1; }
+    .situation-arrow { color:#1b5e3f; font-weight:700; }
+    .section-anchor { scroll-margin-top:100px; }
+    .situation-eyebrow { display:block; font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#8BC342; margin-bottom:8px; }
+    .situation-fit { background:#f3f7ef; border-left:3px solid #8BC342; border-radius:6px; padding:16px 20px; margin:0 0 22px; }
+    .situation-fit h4, .situation-how { font-size:.95rem; font-weight:700; color:#1b5e3f; margin:0 0 10px; }
+    .expertise-area-content .fit-list li::before { content:'•'; font-size:1.2rem; }
+    .expertise-area-content .fit-list li { margin-bottom:6px; }
+    .situation-actions { display:flex; flex-wrap:wrap; gap:14px 22px; align-items:center; margin-top:24px; }
+    .situation-cta { background:#8BC342; color:#0f2a1d; font-weight:700; padding:12px 20px; border-radius:6px; text-decoration:none; }
+    .situation-cta:hover { background:#7aad35; }
+    .situation-proof { color:#1b5e3f; font-weight:600; text-decoration:none; }
+    .situation-proof:hover { text-decoration:underline; }
+    .why-gii-list { list-style:none; padding:0; margin:14px 0 16px; }
+    .why-gii-list li { padding-left:24px; position:relative; margin-bottom:8px; color:#555; line-height:1.5; }
+    .why-gii-list li::before { content:'✓'; position:absolute; left:0; color:#1b5e3f; font-weight:700; }
+    .why-gii-link { font-weight:600; color:#1b5e3f; text-decoration:none; }
+    .why-gii-link:hover { text-decoration:underline; }
+      .q-certs { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; max-width:1100px; margin:40px auto 0; }
+    .q-cert { background:#f3f7ef; border-top:3px solid #8BC342; border-radius:8px; padding:22px; }
+    .q-cert h4 { font-size:1.05rem; color:#1b5e3f; margin:0 0 8px; }
+    .q-cert p { font-size:.92rem; color:#555; line-height:1.5; margin:0; }
+    @media (max-width:1024px){ .q-certs{ grid-template-columns:repeat(2,1fr);} }
+    @media (max-width:560px){ .q-certs{ grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="logo-img" />
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="capabilities.html">Capabilities</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="devices.html">Devices</a></li>
+        <li><a href="quality.html" class="active">Quality</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== QUALITY BANNER ===== -->
+<section class="expertise-banner">
+<div class="expertise-banner-bg"></div>
+<div class="expertise-banner-overlay"></div>
+<div class="expertise-banner-content">
+<h1>Quality &amp; Compliance</h1>
+<p>Medical-Grade Quality Systems Behind Every Cable &amp; Connector We Build</p>
+</div>
+</section>
+<!--
+  PLACEHOLDER PAGE — content uses only claims already made elsewhere on the site.
+  To confirm with Josh / Quality before expanding:
+   - Which sites hold ISO 13485 certification (Heredia? Dongguan? HQ?)
+   - IQ/OQ/PQ scope (already claimed on Capabilities) and ISO 14971 risk management
+   - Supplier audit / qualification program details
+   - "In-house sterilization" claim (Capabilities + homepage)
+   - Downloadable certificates (ISO 13485 cert PDF, FDA registration number)
+-->
+<section class="expertise-intro">
+<div class="container">
+<div class="expertise-intro-text">
+<p>For a medical device OEM, a supplier that can&rsquo;t keep up with your regulatory requirements isn&rsquo;t a partner &mdash; it&rsquo;s a liability. Gii&rsquo;s quality systems are built specifically for the documentation burden of medical cable and connector manufacturing, so your interconnect never becomes the weak link in your regulatory file.</p>
+</div>
+<div class="q-certs">
+<div class="q-cert"><h4>ISO 13485 Certified</h4><p>Medical device quality management system built for regulated cable and connector manufacturing.</p></div>
+<div class="q-cert"><h4>FDA Registered</h4><p>Registered medical device establishment, supporting your 510(k) and PMA submissions.</p></div>
+<div class="q-cert"><h4>IEC 60601</h4><p>Electrical safety compliance for assemblies used in powered medical devices.</p></div>
+<div class="q-cert"><h4>ISO 8 Clean Room</h4><p>Controlled-environment production for sterile and critical assemblies.</p></div>
+</div>
+</div>
+</section>
+<section class="expertise-areas">
+<div class="container">
+<div class="expertise-area">
+<div class="expertise-area-content">
+<h3>Validation &amp; Testing</h3>
+<p>Zero failure is our standard. Every process is validated and every assembly is tested before it ships &mdash; nothing leaves unless it meets your exact specification.</p>
+<ul>
+<li>IQ/OQ/PQ validation protocols</li>
+<li>Process capability studies at the manufacturing facility</li>
+<li>First-article inspection and lot acceptance procedures</li>
+<li>100% electrical test on every assembly</li>
+<li>Environmental monitoring and controls in clean room production</li>
+</ul>
+</div>
+<div class="expertise-area-image">
+<img src="assets/images/capabilities/validation-process.jpg" alt="Validation and testing" />
+</div>
+</div>
+<div class="expertise-area">
+<div class="expertise-area-content">
+<h3>Traceability &amp; Documentation</h3>
+<p>Our quality management system captures the records your regulatory submissions depend on &mdash; from raw material to shipment.</p>
+<ul>
+<li>Full material traceability from raw material to shipment</li>
+<li>Device history records (DHR) for every build</li>
+<li>DHF documentation support for your design history file</li>
+<li>Robust change control that doesn&rsquo;t slow production</li>
+<li>Validation documentation for regulatory submissions</li>
+</ul>
+</div>
+<div class="expertise-area-image">
+<img src="assets/images/validation.jpg" alt="Traceability and documentation" />
+</div>
+</div>
+<div class="expertise-area">
+<div class="expertise-area-content">
+<h3>Audit-Ready Facilities</h3>
+<p>We want you to see where your product is built. Our facilities are audit-ready, and our nearshore facility in Heredia, Costa Rica is a short flight from any US hub.</p>
+<ul>
+<li>Customer and regulatory audits welcomed</li>
+<li>On-site customer audit access at our manufacturing locations</li>
+<li>Supplier audits and ongoing performance monitoring</li>
+<li>ISO 13485 quality management across our network</li>
+</ul>
+</div>
+<div class="expertise-area-image">
+<img src="assets/images/capabilities/cleanroom.jpg" alt="Clean room manufacturing" />
+</div>
+</div>
+</div>
+</section>
+<!-- ===== CTA ===== -->
+<section class="expertise-cta">
+<div class="container">
+<h2>Need Our Quality Documentation?</h2>
+<p>Request certificates, quality agreements, or documentation for your supplier qualification &mdash; or schedule an audit. A Gii quality contact will respond within one business day.</p>
+<a href="index.html?inquiry=quality-docs#contact" class="btn-cta">Request Quality Documentation</a>
+</div>
+</section>
+<!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logos/logo-white.svg" alt="Global Interconnect, Inc." class="footer-logo" />
+          <p>Medical device cable &amp; connector specialists. Engineering-led, value-driven custom connector and cable assembly for energy-based medical devices — electrophysiology, ablation, electrosurgical, orthopedics, urology, and pain management. Trusted by leading OEMs for over three decades.</p>
+          <div class="footer-certs">
+            <span>FDA Registered</span>
+            <span>ISO 13485</span>
+            
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="https://www.globalinterconnect.com/careers/" target="_blank" rel="noopener">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Capabilities</h4>
+          <ul>
+            <li><a href="capabilities.html">Custom Connectors</a></li>
+            <li><a href="capabilities.html">Cable Assemblies</a></li>
+            <li><a href="capabilities.html">Electromechanical Assembly</a></li>
+            <li><a href="capabilities.html">PCBA</a></li>
+            <li><a href="capabilities.html">Metal Stamping</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="devices.html">Medical Devices</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Global Interconnect, Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+</body>
+</html>
