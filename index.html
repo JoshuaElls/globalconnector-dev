@@ -1068,79 +1068,18 @@
 
         <div class="contact-form-wrap">
           <form class="contact-form" id="contact-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="first-name">First Name <span class="required">*</span></label>
-                <input type="text" id="first-name" name="first_name" placeholder="Jane" required />
-              </div>
-              <div class="form-group">
-                <label for="last-name">Last Name <span class="required">*</span></label>
-                <input type="text" id="last-name" name="last_name" placeholder="Smith" required />
-              </div>
+            <input type="hidden" id="inquiry" name="inquiry" value="" />
+            <div class="form-group">
+              <label for="name">Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required />
             </div>
             <div class="form-group">
               <label for="email">Business Email <span class="required">*</span></label>
-              <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+              <input type="email" id="email" name="email" placeholder="jane@company.com" autocomplete="email" required />
             </div>
             <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company" placeholder="Your Company" />
-            </div>
-            <div class="form-group">
-              <label for="inquiry">Inquiry Type</label>
-              <select id="inquiry" name="inquiry">
-                <option value="">Select an inquiry type…</option>
-                <option value="cost-down-review">Cost-Down Review / DFM Analysis</option>
-                <option value="new-project">New Cable / Connector Program</option>
-                <option value="manufacturing-transfer">Manufacturing Transfer</option>
-                <option value="rfq">Request for Quote (RFQ)</option>
-                <option value="quality-docs">Quality Documentation</option>
-                <option value="partnerships">Partnerships</option>
-                <option value="careers">Careers</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="device-category">Device Category</label>
-                <select id="device-category" name="device_category">
-                  <option value="">Select a category…</option>
-                  <option value="energy-based">Energy-Based Devices</option>
-                  <option value="diagnostic-imaging">Diagnostic Imaging</option>
-                  <option value="surgical-instruments">Surgical Instruments</option>
-                  <option value="robotics">Robotics &amp; Navigation</option>
-                  <option value="patient-monitoring">Patient Monitoring</option>
-                  <option value="pain-management">Pain Management</option>
-                  <option value="sports-medicine">Orthopedics</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="project-stage">Project Stage</label>
-                <select id="project-stage" name="project_stage">
-                  <option value="">Select a stage…</option>
-                  <option value="early-design">Concept / Early Design</option>
-                  <option value="design-freeze">Design Freeze / Validation</option>
-                  <option value="transfer">Transfer from Another Manufacturer</option>
-                  <option value="volume-production">Volume Production</option>
-                  <option value="not-sure">Not Sure Yet</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="annual-volume">Estimated Annual Volume</label>
-              <select id="annual-volume" name="annual_volume">
-                <option value="">Select a range…</option>
-                <option value="under-10k">Under 10,000 units</option>
-                <option value="10k-50k">10,000 – 50,000 units</option>
-                <option value="50k-250k">50,000 – 250,000 units</option>
-                <option value="250k-plus">250,000+ units</option>
-                <option value="not-sure">Not Sure Yet</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Message <span class="required">*</span></label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us about your project, timeline, and any specific requirements…" required></textarea>
+              <label for="message">Tell Us About Your Project <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="What are you working on &mdash; a cost-down, a transfer, a new program? Volumes and timelines help if you have them." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="form-submit">
               <span class="btn-text">Send Message</span>
